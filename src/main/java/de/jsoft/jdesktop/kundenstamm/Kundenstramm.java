@@ -5,6 +5,24 @@
  */
 package de.jsoft.jdesktop.kundenstamm;
 
+import de.jsoft.JDesktop;
+import static de.jsoft.JDesktop.baseUrl;
+import de.jsoft.jdesktop.login.LoginFrame;
+import de.jsoft.jdesktop.login.MLoginData;
+import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
+import static de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
+import static de.jsoft.jdesktop.login.NewJInternalFrame.interceptors;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.web.client.RestClientException;
+
+
 
 //Auskunft Kreditreform url 
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
@@ -15,12 +33,41 @@ package de.jsoft.jdesktop.kundenstamm;
  */
 public class Kundenstramm extends javax.swing.JInternalFrame {
 
+   
+    
+    public static List<ClientHttpRequestInterceptor> interceptors;
     /**
      * Creates new form Kundenstramm
      */
     public Kundenstramm()
     {
         initComponents();
+        
+        loadTextEntitystoPanel();
+    }
+    
+    private void loadTextEntitystoPanel() 
+    {
+        // load textentitys from server to panel
+       
+       
+        Desktoplayout dlayout = new Desktoplayout();
+         
+        //ResponseEntity<Desktoplayout> response = JDesktop.rtemp.exchange("http://localhost:8443/getloginlabel/customerpanel",
+        
+        // url http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel
+        
+        //ResponseEntity<Desktoplayout> response = JDesktop.rtemp.getForEntity("http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel", Desktoplayout.class);
+          
+       
+         Object obj = (Object) de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
+         JDesktop.rtemp.getInterceptors();
+       
+         ResponseEntity<List<Desktoplayout>> response = JDesktop.rtemp.exchange("http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel", HttpMethod.GET, null, new ParameterizedTypeReference<List<Desktoplayout>>() {});
+         List<Desktoplayout> todoList = response.getBody();
+                
+                
+         System.out.print("respadminonse");
     }
 
     /**
@@ -581,4 +628,6 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JToolBar jToolBar1;
     public javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
+
+   
 }

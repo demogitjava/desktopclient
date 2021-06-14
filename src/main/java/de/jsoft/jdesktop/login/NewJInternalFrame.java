@@ -29,6 +29,7 @@ import sun.misc.BASE64Encoder;
 /**
  *
  * @author hoscho
+ *  Login JInternalFrame
  */
 @Controller
 public class NewJInternalFrame extends javax.swing.JInternalFrame {
@@ -38,7 +39,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
      */
     //String itemstoComboBox = JDesktop.baseUrl + "/desktoplayout/sprachen";   
     //String texttolabel = JDesktop.baseUrl + "/desktoplayout/logintextentity";
- 
+    public static List<ClientHttpRequestInterceptor> interceptors;
     
     public static HttpHeaders headers;
     public static HttpEntity<String> httpentity;
@@ -350,7 +351,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
                         for http methods
 
                  */
-                List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
+                interceptors = new ArrayList<>();
                 interceptors.add(new HttpHeaderInterceptor("Accept", MediaType.APPLICATION_JSON_VALUE));
                 interceptors.add(new HttpHeaderInterceptor("ContentType", MediaType.APPLICATION_JSON_VALUE));
                 interceptors.add(new HttpHeaderInterceptor("Authorization", "Basic " + authStringEnc));

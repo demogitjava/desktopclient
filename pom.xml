@@ -127,6 +127,7 @@
                 <version>1.8</version>
             </dependency>
              
+             
         </dependencies>   
         
            <pluginRepositories>
@@ -144,21 +145,14 @@
         </pluginRepository>
     </pluginRepositories>
               
-    <build>
+      <build>
         <plugins>
-
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>2.4.5</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <mainClass>de.jgsoftware.UserRegistrationSystemApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
