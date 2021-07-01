@@ -6,6 +6,7 @@
 package de.jsoft.jdesktop.login;
 
 import de.jsoft.JDesktop;
+import static de.jsoft.JDesktop.rtemp;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.Map;
 import java.util.UUID;
 //import org.springframework.boot.developertools.remote.client.HttpHeaderInterceptor;
 import org.springframework.boot.devtools.remote.client.HttpHeaderInterceptor;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -22,6 +24,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.web.client.RestTemplate;
 import sun.misc.BASE64Encoder;
 
 
@@ -45,6 +49,8 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
     public static HttpEntity<String> httpentity;
 
    
+    public static RestTemplateBuilder restTemplateBuilder;
+    
     String stlabel1 = null;
     String stlabel2 = null;
     String stlabel3 = null;
@@ -321,51 +327,43 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
        headers = new HttpHeaders();
 
         String authString = stuser + ":" + stpassword;
-        String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
-        headers.add("Authorization", "Basic " + authStringEnc);
+        //String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
+        //headers.add("Authorization", "Basic " + authStringEnc);
 
-        httpentity = new HttpEntity<String>(headers);
+        //httpentity = new HttpEntity<String>(headers);
 
-        MLoginData mlogindata = new MLoginData();
-        mlogindata.setUsername(stuser);
+        //MLoginData mlogindata = new MLoginData();
+        //mlogindata.setUsername(stuser);
+        //mlogindata.setPassword(stpassword);
 
-
+         
+                
+        de.jsoft.jdesktop.config.LoginProvider loginprovider = new de.jsoft.jdesktop.config.LoginProvider();   
+        loginprovider.logintoServer(stuser, stpassword);
+        
+        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(de.jsoft.jdesktop.config.LoginProvider.client);
+         ResponseEntity<String> response = new RestTemplate(requestFactory).
+      exchange("http://localhost:8443/users", HttpMethod.GET, null, String.class);
         try {
 
 
             //ResponseEntity<LoginFrame> result = JDesktop.rtemp.getForEntity("http://localhost:8443/users", httpentity, LoginFrame.class);
             // Send request with GET method, and Headers.
-            ResponseEntity<MLoginData> response = JDesktop.rtemp.exchange("http://localhost:8443/user",
-                    HttpMethod.GET,
+        
+            /*
+            ResponseEntity<MLoginData> response = JDesktop.rtemp.exchange("http://localhost:8443/login",
+                    HttpMethod.POST,
                     httpentity,
                     MLoginData.class);
-
+                        */
+           
+            //ResponseEntity<String> response = JDesktop.rtemp.getForEntity(JDesktop.baseUrl + "user", String.class);
+            //String body = response.getBody();
+          
             if(response.getStatusCodeValue() == 200)
             {
                 System.out.print("Loggin is success");
 
-
-                /*
-
-                        setup interceptor
-                        for http methods
-
-                 */
-                interceptors = new ArrayList<>();
-                interceptors.add(new HttpHeaderInterceptor("Accept", MediaType.APPLICATION_JSON_VALUE));
-                interceptors.add(new HttpHeaderInterceptor("ContentType", MediaType.APPLICATION_JSON_VALUE));
-                interceptors.add(new HttpHeaderInterceptor("Authorization", "Basic " + authStringEnc));
-
-                // initialize RestTemplate
-                JDesktop.rtemp.setInterceptors(interceptors);
-                System.out.print("Interceptor for  RestTemplate is set" + "\n");
-           
-                
-                // close this JInternalFrame
-                this.setClosed(true);           
-                System.out.print("JInternalFrame closed " + "\n");
-                
-                
                 de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);
@@ -428,6 +426,10 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
         jButton1.setText(textlabelresponse.getBody().get(3).getDe());
 
     }
+    
+    
+    
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

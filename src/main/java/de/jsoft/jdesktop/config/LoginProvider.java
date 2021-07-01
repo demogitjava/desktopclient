@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package de.jsoft.jdesktop.config;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import org.springframework.context.annotation.Configuration;
+/**
+ *
+ * @author hoscho
+ */
+
+@Configuration
+public class LoginProvider 
+{
+ 
+    public static CloseableHttpClient client;
+    
+    public LoginProvider()
+    {
+        
+        
+    }
+    
+    
+    public void logintoServer(String stuser, String stpassword)
+    {
+        try {
+            CredentialsProvider provider = new BasicCredentialsProvider();
+            UsernamePasswordCredentials credentials = new UsernamePasswordCredentials(stuser, stpassword);
+            provider.setCredentials(AuthScope.ANY, credentials);
+            
+            client = HttpClientBuilder.create().setDefaultCredentialsProvider(provider).build();
+            
+            HttpResponse response = client.execute(
+                    new HttpGet(de.jsoft.JDesktop.baseUrl + "login"));
+            int statusCode = response.getStatusLine()
+                    .getStatusCode();
+            
+            assertThat(statusCode, equalTo(HttpStatus.SC_OK));
+        } catch (IOException ex) {
+            Logger.getLogger(LoginProvider.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static CloseableHttpClient getClient() {
+        return client;
+    }
+    
+    
+}
