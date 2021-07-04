@@ -63,9 +63,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
          Object obj = (Object) de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
          JDesktop.rtemp.getInterceptors();
        
-         ResponseEntity<List<Desktoplayout>> response = JDesktop.rtemp.exchange("http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel", HttpMethod.GET, null, new ParameterizedTypeReference<List<Desktoplayout>>() {});
-         List<Desktoplayout> todoList = response.getBody();
-                
+               
                 
          System.out.print("respadminonse");
     }
