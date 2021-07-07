@@ -4,16 +4,26 @@
  * and open the template in the editor.
  */
 package de.jsoft.jdesktop.kundenstamm;
-
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import de.jsoft.JDesktop;
 import static de.jsoft.JDesktop.baseUrl;
+import static de.jsoft.jdesktop.config.LoginProvider.client;
 import de.jsoft.jdesktop.login.LoginFrame;
 import de.jsoft.jdesktop.login.MLoginData;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.interceptors;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.util.EntityUtils;
+import org.json.simple.JSONObject;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -21,8 +31,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.web.client.RestClientException;
-
-
+import java.lang.reflect.Type;
+import com.google.gson.reflect.TypeToken;
 
 //Auskunft Kreditreform url 
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
@@ -48,24 +58,30 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     
     private void loadTextEntitystoPanel() 
     {
-        // load textentitys from server to panel
-       
-       
-        Desktoplayout dlayout = new Desktoplayout();
-         
-        //ResponseEntity<Desktoplayout> response = JDesktop.rtemp.exchange("http://localhost:8443/getloginlabel/customerpanel",
-        
-        // url http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel
-        
-        //ResponseEntity<Desktoplayout> response = JDesktop.rtemp.getForEntity("http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel", Desktoplayout.class);
+        try {
+            // load textentitys from server to panel
+            
+            
+            Desktoplayout dlayout = new Desktoplayout();
+            
+            // url http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel
+
+            
+            HttpResponse response1 = client.execute(
+                    new HttpGet(de.jsoft.JDesktop.baseUrl + "detaillabeldesktopentry/getloginlabel/customerpanel"));
           
-       
-         Object obj = (Object) de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
-         JDesktop.rtemp.getInterceptors();
-       
-               
-                
-         System.out.print("respadminonse");
+            String json = EntityUtils.toString(response1.getEntity()); 
+            Gson gson = new Gson(); 
+            
+            Type desktoplabelentity = new TypeToken<ArrayList<Desktoplayout>>(){}.getType();  
+            List<Desktoplayout> customerlistlabels = gson.fromJson(json, desktoplabelentity);
+           
+            String frametitle = (String) customerlistlabels.get(0).getDe();
+          
+            System.out.print("respadminonse");
+        } catch (IOException ex) {
+            Logger.getLogger(Kundenstramm.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
