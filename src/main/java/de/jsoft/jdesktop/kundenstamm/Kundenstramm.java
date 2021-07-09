@@ -33,6 +33,7 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.web.client.RestClientException;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
+import static de.jsoft.jdesktop.login.NewJInternalFrame.jComboBox1;
 
 //Auskunft Kreditreform url 
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
@@ -53,19 +54,14 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     {
         initComponents();
         
+        clearTextFieldsblank(); // jTabbedPane1 Kundenstamm 
         loadTextEntitystoPanel();
     }
     
     private void loadTextEntitystoPanel() 
     {
         try {
-            // load textentitys from server to panel
-            
-            
             Desktoplayout dlayout = new Desktoplayout();
-            
-            // url http://localhost:8443/detaillabeldesktopentry/getloginlabel/customerpanel
-
             
             HttpResponse response1 = client.execute(
                     new HttpGet(de.jsoft.JDesktop.baseUrl + "detaillabeldesktopentry/getloginlabel/customerpanel"));
@@ -76,9 +72,62 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             Type desktoplabelentity = new TypeToken<ArrayList<Desktoplayout>>(){}.getType();  
             List<Desktoplayout> customerlistlabels = gson.fromJson(json, desktoplabelentity);
            
-            String frametitle = (String) customerlistlabels.get(0).getDe();
+           // String frametitle = (String) customerlistlabels.get(0).getDe();
           
-            System.out.print("respadminonse");
+            
+           
+        // 0 = de
+        // 1 = fr
+        // 2 = uk
+        // 3 = esp 
+        // 4 = it
+        // 5 = tr
+        
+        int selectedlanguage = jComboBox1.getSelectedIndex();
+        
+        switch(selectedlanguage)
+        {
+            // german
+            case 0:
+            {
+                setTextGermanEntity(customerlistlabels);
+                break;
+            }
+            
+            case 1:
+            {
+                
+                
+                break;
+                
+            }
+            
+            
+            case 2:
+            {
+                break;
+            }
+            
+            case 3:
+            {
+                break;
+            }
+            
+            case 4:
+            {
+                break;
+            }
+            
+            case 5:
+            {
+                break;
+            }
+            default:
+                break;
+        }
+            
+            
+            
         } catch (IOException ex) {
             Logger.getLogger(Kundenstramm.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -345,39 +394,38 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel11)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel2))
                                     .addComponent(jLabel12)
-                                    .addGap(34, 34, 34)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel17)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel17)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField10))
-                                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jLabel16)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField15, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField15)
+                                .addGap(145, 145, 145)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField22)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -390,7 +438,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                             .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField20)
                             .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -479,7 +527,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kundenstamm", jPanel1);
@@ -574,6 +622,162 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
 
+    private void clearTextFieldsblank()
+    {
+        
+        
+        // Kundenstamm
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField10.setText("");
+        jTextField11.setText("");
+        jTextField12.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField15.setText("");
+        jTextField16.setText("");
+        jTextField17.setText("");
+        jTextField18.setText("");
+        jTextField19.setText("");
+        jTextField20.setText("");
+        jTextField21.setText("");
+        jTextField22.setText("");
+        jTextField23.setText("");
+      
+        
+        
+    }
+    
+    private void setTextGermanEntity(List<Desktoplayout> customerlistlabels)
+    {
+        
+        // customerpanel title
+        String frametitle = (String) customerlistlabels.get(0).getDe();
+        this.setTitle(frametitle);
+        
+        
+        
+        /*
+        
+                Customerpanel
+        
+        */
+        
+        // Text JTabbedPane1
+        String stcustomertextentity = (String) customerlistlabels.get(1).getDe();
+        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        
+        // id 7  Text jLabel1   
+        String stlabel1 = (String) customerlistlabels.get(2).getDe();
+        this.jLabel1.setText(stlabel1);
+        
+        // id 8 Text jLabel3
+        String stlabel3 = (String) customerlistlabels.get(3).getDe();
+        this.jLabel3.setText(stlabel3);
+        
+        // id 9 Text jLabel4
+        String stlabel4 = (String) customerlistlabels.get(4).getDe();
+        this.jLabel4.setText(stlabel4);
+        
+        // id 10 Text jLabel9
+        String stlabel9 = (String) customerlistlabels.get(5).getDe();
+        this.jLabel9.setText(stlabel9);
+        
+        // id 11 Text jLabel10
+        String stlabel10 = (String) customerlistlabels.get(6).getDe();
+        this.jLabel10.setText(stlabel10);
+        
+        
+        // id 12 Text jLabel11
+        String stlabel11 = (String) customerlistlabels.get(7).getDe();
+        this.jLabel11.setText(stlabel11);
+        
+        // id 13 Text jLabel12
+        String stlabel12 = (String) customerlistlabels.get(8).getDe();
+        this.jLabel12.setText(stlabel12);
+        
+        // id 14 Text jLabel13
+        String stlabel13 = (String) customerlistlabels.get(9).getDe();
+        this.jLabel13.setText(stlabel13);
+        
+        // id 15 Text JLabel14
+        String stlabel14 = (String) customerlistlabels.get(10).getDe();
+        this.jLabel14.setText(stlabel14);
+        
+        // id 16 Text jButton3
+        String stbutton3 = (String) customerlistlabels.get(11).getDe();
+        this.jButton3.setText(stbutton3);
+        
+        // id 17 Text jLabel2
+        String stlabel2 = (String) customerlistlabels.get(12).getDe();
+        this.jLabel2.setText(stlabel2);
+        
+        // id 18 Text jLabel5
+        String stlabel5 = (String) customerlistlabels.get(13).getDe();
+        this.jLabel5.setText(stlabel5);
+        
+        // id 19 Text jLabel6
+        String stlabel6 = (String) customerlistlabels.get(14).getDe();
+        this.jLabel6.setText(stlabel6);
+        
+        // id 20 Text jLabel7
+        String stlabel7 = (String) customerlistlabels.get(15).getDe();
+        this.jLabel7.setText(stlabel7);
+        
+        
+        // id 21 Text jLabel8
+        String stlabel8 = (String) customerlistlabels.get(16).getDe();
+        this.jLabel8.setText(stlabel8);
+        
+        // id 22 Text jLabel15
+        String stlabel15 = (String) customerlistlabels.get(17).getDe();
+        this.jLabel15.setText(stlabel15);
+        
+        
+        // id 23 Text jLabel16
+        String stlabel16 = (String) customerlistlabels.get(18).getDe();
+        this.jLabel16.setText(stlabel16);
+        
+        // id 24 Text jButton2
+        String stbutton2 = (String) customerlistlabels.get(19).getDe();
+        this.jButton2.setText(stbutton2);
+        
+        // id 25 Text jLabel17
+        String stlabel17 = (String) customerlistlabels.get(20).getDe();
+        this.jLabel17.setText(stlabel17);
+        
+        // id 26 Text jButton8
+        String stbutton8 = (String) customerlistlabels.get(21).getDe();
+        this.jButton8.setText(stbutton8);
+        
+        // id 27 Text jButton9
+        String stbutton9 = (String) customerlistlabels.get(22).getDe();
+        this.jButton9.setText(stbutton9);
+        
+        // id 28 Text jButton10
+        String stbutton10 = (String) customerlistlabels.get(23).getDe();
+        this.jButton10.setText(stbutton10);
+        
+        // id 29 Text jButton11
+        String stbutton11 = (String) customerlistlabels.get(24).getDe();
+        this.jButton11.setText(stbutton11);
+        
+        // id 30 Text jLabel18
+        String stlabel18 = (String) customerlistlabels.get(25).getDe();
+        this.jLabel18.setText(stlabel18);
+        
+        
+        
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
