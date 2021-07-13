@@ -72,18 +72,16 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             Type desktoplabelentity = new TypeToken<ArrayList<Desktoplayout>>(){}.getType();  
             List<Desktoplayout> customerlistlabels = gson.fromJson(json, desktoplabelentity);
            
-           // String frametitle = (String) customerlistlabels.get(0).getDe();
-          
-            
-           
-        // 0 = de
-        // 1 = fr
-        // 2 = uk
-        // 3 = esp 
-        // 4 = it
-        // 5 = tr
-        
-        int selectedlanguage = jComboBox1.getSelectedIndex();
+            // String frametitle = (String) customerlistlabels.get(0).getDe();
+            // 0 = de
+            // 1 = fr
+            // 2 = uk
+            // 3 = esp
+            // 4 = it
+            // 5 = tr
+            //int selectedlanguage = de.jsoft.jdesktop.login.NewJInternalFrame.selectedlanguage;
+           Integer selectedlanguage = (Integer) de.jsoft.JDesktop.global;
+            //Integer selectedlanguage = de.jsoft.JDesktop.languagecode.intValue();
         
         switch(selectedlanguage)
         {
@@ -93,33 +91,38 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 setTextGermanEntity(customerlistlabels);
                 break;
             }
-            
+            // frensh
             case 1:
             {
-                
-                
+                setTextFrenshEntity(customerlistlabels);
                 break;
                 
             }
             
-            
+            // english
             case 2:
             {
+                setTextEnglishEntity(customerlistlabels);
                 break;
             }
             
+            // spanish
             case 3:
             {
+                setTextSpanishEntity(customerlistlabels);
                 break;
             }
             
+            // italy
             case 4:
             {
+                setTextItalyEntity(customerlistlabels);
                 break;
             }
-            
+            // türky
             case 5:
             {
+                setTextTuerkyEntity(customerlistlabels);
                 break;
             }
             default:
@@ -674,7 +677,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         /*
         
                 Customerpanel
-        
+                JTab1 Kundenstamm
         */
         
         // Text JTabbedPane1
@@ -787,6 +790,632 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }
     
+       
+      private void setTextSpanishEntity(List<Desktoplayout> customerlistlabels)
+    {
+        
+        // customerpanel title
+        String frametitle = (String) customerlistlabels.get(0).getEsp();
+        this.setTitle(frametitle);
+        
+        
+        
+        /*
+        
+                Customerpanel
+                JTab1 Kundenstamm
+        */
+        
+        // Text JTabbedPane1
+        String stcustomertextentity = (String) customerlistlabels.get(1).getEsp();
+        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        
+        // id 7  Text jLabel1   
+        String stlabel1 = (String) customerlistlabels.get(2).getEsp();
+        this.jLabel1.setText(stlabel1);
+        
+        // id 8 Text jLabel3
+        String stlabel3 = (String) customerlistlabels.get(3).getEsp();
+        this.jLabel3.setText(stlabel3);
+        
+        // id 9 Text jLabel4
+        String stlabel4 = (String) customerlistlabels.get(4).getEsp();
+        this.jLabel4.setText(stlabel4);
+        
+        // id 10 Text jLabel9
+        String stlabel9 = (String) customerlistlabels.get(5).getEsp();
+        this.jLabel9.setText(stlabel9);
+        
+        // id 11 Text jLabel10
+        String stlabel10 = (String) customerlistlabels.get(6).getEsp();
+        this.jLabel10.setText(stlabel10);
+        
+        
+        // id 12 Text jLabel11
+        String stlabel11 = (String) customerlistlabels.get(7).getEsp();
+        this.jLabel11.setText(stlabel11);
+        
+        // id 13 Text jLabel12
+        String stlabel12 = (String) customerlistlabels.get(8).getEsp();
+        this.jLabel12.setText(stlabel12);
+        
+        // id 14 Text jLabel13
+        String stlabel13 = (String) customerlistlabels.get(9).getEsp();
+        this.jLabel13.setText(stlabel13);
+        
+        // id 15 Text JLabel14
+        String stlabel14 = (String) customerlistlabels.get(10).getEsp();
+        this.jLabel14.setText(stlabel14);
+        
+        // id 16 Text jButton3
+        String stbutton3 = (String) customerlistlabels.get(11).getEsp();
+        this.jButton3.setText(stbutton3);
+        
+        // id 17 Text jLabel2
+        String stlabel2 = (String) customerlistlabels.get(12).getEsp();
+        this.jLabel2.setText(stlabel2);
+        
+        // id 18 Text jLabel5
+        String stlabel5 = (String) customerlistlabels.get(13).getEsp();
+        this.jLabel5.setText(stlabel5);
+        
+        // id 19 Text jLabel6
+        String stlabel6 = (String) customerlistlabels.get(14).getEsp();
+        this.jLabel6.setText(stlabel6);
+        
+        // id 20 Text jLabel7
+        String stlabel7 = (String) customerlistlabels.get(15).getEsp();
+        this.jLabel7.setText(stlabel7);
+        
+        
+        // id 21 Text jLabel8
+        String stlabel8 = (String) customerlistlabels.get(16).getEsp();
+        this.jLabel8.setText(stlabel8);
+        
+        // id 22 Text jLabel15
+        String stlabel15 = (String) customerlistlabels.get(17).getEsp();
+        this.jLabel15.setText(stlabel15);
+        
+        
+        // id 23 Text jLabel16
+        String stlabel16 = (String) customerlistlabels.get(18).getEsp();
+        this.jLabel16.setText(stlabel16);
+        
+        // id 24 Text jButton2
+        String stbutton2 = (String) customerlistlabels.get(19).getEsp();
+        this.jButton2.setText(stbutton2);
+        
+        // id 25 Text jLabel17
+        String stlabel17 = (String) customerlistlabels.get(20).getEsp();
+        this.jLabel17.setText(stlabel17);
+        
+        // id 26 Text jButton8
+        String stbutton8 = (String) customerlistlabels.get(21).getEsp();
+        this.jButton8.setText(stbutton8);
+        
+        // id 27 Text jButton9
+        String stbutton9 = (String) customerlistlabels.get(22).getEsp();
+        this.jButton9.setText(stbutton9);
+        
+        // id 28 Text jButton10
+        String stbutton10 = (String) customerlistlabels.get(23).getEsp();
+        this.jButton10.setText(stbutton10);
+        
+        // id 29 Text jButton11
+        String stbutton11 = (String) customerlistlabels.get(24).getEsp();
+        this.jButton11.setText(stbutton11);
+        
+        // id 30 Text jLabel18
+        String stlabel18 = (String) customerlistlabels.get(25).getEsp();
+        this.jLabel18.setText(stlabel18);
+        
+        // id 36 Text JButton12
+        String stbutton12 = (String) customerlistlabels.get(31).getEsp();
+        this.jButton12.setText(stbutton12);
+        
+        
+    }
+      
+        private void setTextFrenshEntity(List<Desktoplayout> customerlistlabels)
+    {
+        
+        // customerpanel title
+        String frametitle = (String) customerlistlabels.get(0).getFr();
+        this.setTitle(frametitle);
+        
+        
+        
+        /*
+        
+                Customerpanel
+                JTab1 Kundenstamm
+        */
+        
+        // Text JTabbedPane1
+        String stcustomertextentity = (String) customerlistlabels.get(1).getFr();
+        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        
+        // id 7  Text jLabel1   
+        String stlabel1 = (String) customerlistlabels.get(2).getFr();
+        this.jLabel1.setText(stlabel1);
+        
+        // id 8 Text jLabel3
+        String stlabel3 = (String) customerlistlabels.get(3).getFr();
+        this.jLabel3.setText(stlabel3);
+        
+        // id 9 Text jLabel4
+        String stlabel4 = (String) customerlistlabels.get(4).getFr();
+        this.jLabel4.setText(stlabel4);
+        
+        // id 10 Text jLabel9
+        String stlabel9 = (String) customerlistlabels.get(5).getFr();
+        this.jLabel9.setText(stlabel9);
+        
+        // id 11 Text jLabel10
+        String stlabel10 = (String) customerlistlabels.get(6).getFr();
+        this.jLabel10.setText(stlabel10);
+        
+        
+        // id 12 Text jLabel11
+        String stlabel11 = (String) customerlistlabels.get(7).getFr();
+        this.jLabel11.setText(stlabel11);
+        
+        // id 13 Text jLabel12
+        String stlabel12 = (String) customerlistlabels.get(8).getFr();
+        this.jLabel12.setText(stlabel12);
+        
+        // id 14 Text jLabel13
+        String stlabel13 = (String) customerlistlabels.get(9).getFr();
+        this.jLabel13.setText(stlabel13);
+        
+        // id 15 Text JLabel14
+        String stlabel14 = (String) customerlistlabels.get(10).getFr();
+        this.jLabel14.setText(stlabel14);
+        
+        // id 16 Text jButton3
+        String stbutton3 = (String) customerlistlabels.get(11).getFr();
+        this.jButton3.setText(stbutton3);
+        
+        // id 17 Text jLabel2
+        String stlabel2 = (String) customerlistlabels.get(12).getFr();
+        this.jLabel2.setText(stlabel2);
+        
+        // id 18 Text jLabel5
+        String stlabel5 = (String) customerlistlabels.get(13).getFr();
+        this.jLabel5.setText(stlabel5);
+        
+        // id 19 Text jLabel6
+        String stlabel6 = (String) customerlistlabels.get(14).getFr();
+        this.jLabel6.setText(stlabel6);
+        
+        // id 20 Text jLabel7
+        String stlabel7 = (String) customerlistlabels.get(15).getFr();
+        this.jLabel7.setText(stlabel7);
+        
+        
+        // id 21 Text jLabel8
+        String stlabel8 = (String) customerlistlabels.get(16).getFr();
+        this.jLabel8.setText(stlabel8);
+        
+        // id 22 Text jLabel15
+        String stlabel15 = (String) customerlistlabels.get(17).getFr();
+        this.jLabel15.setText(stlabel15);
+        
+        
+        // id 23 Text jLabel16
+        String stlabel16 = (String) customerlistlabels.get(18).getFr();
+        this.jLabel16.setText(stlabel16);
+        
+        // id 24 Text jButton2
+        String stbutton2 = (String) customerlistlabels.get(19).getFr();
+        this.jButton2.setText(stbutton2);
+        
+        // id 25 Text jLabel17
+        String stlabel17 = (String) customerlistlabels.get(20).getFr();
+        this.jLabel17.setText(stlabel17);
+        
+        // id 26 Text jButton8
+        String stbutton8 = (String) customerlistlabels.get(21).getFr();
+        this.jButton8.setText(stbutton8);
+        
+        // id 27 Text jButton9
+        String stbutton9 = (String) customerlistlabels.get(22).getFr();
+        this.jButton9.setText(stbutton9);
+        
+        // id 28 Text jButton10
+        String stbutton10 = (String) customerlistlabels.get(23).getFr();
+        this.jButton10.setText(stbutton10);
+        
+        // id 29 Text jButton11
+        String stbutton11 = (String) customerlistlabels.get(24).getFr();
+        this.jButton11.setText(stbutton11);
+        
+        // id 30 Text jLabel18
+        String stlabel18 = (String) customerlistlabels.get(25).getFr();
+        this.jLabel18.setText(stlabel18);
+        
+        // id 36 Text JButton12
+        String stbutton12 = (String) customerlistlabels.get(31).getFr();
+        this.jButton12.setText(stbutton12);
+        
+        
+    }  
+        
+       private void setTextItalyEntity(List<Desktoplayout> customerlistlabels)
+    {
+        
+        // customerpanel title
+        String frametitle = (String) customerlistlabels.get(0).getIt();
+        this.setTitle(frametitle);
+        
+        
+        
+        /*
+        
+                Customerpanel
+                JTab1 Kundenstamm
+        */
+        
+        // Text JTabbedPane1
+        String stcustomertextentity = (String) customerlistlabels.get(1).getIt();
+        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        
+        // id 7  Text jLabel1   
+        String stlabel1 = (String) customerlistlabels.get(2).getIt();
+        this.jLabel1.setText(stlabel1);
+        
+        // id 8 Text jLabel3
+        String stlabel3 = (String) customerlistlabels.get(3).getIt();
+        this.jLabel3.setText(stlabel3);
+        
+        // id 9 Text jLabel4
+        String stlabel4 = (String) customerlistlabels.get(4).getIt();
+        this.jLabel4.setText(stlabel4);
+        
+        // id 10 Text jLabel9
+        String stlabel9 = (String) customerlistlabels.get(5).getIt();
+        this.jLabel9.setText(stlabel9);
+        
+        // id 11 Text jLabel10
+        String stlabel10 = (String) customerlistlabels.get(6).getIt();
+        this.jLabel10.setText(stlabel10);
+        
+        
+        // id 12 Text jLabel11
+        String stlabel11 = (String) customerlistlabels.get(7).getIt();
+        this.jLabel11.setText(stlabel11);
+        
+        // id 13 Text jLabel12
+        String stlabel12 = (String) customerlistlabels.get(8).getIt();
+        this.jLabel12.setText(stlabel12);
+        
+        // id 14 Text jLabel13
+        String stlabel13 = (String) customerlistlabels.get(9).getIt();
+        this.jLabel13.setText(stlabel13);
+        
+        // id 15 Text JLabel14
+        String stlabel14 = (String) customerlistlabels.get(10).getIt();
+        this.jLabel14.setText(stlabel14);
+        
+        // id 16 Text jButton3
+        String stbutton3 = (String) customerlistlabels.get(11).getIt();
+        this.jButton3.setText(stbutton3);
+        
+        // id 17 Text jLabel2
+        String stlabel2 = (String) customerlistlabels.get(12).getIt();
+        this.jLabel2.setText(stlabel2);
+        
+        // id 18 Text jLabel5
+        String stlabel5 = (String) customerlistlabels.get(13).getIt();
+        this.jLabel5.setText(stlabel5);
+        
+        // id 19 Text jLabel6
+        String stlabel6 = (String) customerlistlabels.get(14).getIt();
+        this.jLabel6.setText(stlabel6);
+        
+        // id 20 Text jLabel7
+        String stlabel7 = (String) customerlistlabels.get(15).getIt();
+        this.jLabel7.setText(stlabel7);
+        
+        
+        // id 21 Text jLabel8
+        String stlabel8 = (String) customerlistlabels.get(16).getIt();
+        this.jLabel8.setText(stlabel8);
+        
+        // id 22 Text jLabel15
+        String stlabel15 = (String) customerlistlabels.get(17).getIt();
+        this.jLabel15.setText(stlabel15);
+        
+        
+        // id 23 Text jLabel16
+        String stlabel16 = (String) customerlistlabels.get(18).getIt();
+        this.jLabel16.setText(stlabel16);
+        
+        // id 24 Text jButton2
+        String stbutton2 = (String) customerlistlabels.get(19).getIt();
+        this.jButton2.setText(stbutton2);
+        
+        // id 25 Text jLabel17
+        String stlabel17 = (String) customerlistlabels.get(20).getIt();
+        this.jLabel17.setText(stlabel17);
+        
+        // id 26 Text jButton8
+        String stbutton8 = (String) customerlistlabels.get(21).getIt();
+        this.jButton8.setText(stbutton8);
+        
+        // id 27 Text jButton9
+        String stbutton9 = (String) customerlistlabels.get(22).getIt();
+        this.jButton9.setText(stbutton9);
+        
+        // id 28 Text jButton10
+        String stbutton10 = (String) customerlistlabels.get(23).getIt();
+        this.jButton10.setText(stbutton10);
+        
+        // id 29 Text jButton11
+        String stbutton11 = (String) customerlistlabels.get(24).getIt();
+        this.jButton11.setText(stbutton11);
+        
+        // id 30 Text jLabel18
+        String stlabel18 = (String) customerlistlabels.get(25).getIt();
+        this.jLabel18.setText(stlabel18);
+        
+        // id 36 Text JButton12
+        String stbutton12 = (String) customerlistlabels.get(31).getIt();
+        this.jButton12.setText(stbutton12);
+        
+        
+    }  
+       
+           private void setTextTuerkyEntity(List<Desktoplayout> customerlistlabels)
+    {
+        
+        // customerpanel title
+        String frametitle = (String) customerlistlabels.get(0).getTr();
+        this.setTitle(frametitle);
+        
+        
+        
+        /*
+        
+                Customerpanel
+                JTab1 Kundenstamm
+        */
+        
+        // Text JTabbedPane1
+        String stcustomertextentity = (String) customerlistlabels.get(1).getTr();
+        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        
+        // id 7  Text jLabel1   
+        String stlabel1 = (String) customerlistlabels.get(2).getTr();
+        this.jLabel1.setText(stlabel1);
+        
+        // id 8 Text jLabel3
+        String stlabel3 = (String) customerlistlabels.get(3).getTr();
+        this.jLabel3.setText(stlabel3);
+        
+        // id 9 Text jLabel4
+        String stlabel4 = (String) customerlistlabels.get(4).getTr();
+        this.jLabel4.setText(stlabel4);
+        
+        // id 10 Text jLabel9
+        String stlabel9 = (String) customerlistlabels.get(5).getTr();
+        this.jLabel9.setText(stlabel9);
+        
+        // id 11 Text jLabel10
+        String stlabel10 = (String) customerlistlabels.get(6).getTr();
+        this.jLabel10.setText(stlabel10);
+        
+        
+        // id 12 Text jLabel11
+        String stlabel11 = (String) customerlistlabels.get(7).getTr();
+        this.jLabel11.setText(stlabel11);
+        
+        // id 13 Text jLabel12
+        String stlabel12 = (String) customerlistlabels.get(8).getTr();
+        this.jLabel12.setText(stlabel12);
+        
+        // id 14 Text jLabel13
+        String stlabel13 = (String) customerlistlabels.get(9).getTr();
+        this.jLabel13.setText(stlabel13);
+        
+        // id 15 Text JLabel14
+        String stlabel14 = (String) customerlistlabels.get(10).getTr();
+        this.jLabel14.setText(stlabel14);
+        
+        // id 16 Text jButton3
+        String stbutton3 = (String) customerlistlabels.get(11).getTr();
+        this.jButton3.setText(stbutton3);
+        
+        // id 17 Text jLabel2
+        String stlabel2 = (String) customerlistlabels.get(12).getTr();
+        this.jLabel2.setText(stlabel2);
+        
+        // id 18 Text jLabel5
+        String stlabel5 = (String) customerlistlabels.get(13).getTr();
+        this.jLabel5.setText(stlabel5);
+        
+        // id 19 Text jLabel6
+        String stlabel6 = (String) customerlistlabels.get(14).getTr();
+        this.jLabel6.setText(stlabel6);
+        
+        // id 20 Text jLabel7
+        String stlabel7 = (String) customerlistlabels.get(15).getTr();
+        this.jLabel7.setText(stlabel7);
+        
+        
+        // id 21 Text jLabel8
+        String stlabel8 = (String) customerlistlabels.get(16).getTr();
+        this.jLabel8.setText(stlabel8);
+        
+        // id 22 Text jLabel15
+        String stlabel15 = (String) customerlistlabels.get(17).getTr();
+        this.jLabel15.setText(stlabel15);
+        
+        
+        // id 23 Text jLabel16
+        String stlabel16 = (String) customerlistlabels.get(18).getTr();
+        this.jLabel16.setText(stlabel16);
+        
+        // id 24 Text jButton2
+        String stbutton2 = (String) customerlistlabels.get(19).getTr();
+        this.jButton2.setText(stbutton2);
+        
+        // id 25 Text jLabel17
+        String stlabel17 = (String) customerlistlabels.get(20).getTr();
+        this.jLabel17.setText(stlabel17);
+        
+        // id 26 Text jButton8
+        String stbutton8 = (String) customerlistlabels.get(21).getTr();
+        this.jButton8.setText(stbutton8);
+        
+        // id 27 Text jButton9
+        String stbutton9 = (String) customerlistlabels.get(22).getTr();
+        this.jButton9.setText(stbutton9);
+        
+        // id 28 Text jButton10
+        String stbutton10 = (String) customerlistlabels.get(23).getTr();
+        this.jButton10.setText(stbutton10);
+        
+        // id 29 Text jButton11
+        String stbutton11 = (String) customerlistlabels.get(24).getTr();
+        this.jButton11.setText(stbutton11);
+        
+        // id 30 Text jLabel18
+        String stlabel18 = (String) customerlistlabels.get(25).getTr();
+        this.jLabel18.setText(stlabel18);
+        
+        // id 36 Text JButton12
+        String stbutton12 = (String) customerlistlabels.get(31).getTr();
+        this.jButton12.setText(stbutton12);
+        
+        
+    }  
+            
+          private void setTextEnglishEntity(List<Desktoplayout> customerlistlabels)
+    {
+        
+        // customerpanel title
+        String frametitle = (String) customerlistlabels.get(0).getUk();
+        this.setTitle(frametitle);
+        
+        
+        
+        /*
+        
+                Customerpanel
+                JTab1 Kundenstamm
+        */
+        
+        // Text JTabbedPane1
+        String stcustomertextentity = (String) customerlistlabels.get(1).getUk();
+        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        
+        // id 7  Text jLabel1   
+        String stlabel1 = (String) customerlistlabels.get(2).getUk();
+        this.jLabel1.setText(stlabel1);
+        
+        // id 8 Text jLabel3
+        String stlabel3 = (String) customerlistlabels.get(3).getUk();
+        this.jLabel3.setText(stlabel3);
+        
+        // id 9 Text jLabel4
+        String stlabel4 = (String) customerlistlabels.get(4).getUk();
+        this.jLabel4.setText(stlabel4);
+        
+        // id 10 Text jLabel9
+        String stlabel9 = (String) customerlistlabels.get(5).getUk();
+        this.jLabel9.setText(stlabel9);
+        
+        // id 11 Text jLabel10
+        String stlabel10 = (String) customerlistlabels.get(6).getUk();
+        this.jLabel10.setText(stlabel10);
+        
+        
+        // id 12 Text jLabel11
+        String stlabel11 = (String) customerlistlabels.get(7).getUk();
+        this.jLabel11.setText(stlabel11);
+        
+        // id 13 Text jLabel12
+        String stlabel12 = (String) customerlistlabels.get(8).getUk();
+        this.jLabel12.setText(stlabel12);
+        
+        // id 14 Text jLabel13
+        String stlabel13 = (String) customerlistlabels.get(9).getUk();
+        this.jLabel13.setText(stlabel13);
+        
+        // id 15 Text JLabel14
+        String stlabel14 = (String) customerlistlabels.get(10).getUk();
+        this.jLabel14.setText(stlabel14);
+        
+        // id 16 Text jButton3
+        String stbutton3 = (String) customerlistlabels.get(11).getUk();
+        this.jButton3.setText(stbutton3);
+        
+        // id 17 Text jLabel2
+        String stlabel2 = (String) customerlistlabels.get(12).getUk();
+        this.jLabel2.setText(stlabel2);
+        
+        // id 18 Text jLabel5
+        String stlabel5 = (String) customerlistlabels.get(13).getUk();
+        this.jLabel5.setText(stlabel5);
+        
+        // id 19 Text jLabel6
+        String stlabel6 = (String) customerlistlabels.get(14).getUk();
+        this.jLabel6.setText(stlabel6);
+        
+        // id 20 Text jLabel7
+        String stlabel7 = (String) customerlistlabels.get(15).getUk();
+        this.jLabel7.setText(stlabel7);
+        
+        
+        // id 21 Text jLabel8
+        String stlabel8 = (String) customerlistlabels.get(16).getUk();
+        this.jLabel8.setText(stlabel8);
+        
+        // id 22 Text jLabel15
+        String stlabel15 = (String) customerlistlabels.get(17).getUk();
+        this.jLabel15.setText(stlabel15);
+        
+        
+        // id 23 Text jLabel16
+        String stlabel16 = (String) customerlistlabels.get(18).getUk();
+        this.jLabel16.setText(stlabel16);
+        
+        // id 24 Text jButton2
+        String stbutton2 = (String) customerlistlabels.get(19).getUk();
+        this.jButton2.setText(stbutton2);
+        
+        // id 25 Text jLabel17
+        String stlabel17 = (String) customerlistlabels.get(20).getUk();
+        this.jLabel17.setText(stlabel17);
+        
+        // id 26 Text jButton8
+        String stbutton8 = (String) customerlistlabels.get(21).getUk();
+        this.jButton8.setText(stbutton8);
+        
+        // id 27 Text jButton9
+        String stbutton9 = (String) customerlistlabels.get(22).getUk();
+        this.jButton9.setText(stbutton9);
+        
+        // id 28 Text jButton10
+        String stbutton10 = (String) customerlistlabels.get(23).getUk();
+        this.jButton10.setText(stbutton10);
+        
+        // id 29 Text jButton11
+        String stbutton11 = (String) customerlistlabels.get(24).getUk();
+        this.jButton11.setText(stbutton11);
+        
+        // id 30 Text jLabel18
+        String stlabel18 = (String) customerlistlabels.get(25).getUk();
+        this.jLabel18.setText(stlabel18);
+        
+        // id 36 Text JButton12
+        String stbutton12 = (String) customerlistlabels.get(31).getUk();
+        this.jButton12.setText(stbutton12);
+        
+        
+    }
+      
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
