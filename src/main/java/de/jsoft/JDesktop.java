@@ -24,14 +24,21 @@ public class JDesktop
     public static RestTemplate rtemp;
     
     public static String baseUrl;
-
     public static JDesktopPane jdeskpane;
 
+    public static int lgglobal;
+    
     public JDesktop()
     {
 
     }
     
+    public static Integer setLgtoPanel(int indexlanguage)
+    {
+       
+        lgglobal = indexlanguage;
+        return lgglobal;
+    }
     
     
     public static void main(String[] args)

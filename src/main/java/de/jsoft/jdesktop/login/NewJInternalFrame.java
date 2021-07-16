@@ -200,11 +200,13 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
         // 5 = tr
         
         
-        int size = jComboBox1.getItemCount();
-        int selectedlanguage = jComboBox1.getSelectedIndex();
-        
+     int size = jComboBox1.getItemCount();
+        Integer getcomblg = (int) jComboBox1.getSelectedIndex();
+        Integer selectedlanguage = (int) getcomblg;
        
         
+       
+        //  de.jsoft.JDesktop.lgglobal = jComboBox1.getSelectedIndex();
         switch(selectedlanguage)
         {
           
@@ -318,8 +320,10 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       // TODO add your handling code here:
-        
-     
+       Integer selectedlanguage = (int) jComboBox1.getSelectedIndex();
+       de.jsoft.JDesktop.setLgtoPanel(selectedlanguage);
+       
+       
        String stuser = jTextField1.getText();
        char[] stpass = jPasswordField1.getPassword();
 
@@ -362,8 +366,10 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
           
             if(response.getStatusCodeValue() == 200)
             {
-                System.out.print("Loggin is success");
-
+                  System.out.print("Loggin is success");
+                
+           
+                  
                 de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);

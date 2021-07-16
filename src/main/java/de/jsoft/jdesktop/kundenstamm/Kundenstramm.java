@@ -80,8 +80,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             // 4 = it
             // 5 = tr
             //int selectedlanguage = de.jsoft.jdesktop.login.NewJInternalFrame.selectedlanguage;
-           Integer selectedlanguage = (Integer) de.jsoft.JDesktop.global;
-            //Integer selectedlanguage = de.jsoft.JDesktop.languagecode.intValue();
+             Integer selectedlanguage = (int) de.jsoft.JDesktop.lgglobal;
         
         switch(selectedlanguage)
         {
