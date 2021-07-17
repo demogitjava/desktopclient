@@ -363,13 +363,18 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
            
             //ResponseEntity<String> response = JDesktop.rtemp.getForEntity(JDesktop.baseUrl + "user", String.class);
             //String body = response.getBody();
-          
+       
             if(response.getStatusCodeValue() == 200)
             {
-                  System.out.print("Loggin is success");
+                System.out.print("Loggin is success");
                 
-           
+                de.jsoft.jdesktop.login.NewJInternalFrame loginframe = new de.jsoft.jdesktop.login.NewJInternalFrame();
+                loginframe.dispose();
+                
+                JDesktop.jdeskpane.removeAll();
                   
+                
+               
                 de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);
@@ -377,7 +382,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
                 JDesktop.jdeskpane.add(kdstamm);
                 
                 
-            
+                JDesktop.jdeskpane.repaint();
                 
                 
             }
