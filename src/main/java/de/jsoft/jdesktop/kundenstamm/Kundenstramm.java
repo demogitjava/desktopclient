@@ -223,10 +223,15 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jToolBar1.setRollover(true);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Email");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton1);
 
         getContentPane().add(jToolBar1, java.awt.BorderLayout.PAGE_START);
@@ -629,6 +634,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        de.jsoft.jdesktop.emails.EmailClient emailclient = new de.jsoft.jdesktop.emails.EmailClient();
+        emailclient.setVisible(true);
+        emailclient.setMaximizable(true);
+        emailclient.pack();
+        emailclient.moveToFront();
+        de.jsoft.JDesktop.jdeskpane.add(emailclient);
+        
+      
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     private void clearTextFieldsblank()
