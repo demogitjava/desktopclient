@@ -33,7 +33,36 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.web.client.RestClientException;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
+import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.jComboBox1;
+
+import de.jsoft.JDesktop;
+import static de.jsoft.JDesktop.rtemp;
+import java.awt.Dimension;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import org.springframework.stereotype.Controller;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.UUID;
+//import org.springframework.boot.developertools.remote.client.HttpHeaderInterceptor;
+import org.springframework.boot.devtools.remote.client.HttpHeaderInterceptor;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Import;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
+import sun.misc.BASE64Encoder;
+
 
 //Auskunft Kreditreform url 
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
@@ -42,6 +71,7 @@ import static de.jsoft.jdesktop.login.NewJInternalFrame.jComboBox1;
  *
  * @author hoscho
  */
+@Import({ SecurityConfiguration.class })
 public class Kundenstramm extends javax.swing.JInternalFrame {
 
    
@@ -356,6 +386,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jLabel18.setText("QR Code");
 
         jButton12.setText("suchen");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -647,6 +682,26 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
       
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+           
+        
+      
+       // de.jsoft.JDesktop.baseUrl + "/customer/getCustomerbyName/" + jTextField13.getText()
+     
+        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        
+         ResponseEntity<List<MKundenstamm>> textlabelresponse = JDesktop.rtemp.exchange(
+                de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/" + jTextField13.getText(),
+                HttpMethod.GET,
+                requestEntity,
+                new ParameterizedTypeReference<List<MKundenstamm>>(){});
+        //ResponseEntity<MKundenstamm> responseEntity = de.jsoft.JDesktop.rtemp.exchange(de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/", HttpMethod.GET, requestEntity, .class, jTextField13.getText());
+     
+        System.out.print("test");
+              
+                
+    }//GEN-LAST:event_jButton12ActionPerformed
 
 
     private void clearTextFieldsblank()

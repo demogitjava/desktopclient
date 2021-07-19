@@ -7,9 +7,14 @@ package de.jsoft.jdesktop.config;
 
 import de.jsoft.JDesktop;
 import de.jsoft.jdesktop.login.NewJInternalFrame;
+import io.netty.handler.codec.Headers;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.auth.AuthScope;
@@ -22,7 +27,22 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import org.springframework.boot.devtools.remote.client.HttpHeaderInterceptor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpRequest;
+import org.springframework.http.MediaType;
+import org.springframework.http.client.ClientHttpRequestExecution;
+import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.http.client.ClientHttpResponse;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
 /**
  *
  * @author hoscho
@@ -33,6 +53,8 @@ public class LoginProvider
 {
  
     public static CloseableHttpClient client;
+    
+   
     
     public LoginProvider()
     {
@@ -92,6 +114,23 @@ public class LoginProvider
     public static CloseableHttpClient getClient() {
         return client;
     }
+    
+    /*
+    public void addRestTemplateHeader(String authStringEnc)
+    {
+        
+          List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
+          interceptors.add(new HttpHeaderInterceptor("Accept", MediaType.APPLICATION_JSON_VALUE));
+          interceptors.add(new HttpHeaderInterceptor("Authorization", "Basic " + authStringEnc));
+          
+          de.jsoft.JDesktop.rtemp.setInterceptors(interceptors);
+        
+    
+    }
+*/
+    
+    
+   
     
     
 }

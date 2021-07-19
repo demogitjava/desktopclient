@@ -7,6 +7,7 @@ package de.jsoft;
 
 
 import de.jsoft.jdesktop.mainframe.MainFrame;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import javax.swing.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.http.HttpHeaders;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "de.jsoft")
@@ -27,6 +29,7 @@ public class JDesktop
     public static JDesktopPane jdeskpane;
 
     public static int lgglobal;
+   
     
     public JDesktop()
     {

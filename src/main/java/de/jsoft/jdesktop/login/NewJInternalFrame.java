@@ -7,6 +7,7 @@ package de.jsoft.jdesktop.login;
 
 import de.jsoft.JDesktop;
 import static de.jsoft.JDesktop.rtemp;
+import de.jsoft.jdesktop.config.LoginProvider;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +49,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
     public static HttpHeaders headers;
     public static HttpEntity<String> httpentity;
 
-   
+    public static HttpHeaders header;
     public static RestTemplateBuilder restTemplateBuilder;
     
     String stlabel1 = null;
@@ -328,12 +329,14 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
        char[] stpass = jPasswordField1.getPassword();
 
        String stpassword = String.valueOf(stpass);
-       headers = new HttpHeaders();
+       //headers = new HttpHeaders();
 
         String authString = stuser + ":" + stpassword;
-        //String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
+        
+        String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
         //headers.add("Authorization", "Basic " + authStringEnc);
 
+   
         //httpentity = new HttpEntity<String>(headers);
 
         //MLoginData mlogindata = new MLoginData();
@@ -343,9 +346,15 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
          
                 
         de.jsoft.jdesktop.config.LoginProvider loginprovider = new de.jsoft.jdesktop.config.LoginProvider();   
+        setHeaders(authStringEnc);
+      
         loginprovider.logintoServer(stuser, stpassword);
         
+       
+        
+      
         HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(de.jsoft.jdesktop.config.LoginProvider.client);
+        
          ResponseEntity<String> response = new RestTemplate(requestFactory).
       exchange("http://localhost:8443/users", HttpMethod.GET, null, String.class);
         try {
@@ -382,7 +391,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
                 JDesktop.jdeskpane.add(kdstamm);
                 
                 
-                JDesktop.jdeskpane.repaint();
+              
                 
                 
             }
@@ -438,7 +447,17 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
 
     }
     
-    
+     public HttpHeaders setHeaders(String authStringEnc)
+    { 
+       
+        header = new HttpHeaders();
+        header.setContentType(MediaType.APPLICATION_JSON);
+     	header.add("Authorization", "Basic " + authStringEnc);
+    	return header;
+    	//de.jsoft.JDesktop.headers.set("Authorization", "Basic " + authStringEnc);
+    }
+
+   
     
     
     
