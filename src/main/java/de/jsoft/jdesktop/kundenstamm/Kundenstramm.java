@@ -175,10 +175,10 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
         jToolBar1 = new javax.swing.JToolBar();
         jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -245,6 +245,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
 
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable3);
+
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
@@ -265,18 +278,6 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jToolBar1.add(jButton1);
 
         getContentPane().add(jToolBar1, java.awt.BorderLayout.PAGE_START);
-
-        jScrollPane1.setMinimumSize(new java.awt.Dimension(150, 150));
-        jScrollPane1.setNextFocusableComponent(jTree1);
-
-        jTree1.setFocusCycleRoot(true);
-        jTree1.setMaximumSize(new java.awt.Dimension(250, 150));
-        jTree1.setMinimumSize(new java.awt.Dimension(190, 150));
-        jTree1.setNextFocusableComponent(jScrollPane1);
-        jTree1.setPreferredSize(new java.awt.Dimension(190, 190));
-        jScrollPane1.setViewportView(jTree1);
-
-        getContentPane().add(jScrollPane1, java.awt.BorderLayout.LINE_START);
 
         jTabbedPane1.setToolTipText("");
 
@@ -486,7 +487,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                             .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField20)
                             .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -637,7 +638,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton4))
                     .addComponent(jTextField24))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -654,7 +655,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Angebote erstellen", jPanel2);
@@ -691,13 +692,34 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
      
         HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
         
-         ResponseEntity<List<MKundenstamm>> textlabelresponse = JDesktop.rtemp.exchange(
+         ResponseEntity<List<MKundenstamm>> customerentity = JDesktop.rtemp.exchange(
                 de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/" + jTextField13.getText(),
                 HttpMethod.GET,
                 requestEntity,
                 new ParameterizedTypeReference<List<MKundenstamm>>(){});
         //ResponseEntity<MKundenstamm> responseEntity = de.jsoft.JDesktop.rtemp.exchange(de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/", HttpMethod.GET, requestEntity, .class, jTextField13.getText());
      
+        
+         if(customerentity.getBody().size() == 0)
+         {
+             System.out.print("more than 1 customer avilable!" + "\n");
+             // add Data to list
+         }
+         else
+         {
+             // only one customer is there
+             
+             
+                // 0 = de
+                // 1 = fr
+                // 2 = uk
+                // 3 = esp 
+                // 4 = it
+                // 5 = tr
+             
+             int selectedvalue = JDesktop.lgglobal;
+             
+         }
         System.out.print("test");
               
                 
@@ -1530,6 +1552,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -1555,7 +1578,6 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JToolBar jToolBar1;
-    public javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 
    

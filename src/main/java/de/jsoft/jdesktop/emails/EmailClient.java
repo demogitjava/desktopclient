@@ -141,21 +141,7 @@ public class EmailClient extends javax.swing.JInternalFrame
                 int messagesize = mclient.messagemap.size();
                
                 model.removeAllElements();
-     
-                /*  
-                    Iterator<Entry<Integer, Object>> entries = mclient.messagemap.entrySet().iterator();
-                     while (entries.hasNext()) 
-                    {
-                        Entry<Integer, Object> entry = entries.next();
-                        mailmodel = (MailModel) entry.getValue();
-                        String stsubject = mailmodel.getSubject();
-                        
-                        
-                        System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue().toString());
-                    
-                        model.addElement(me2.getValue());
-                }
-                */
+    
                 
                 Iterator<Entry<Integer, Object>> entries = mclient.messagemap.entrySet().iterator();
                      while (entries.hasNext()) 
@@ -170,10 +156,7 @@ public class EmailClient extends javax.swing.JInternalFrame
                         {
                             
                                 Integer msnumer = message.getMessageNumber();
-                                message.getSubject();
-                                //String address = Arrays.toString(message.getFrom());
-                                // ByteBuffer byteBuffer = StandardCharsets.UTF_8.encode(address);
-                                
+                                message.getSubject();      
 
                                 
                                 Address[] froms = message.getFrom();
@@ -193,7 +176,7 @@ public class EmailClient extends javax.swing.JInternalFrame
                         {
                             System.out.print("Fehler" + ex);
                         }
-                        //System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue().toString());      
+                       
                 }
  
             }
@@ -278,10 +261,11 @@ public class EmailClient extends javax.swing.JInternalFrame
         jList1 = new javax.swing.JList<>();
         jEditorPane2 = new javax.swing.JEditorPane();
 
+        setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("EmailClient");
+        setTitle("EmailClient - Viewer");
         setDoubleBuffered(true);
 
         jToolBar1.setRollover(true);
@@ -310,7 +294,6 @@ public class EmailClient extends javax.swing.JInternalFrame
 
         jSplitPane1.setTopComponent(jScrollPane1);
 
-        jEditorPane2.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane4.setViewportView(jEditorPane2);
 
         jSplitPane1.setRightComponent(jScrollPane4);

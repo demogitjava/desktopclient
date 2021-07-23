@@ -39,6 +39,7 @@ public class JDesktop
     public static Integer setLgtoPanel(int indexlanguage)
     {
        
+        lgglobal = 0;
         lgglobal = indexlanguage;
         return lgglobal;
     }
@@ -89,24 +90,10 @@ public class JDesktop
         Object size = (Object) MainFrame.jDesktopPane1.getSize();
 
 
-
-
-        // Emails
-        //de.jsoft.jdesktop.emails.EmailClient eclient = new de.jsoft.jdesktop.emails.EmailClient();
-        //eclient.getMaximumSize();
-        //eclient.setVisible(true);
-
-
-
-
         de.jsoft.jdesktop.login.NewJInternalFrame loginframe = new de.jsoft.jdesktop.login.NewJInternalFrame();
         loginframe.setVisible(true);
 
         jdeskpane.add(loginframe);
-
-
-        //jdeskpane.add(loginframe);
-        //jdeskpane.add(eclient);
 
         mframe.add(jdeskpane);
 
