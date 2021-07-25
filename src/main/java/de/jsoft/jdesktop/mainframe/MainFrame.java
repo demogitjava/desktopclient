@@ -5,7 +5,12 @@
  */
 package de.jsoft.jdesktop.mainframe;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -20,6 +25,7 @@ public class MainFrame extends javax.swing.JFrame
     public MainFrame()
     {
         initComponents();
+        
         
     }
 
@@ -43,4 +49,8 @@ public class MainFrame extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JDesktopPane jDesktopPane1 = new javax.swing.JDesktopPane();
     // End of variables declaration//GEN-END:variables
+
+    public void setMenuBar(JMenuBar bar) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

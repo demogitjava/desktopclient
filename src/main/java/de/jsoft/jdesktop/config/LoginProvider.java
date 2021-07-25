@@ -6,6 +6,7 @@
 package de.jsoft.jdesktop.config;
 
 import de.jsoft.JDesktop;
+import static de.jsoft.JDesktop.mframe;
 import de.jsoft.jdesktop.login.NewJInternalFrame;
 import io.netty.handler.codec.Headers;
 import java.io.IOException;
@@ -98,7 +99,18 @@ public class LoginProvider
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);
                 kdstamm.pack();
+                
+                
+                /*
+                    load default Window menu 
+                    if User successful loginid
+                */
+                de.jsoft.jdesktop.menu.WindowsMenu wmenu = new de.jsoft.jdesktop.menu.WindowsMenu();
+                mframe.setJMenuBar(wmenu.setMenu());
+               
                 JDesktop.jdeskpane.add(kdstamm);
+                
+                
               }
               else
               {

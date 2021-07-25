@@ -6,6 +6,7 @@
 package de.jsoft.jdesktop.login;
 
 import de.jsoft.JDesktop;
+import static de.jsoft.JDesktop.mframe;
 import static de.jsoft.JDesktop.rtemp;
 import de.jsoft.jdesktop.config.LoginProvider;
 import java.awt.Dimension;
@@ -383,6 +384,14 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
                 JDesktop.jdeskpane.removeAll();
                   
                 
+                
+                
+                   /*
+                    load default Window menu 
+                    if User successful loginid
+                */
+                de.jsoft.jdesktop.menu.WindowsMenu wmenu = new de.jsoft.jdesktop.menu.WindowsMenu();
+                mframe.setJMenuBar(wmenu.setMenu());
                
                 de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
                 kdstamm.setVisible(true);

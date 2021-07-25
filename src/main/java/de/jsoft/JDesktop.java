@@ -7,6 +7,8 @@ package de.jsoft;
 
 
 import de.jsoft.jdesktop.mainframe.MainFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -29,7 +31,8 @@ public class JDesktop
     public static JDesktopPane jdeskpane;
 
     public static int lgglobal;
-   
+    public static boolean userislogedin;
+    
     
     public JDesktop()
     {
@@ -93,19 +96,20 @@ public class JDesktop
         de.jsoft.jdesktop.login.NewJInternalFrame loginframe = new de.jsoft.jdesktop.login.NewJInternalFrame();
         loginframe.setVisible(true);
 
+     
+      
+        
+        
         jdeskpane.add(loginframe);
 
         mframe.add(jdeskpane);
-
-
-
-        mframe.setExtendedState(JFrame.MAXIMIZED_BOTH);
+       
+        mframe.setExtendedState(JFrame.MAXIMIZED_BOTH);  
         mframe.setVisible(true);
         // mframe.pack();
-
-
-
-
     }
+    
+    
+ 
     
 }
