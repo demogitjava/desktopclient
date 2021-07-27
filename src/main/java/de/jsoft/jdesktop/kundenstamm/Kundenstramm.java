@@ -697,27 +697,28 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 HttpMethod.GET,
                 requestEntity,
                 new ParameterizedTypeReference<List<MKundenstamm>>(){});
-        //ResponseEntity<MKundenstamm> responseEntity = de.jsoft.JDesktop.rtemp.exchange(de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/", HttpMethod.GET, requestEntity, .class, jTextField13.getText());
-     
+    
+         
+         /*
+            
+                response from search Field 
+                jTextField13 to JTable
+         
+         */
         
          if(customerentity.getBody().size() == 0)
          {
              System.out.print("more than 1 customer avilable!" + "\n");
-             // add Data to list
+             // add Data to Customer Panel
          }
          else
          {
-             // only one customer is there
+             // more then one customer is there
+             // load data to JTable
              
+             de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch customersearchtable = new de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch();
+            
              
-                // 0 = de
-                // 1 = fr
-                // 2 = uk
-                // 3 = esp 
-                // 4 = it
-                // 5 = tr
-             
-             int selectedvalue = JDesktop.lgglobal;
              
          }
         System.out.print("test");

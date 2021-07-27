@@ -335,17 +335,8 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
         String authString = stuser + ":" + stpassword;
         
         String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
-        //headers.add("Authorization", "Basic " + authStringEnc);
-
-   
-        //httpentity = new HttpEntity<String>(headers);
-
-        //MLoginData mlogindata = new MLoginData();
-        //mlogindata.setUsername(stuser);
-        //mlogindata.setPassword(stpassword);
-
-         
-                
+     
+            
         de.jsoft.jdesktop.config.LoginProvider loginprovider = new de.jsoft.jdesktop.config.LoginProvider();   
         setHeaders(authStringEnc);
       
@@ -356,23 +347,13 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
       
         HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(de.jsoft.jdesktop.config.LoginProvider.client);
         
+        // "http://localhost:8443/users"
          ResponseEntity<String> response = new RestTemplate(requestFactory).
-      exchange("http://localhost:8443/users", HttpMethod.GET, null, String.class);
+      exchange(JDesktop.baseUrl + "users", HttpMethod.GET, null, String.class);
         try {
 
 
-            //ResponseEntity<LoginFrame> result = JDesktop.rtemp.getForEntity("http://localhost:8443/users", httpentity, LoginFrame.class);
-            // Send request with GET method, and Headers.
         
-            /*
-            ResponseEntity<MLoginData> response = JDesktop.rtemp.exchange("http://localhost:8443/login",
-                    HttpMethod.POST,
-                    httpentity,
-                    MLoginData.class);
-                        */
-           
-            //ResponseEntity<String> response = JDesktop.rtemp.getForEntity(JDesktop.baseUrl + "user", String.class);
-            //String body = response.getBody();
        
             if(response.getStatusCodeValue() == 200)
             {
@@ -397,6 +378,11 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);
                 kdstamm.pack();
+                
+                
+                // user is logedin
+                de.jsoft.JDesktop.userislogedin = true;
+                
                 JDesktop.jdeskpane.add(kdstamm);
                 
                 

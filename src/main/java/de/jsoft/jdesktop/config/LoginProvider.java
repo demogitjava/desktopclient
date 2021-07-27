@@ -101,6 +101,9 @@ public class LoginProvider
                 kdstamm.pack();
                 
                 
+                // user is logedin
+                de.jsoft.JDesktop.userislogedin = true;
+                
                 /*
                     load default Window menu 
                     if User successful loginid

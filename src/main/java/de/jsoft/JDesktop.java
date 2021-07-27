@@ -31,7 +31,7 @@ public class JDesktop
     public static JDesktopPane jdeskpane;
 
     public static int lgglobal;
-    public static boolean userislogedin;
+    public static boolean userislogedin = false;
     
     
     public JDesktop()
@@ -96,10 +96,7 @@ public class JDesktop
         de.jsoft.jdesktop.login.NewJInternalFrame loginframe = new de.jsoft.jdesktop.login.NewJInternalFrame();
         loginframe.setVisible(true);
 
-     
-      
-        
-        
+             
         jdeskpane.add(loginframe);
 
         mframe.add(jdeskpane);

@@ -125,13 +125,14 @@ class Receiver extends Thread {
 // TelnetWindow.  Send keyboard input from a terminal to a remote socket,
 // and start a Receiver to receive characters from the socket and print
 // them on the terminal.
-public class TelnetWindow extends javax.swing.JInternalFrame {
+public class TelnetWindow extends javax.swing.JInternalFrame 
+{
     Terminal terminal;
     InputStream in;
     OutputStream out;
 
     
-     public String hostname="192.168.10.56";
+    public String hostname = "192.168.10.56";
     public int port=23;
     
     // Constructor, no other methods
@@ -211,8 +212,5 @@ public class TelnetWindow extends javax.swing.JInternalFrame {
             System.exit(1);
         }
     }
-
-  
-
    
 }
