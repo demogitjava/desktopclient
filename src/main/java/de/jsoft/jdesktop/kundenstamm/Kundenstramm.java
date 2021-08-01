@@ -33,7 +33,7 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.web.client.RestClientException;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
-import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
+//import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.jComboBox1;
 
 import de.jsoft.JDesktop;
@@ -61,17 +61,16 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-import sun.misc.BASE64Encoder;
 
 
-//Auskunft Kreditreform url 
-// https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
+
+
 
 /**
  *
  * @author hoscho
  */
-@Import({ SecurityConfiguration.class })
+//@Import({ SecurityConfiguration.class })
 public class Kundenstramm extends javax.swing.JInternalFrame {
 
    

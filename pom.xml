@@ -15,13 +15,23 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
     </properties>
     
   
+    <repositories>
+      <repository>
+          <id>BASE64Decoder</id>
+          <url>https://github.com/demogitjava/demodatabase/raw/master/sun.misc.BASE64Decoder.jar</url>
+          <snapshots>
+              <enabled>true</enabled>
+              <updatePolicy>always</updatePolicy>
+          </snapshots>
+      </repository>
+  </repositories>
     
-        <dependencies>   
+    <dependencies>   
         
 <!-- https://mvnrepository.com/artifact/com.github.jiconfont/jiconfont-font_awesome -->
         
@@ -121,11 +131,14 @@
                 <version>3.2.4.RELEASE</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
-                <version>1.8</version>
+                <version>1.13</version>
+                  <type>jar</type>
             </dependency>
+
              
             <dependency>
                     <groupId>org.springframework.boot</groupId>
@@ -167,9 +180,19 @@
             <artifactId>commons-compress</artifactId>
             <version>1.0</version>
         </dependency>
-        </dependencies>   
         
-           <pluginRepositories>
+<!-- https://mvnrepository.com/artifact/net.java.dev.nimbus/nimbus -->
+<dependency>
+    <groupId>net.java.dev.nimbus</groupId>
+    <artifactId>nimbus</artifactId>
+    <version>weekly-080113</version>
+</dependency>
+
+
+       
+    </dependencies>   
+        
+    <pluginRepositories>
         <pluginRepository>
             <id>central</id>
             <name>Central Repository</name>
@@ -184,7 +207,7 @@
         </pluginRepository>
     </pluginRepositories>
               
-      <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

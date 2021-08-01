@@ -5,6 +5,7 @@
  */
 package de.jsoft.jdesktop.login;
 
+
 import de.jsoft.JDesktop;
 import static de.jsoft.JDesktop.mframe;
 import static de.jsoft.JDesktop.rtemp;
@@ -28,9 +29,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
-import sun.misc.BASE64Encoder;
+//import sun.misc.BASE64Encoder;
 
-
+import java.util.Base64;
 
 /**
  *
@@ -332,15 +333,15 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
        String stpassword = String.valueOf(stpass);
        //headers = new HttpHeaders();
 
-        String authString = stuser + ":" + stpassword;
+       String authString = stuser + ":" + stpassword;
         
-        String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
-     
+       //String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
+       String authStringEnc = Base64.getEncoder().encodeToString(authString.getBytes());
             
-        de.jsoft.jdesktop.config.LoginProvider loginprovider = new de.jsoft.jdesktop.config.LoginProvider();   
-        setHeaders(authStringEnc);
+       de.jsoft.jdesktop.config.LoginProvider loginprovider = new de.jsoft.jdesktop.config.LoginProvider();   
+       setHeaders(authStringEnc);
       
-        loginprovider.logintoServer(stuser, stpassword);
+       loginprovider.logintoServer(stuser, stpassword);
         
        
         

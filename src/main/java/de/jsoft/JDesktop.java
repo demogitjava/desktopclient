@@ -13,7 +13,8 @@ import java.awt.event.ActionListener;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
-
+import javax.swing.UIManager.*;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import javax.swing.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -60,7 +61,7 @@ public class JDesktop
         
         */
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(JDesktop.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
