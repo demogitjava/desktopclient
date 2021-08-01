@@ -64,16 +64,17 @@ import org.springframework.web.client.RestTemplate;
 
 
 
-
+//Auskunft Kreditreform url 
+// https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
 
 /**
  *
  * @author hoscho
  */
-//@Import({ SecurityConfiguration.class })
+
 public class Kundenstramm extends javax.swing.JInternalFrame {
 
-   
+
     
     public static List<ClientHttpRequestInterceptor> interceptors;
     /**
@@ -707,7 +708,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
          if(customerentity.getBody().size() == 0)
          {
-             System.out.print("more than 1 customer avilable!" + "\n");
+             System.out.print("0 customer avilable!" + "\n");
              // add Data to Customer Panel
          }
          else
@@ -715,10 +716,21 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
              // more then one customer is there
              // load data to JTable
              
-             de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch customersearchtable = new de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch();
+            de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch customersearchtable = new de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch();
+            customersearchtable.setVisible(true);
+            customersearchtable.setMaximizable(true);
+            customersearchtable.pack();
             
-             
-             
+            List searchresult = (List<MKundenstamm>) customerentity.getBody();
+            customersearchtable.addDatatoTable(searchresult);
+            
+          
+           
+            JDesktop.jdeskpane.add(customersearchtable);
+            
+          
+            JDesktop.jdeskpane.setSelectedFrame(customersearchtable);
+            
          }
         System.out.print("test");
               
@@ -1510,6 +1522,14 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }
       
+          
+     public void addCustomerEntityfromSearch(int searchid)
+     {
+        
+        
+     }
+     
+     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;

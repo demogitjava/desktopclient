@@ -20,6 +20,8 @@ public class MKundenstamm implements Serializable {
    
     private String kundennummer;
    
+     private String kundenname;
+    
     private String land;
     
     private String nameAnschrift1;
@@ -69,6 +71,17 @@ public class MKundenstamm implements Serializable {
     public MKundenstamm() {
     }
 
+    public String getKundenname() {
+        return kundenname;
+    }
+
+    public void setKundenname(String kundenname) {
+        this.kundenname = kundenname;
+    }
+
+    
+    
+    
     public MKundenstamm(String kundennummer) {
         this.kundennummer = kundennummer;
     }

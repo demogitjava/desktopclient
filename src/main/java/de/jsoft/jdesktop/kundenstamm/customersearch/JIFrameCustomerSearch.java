@@ -5,10 +5,14 @@
  */
 package de.jsoft.jdesktop.kundenstamm.customersearch;
 
+import de.jsoft.jdesktop.kundenstamm.MKundenstamm;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import static org.springframework.shell.table.CellMatchers.table;
 
 /**
  *
@@ -16,9 +20,18 @@ import javax.swing.table.TableModel;
  */
 public class JIFrameCustomerSearch extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form JIFrameCustomerSearch
-     */
+    
+     String kdnummer;
+     String searchuser;
+     String searchstrasse;
+     Integer searchplz;
+     String searchort;
+    
+     DefaultTableModel model;
+    
+     /*
+      * Creates new form JIFrameCustomerSearch
+      */
     public JIFrameCustomerSearch() {
         initComponents();
     }
@@ -40,6 +53,11 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Search Customer");
 
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
@@ -47,15 +65,61 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        
+        evt.getSource();
+        this.jTable1 = (JTable) evt.getSource();
+        
+    }//GEN-LAST:event_jTable1MouseClicked
 
-    public void addDatatoTable(List<de.jsoft.jdesktop.kundenstamm.MKundenstamm> customerdata)
+
+    public void addDatatoTable(List<MKundenstamm> searchresult)
     {
-      
-      
+        model = new DefaultTableModel(
+        
+      new Object[][]
+      {
+          
+          /*
+            {  
+                searchuser, searchstrasse, searchplz, searchort 
+                
+            }, 
+*/
+           
+      },
+      new Object[] { "KontoNummer", "Name", "Strasse", "PLZ", "Ort" });
+        
+        
+         for(int i = 0; i < searchresult.size(); i++)
+       {
+              kdnummer = searchresult.get(i).getKundennummer();
+              searchuser = searchresult.get(i).getKundenname();
+              searchstrasse = searchresult.get(i).getStrasse();
+              searchplz = searchresult.get(i).getPlz();
+              searchort = searchresult.get(i).getOrt();
+              
+             
+            
+              //model.addRow(searchuser, searchstrasse, searchplz, searchort);
+         
+              model.addRow(new Object[]{ kdnummer, searchuser, searchstrasse, searchplz, searchort});
+       }
+        
+     
+   
+      this.jTable1.setModel(model);
     }
+
+    public DefaultTableModel getModel() {
+        return model;
+    }
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
-
