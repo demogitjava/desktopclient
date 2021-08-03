@@ -73,11 +73,6 @@ public class JDesktop
         }
         
 
-
-
-
-
-
         baseUrl = "http://localhost:8443/";
 
         JDesktop jdesk = new JDesktop();
@@ -89,7 +84,7 @@ public class JDesktop
         jdeskpane = MainFrame.jDesktopPane1;
 
         /*
-            inizialisiere Klassen für DeskopPane
+            inizialisiere Klassen fÃ¼r DeskopPane
         */
         Object size = (Object) MainFrame.jDesktopPane1.getSize();
 
