@@ -217,7 +217,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.4.5</version>
                 <configuration>
-                    <mainClass>de.jgsoftware.UserRegistrationSystemApplication</mainClass>
+                    <mainClass>de.jsoft.JDesktop</mainClass>
                 </configuration>
             </plugin>
         </plugins>
