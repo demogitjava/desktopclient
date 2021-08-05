@@ -5,6 +5,7 @@
  */
 package de.jsoft.jdesktop.kundenstamm.customersearch;
 
+import de.jsoft.jdesktop.kundenstamm.Kundenstramm;
 import de.jsoft.jdesktop.kundenstamm.MKundenstamm;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ import static org.springframework.shell.table.CellMatchers.table;
  *
  * @author hoscho
  */
-public class JIFrameCustomerSearch extends javax.swing.JInternalFrame {
+public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
 
     
      String kdnummer;
@@ -28,7 +29,8 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame {
      String searchort;
     
      DefaultTableModel model;
-    
+
+     de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm;
      /*
       * Creates new form JIFrameCustomerSearch
       */
@@ -67,9 +69,22 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
-        
-        evt.getSource();
-        this.jTable1 = (JTable) evt.getSource();
+
+
+
+        int rowcount = jTable1.getSelectedRow();
+        de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
+
+        String test = Kundenstramm.searchresult.get(rowcount).getKontoNr().toString();
+
+
+        kdstamm.getjTextField13().getText();
+        kdstamm.jTextField13.setText(Kundenstramm.searchresult.get(rowcount).getKontoNr().toString());
+        kdstamm.getjTextField13().setText(Kundenstramm.searchresult.get(rowcount).getKontoNr().toString());
+
+        kdstamm.repaint();
+        this.dispose();
+
         
     }//GEN-LAST:event_jTable1MouseClicked
 

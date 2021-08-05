@@ -14,12 +14,18 @@ import de.jsoft.jdesktop.login.MLoginData;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.interceptors;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import de.jsoft.jdesktop.login.NewJInternalFrame;
+import de.jsoft.jdesktop.mainframe.MainFrame;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
@@ -35,7 +41,7 @@ import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 //import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.jComboBox1;
-
+import org.apache.http.impl.client.CloseableHttpClient;
 import de.jsoft.JDesktop;
 import static de.jsoft.JDesktop.rtemp;
 import java.awt.Dimension;
@@ -62,9 +68,11 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import javax.swing.*;
+import javax.swing.event.DocumentEvent;
 
 
-//Auskunft Kreditreform url 
+//Auskunft Kreditreform url
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
 
 /**
@@ -77,6 +85,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
     
     public static List<ClientHttpRequestInterceptor> interceptors;
+
+    public static List<MKundenstamm> searchresult;
+
     /**
      * Creates new form Kundenstramm
      */
@@ -721,7 +732,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             customersearchtable.setMaximizable(true);
             customersearchtable.pack();
             
-            List searchresult = (List<MKundenstamm>) customerentity.getBody();
+            searchresult = (List<MKundenstamm>) customerentity.getBody();
             customersearchtable.addDatatoTable(searchresult);
             
           
@@ -1521,8 +1532,13 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         
     }
-      
-          
+
+
+
+
+
+
+
      public void addCustomerEntityfromSearch(int searchid)
      {
         
@@ -1573,32 +1589,224 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField10;
+    public javax.swing.JTextField jTextField11;
+    public javax.swing.JTextField jTextField12;
+    public javax.swing.JTextField jTextField13;
+    public javax.swing.JTextField jTextField14;
+    public javax.swing.JTextField jTextField15;
+    public javax.swing.JTextField jTextField16;
+    public javax.swing.JTextField jTextField17;
+    public javax.swing.JTextField jTextField18;
+    public javax.swing.JTextField jTextField19;
+    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField20;
+    public javax.swing.JTextField jTextField21;
+    public javax.swing.JTextField jTextField22;
+    public javax.swing.JTextField jTextField23;
+    public javax.swing.JTextField jTextField24;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
+    public javax.swing.JTextField jTextField5;
+    public javax.swing.JTextField jTextField6;
+    public javax.swing.JTextField jTextField7;
+    public javax.swing.JTextField jTextField8;
+    public javax.swing.JTextField jTextField9;
+
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 
-   
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
+    }
+
+    public JTextField getjTextField10() {
+        return jTextField10;
+    }
+
+    public void setjTextField10(JTextField jTextField10) {
+        this.jTextField10 = jTextField10;
+    }
+
+    public JTextField getjTextField11() {
+        return jTextField11;
+    }
+
+    public void setjTextField11(JTextField jTextField11) {
+        this.jTextField11 = jTextField11;
+    }
+
+    public JTextField getjTextField12() {
+        return jTextField12;
+    }
+
+    public void setjTextField12(JTextField jTextField12) {
+        this.jTextField12 = jTextField12;
+    }
+
+    public JTextField getjTextField13() {
+        return jTextField13;
+    }
+
+    public void setjTextField13(JTextField jTextField13) {
+        this.jTextField13 = jTextField13;
+    }
+
+    public JTextField getjTextField14() {
+        return jTextField14;
+    }
+
+    public void setjTextField14(JTextField jTextField14) {
+        this.jTextField14 = jTextField14;
+    }
+
+    public JTextField getjTextField15() {
+        return jTextField15;
+    }
+
+    public void setjTextField15(JTextField jTextField15) {
+        this.jTextField15 = jTextField15;
+    }
+
+    public JTextField getjTextField16() {
+        return jTextField16;
+    }
+
+    public void setjTextField16(JTextField jTextField16) {
+        this.jTextField16 = jTextField16;
+    }
+
+    public JTextField getjTextField17() {
+        return jTextField17;
+    }
+
+    public void setjTextField17(JTextField jTextField17) {
+        this.jTextField17 = jTextField17;
+    }
+
+    public JTextField getjTextField18() {
+        return jTextField18;
+    }
+
+    public void setjTextField18(JTextField jTextField18) {
+        this.jTextField18 = jTextField18;
+    }
+
+    public JTextField getjTextField19() {
+        return jTextField19;
+    }
+
+    public void setjTextField19(JTextField jTextField19) {
+        this.jTextField19 = jTextField19;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public void setjTextField2(JTextField jTextField2) {
+        this.jTextField2 = jTextField2;
+    }
+
+    public JTextField getjTextField20() {
+        return jTextField20;
+    }
+
+    public void setjTextField20(JTextField jTextField20) {
+        this.jTextField20 = jTextField20;
+    }
+
+    public JTextField getjTextField21() {
+        return jTextField21;
+    }
+
+    public void setjTextField21(JTextField jTextField21) {
+        this.jTextField21 = jTextField21;
+    }
+
+    public JTextField getjTextField22() {
+        return jTextField22;
+    }
+
+    public void setjTextField22(JTextField jTextField22) {
+        this.jTextField22 = jTextField22;
+    }
+
+    public JTextField getjTextField23() {
+        return jTextField23;
+    }
+
+    public void setjTextField23(JTextField jTextField23) {
+        this.jTextField23 = jTextField23;
+    }
+
+    public JTextField getjTextField24() {
+        return jTextField24;
+    }
+
+    public void setjTextField24(JTextField jTextField24) {
+        this.jTextField24 = jTextField24;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public void setjTextField3(JTextField jTextField3) {
+        this.jTextField3 = jTextField3;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public void setjTextField4(JTextField jTextField4) {
+        this.jTextField4 = jTextField4;
+    }
+
+    public JTextField getjTextField5() {
+        return jTextField5;
+    }
+
+    public void setjTextField5(JTextField jTextField5) {
+        this.jTextField5 = jTextField5;
+    }
+
+    public JTextField getjTextField6() {
+        return jTextField6;
+    }
+
+    public void setjTextField6(JTextField jTextField6) {
+        this.jTextField6 = jTextField6;
+    }
+
+    public JTextField getjTextField7() {
+        return jTextField7;
+    }
+
+    public void setjTextField7(JTextField jTextField7) {
+        this.jTextField7 = jTextField7;
+    }
+
+    public JTextField getjTextField8() {
+        return jTextField8;
+    }
+
+    public void setjTextField8(JTextField jTextField8) {
+        this.jTextField8 = jTextField8;
+    }
+
+    public JTextField getjTextField9() {
+        return jTextField9;
+    }
+
+    public void setjTextField9(JTextField jTextField9) {
+        this.jTextField9 = jTextField9;
+    }
 }

@@ -30,7 +30,7 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 //import sun.misc.BASE64Encoder;
-
+import org.apache.http.impl.client.CloseableHttpClient;
 import java.util.Base64;
 
 /**
