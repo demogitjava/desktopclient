@@ -7,9 +7,14 @@ package de.jsoft.jdesktop.kundenstamm.customersearch;
 
 import de.jsoft.jdesktop.kundenstamm.Kundenstramm;
 import de.jsoft.jdesktop.kundenstamm.MKundenstamm;
+import java.beans.PropertyVetoException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -73,16 +78,10 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
 
 
         int rowcount = jTable1.getSelectedRow();
-        de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
-
-        String test = Kundenstramm.searchresult.get(rowcount).getKontoNr().toString();
-
-
-        kdstamm.getjTextField13().getText();
-        kdstamm.jTextField13.setText(Kundenstramm.searchresult.get(rowcount).getKontoNr().toString());
-        kdstamm.getjTextField13().setText(Kundenstramm.searchresult.get(rowcount).getKontoNr().toString());
-
-        kdstamm.repaint();
+       
+       
+         
+        
         this.dispose();
 
         
