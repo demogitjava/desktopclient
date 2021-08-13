@@ -20,15 +20,8 @@
     
   
     <repositories>
-      <repository>
-          <id>BASE64Decoder</id>
-          <url>https://github.com/demogitjava/demodatabase/raw/master/sun.misc.BASE64Decoder.jar</url>
-          <snapshots>
-              <enabled>true</enabled>
-              <updatePolicy>always</updatePolicy>
-          </snapshots>
-      </repository>
-  </repositories>
+
+    </repositories>
     
     <dependencies>   
         

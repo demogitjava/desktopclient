@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 import org.springframework.http.HttpHeaders;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "de.jsoft")
+//@ComponentScan(basePackages = "de.jsoft")
 public class JDesktop 
 {
     
@@ -57,21 +57,19 @@ public class JDesktop
         /*
         
             Look and Feel 
-            Einstellung auf Nimbus als default
+            setup to Nimbus
         
         */
-        try {
+
+
+        try
+        {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(JDesktop.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            Logger.getLogger(JDesktop.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            Logger.getLogger(JDesktop.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(JDesktop.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e)
+        {
+            System.out.print("LookAndFeel Error Nimbus !");
         }
-        
+
 
         baseUrl = "http://localhost:8443/";
 

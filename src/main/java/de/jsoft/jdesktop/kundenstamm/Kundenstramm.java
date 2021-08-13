@@ -88,6 +88,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
     public static List<MKundenstamm> searchresult;
 
+    public static int kdrowcount;
     /**
      * Creates new form Kundenstramm
      */
@@ -322,6 +323,12 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jLabel9.setText("Kundenummer");
 
         jTextField13.setText("jTextField13");
+
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField13ActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Land");
 
@@ -734,19 +741,37 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             
             searchresult = (List<MKundenstamm>) customerentity.getBody();
             customersearchtable.addDatatoTable(searchresult);
-            
-          
-           
+
             JDesktop.jdeskpane.add(customersearchtable);
-            
-          
             JDesktop.jdeskpane.setSelectedFrame(customersearchtable);
             
          }
-        System.out.print("test");
-              
-                
+         JDesktop.jdeskpane.setSelectedFrame(this);
+         
+       
+
+         if(searchresult == null)
+         {
+             System.out.print("list is null" + "\n");
+         }
+         
+         else
+         {
+             clearTextFieldsblank();
+             jTextField13.setText(searchresult.get(kdrowcount).getKundennummer());
+         }
+        
+
     }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13ActionPerformed
+
+    public void jTextField13InputMethodTextChanged(java.awt.event.InputMethodEvent ev) {//GEN-FIRST:event_jTextField13InputMethodTextChanged
+
+
+    }//GEN-LAST:event_jTextField13InputMethodTextChanged
 
 
     private void clearTextFieldsblank()
@@ -1533,18 +1558,6 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }
 
-
-
-
-
-
-
-     public void addCustomerEntityfromSearch(int searchid)
-     {
-        
-        
-     }
-     
      
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -1589,31 +1602,30 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    public javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField jTextField10;
-    public javax.swing.JTextField jTextField11;
-    public javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
     public javax.swing.JTextField jTextField13;
-    public javax.swing.JTextField jTextField14;
-    public javax.swing.JTextField jTextField15;
-    public javax.swing.JTextField jTextField16;
-    public javax.swing.JTextField jTextField17;
-    public javax.swing.JTextField jTextField18;
-    public javax.swing.JTextField jTextField19;
-    public javax.swing.JTextField jTextField2;
-    public javax.swing.JTextField jTextField20;
-    public javax.swing.JTextField jTextField21;
-    public javax.swing.JTextField jTextField22;
-    public javax.swing.JTextField jTextField23;
-    public javax.swing.JTextField jTextField24;
-    public javax.swing.JTextField jTextField3;
-    public javax.swing.JTextField jTextField4;
-    public javax.swing.JTextField jTextField5;
-    public javax.swing.JTextField jTextField6;
-    public javax.swing.JTextField jTextField7;
-    public javax.swing.JTextField jTextField8;
-    public javax.swing.JTextField jTextField9;
-
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
 
@@ -1808,5 +1820,15 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
     public void setjTextField9(JTextField jTextField9) {
         this.jTextField9 = jTextField9;
+    }
+
+    public int getKdrowcount()
+    {
+        return kdrowcount;
+    }
+
+    public void setKdrowcount(int kdrowcount)
+    {
+        Kundenstramm.kdrowcount = kdrowcount;
     }
 }

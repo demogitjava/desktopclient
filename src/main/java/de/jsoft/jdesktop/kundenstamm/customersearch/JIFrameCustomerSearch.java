@@ -7,14 +7,17 @@ package de.jsoft.jdesktop.kundenstamm.customersearch;
 
 import de.jsoft.jdesktop.kundenstamm.Kundenstramm;
 import de.jsoft.jdesktop.kundenstamm.MKundenstamm;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.InputMethodEvent;
+import java.awt.event.MouseEvent;
 import java.beans.PropertyVetoException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JInternalFrame;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -34,8 +37,8 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
      String searchort;
     
      DefaultTableModel model;
-
-     de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm;
+    java.awt.event.InputMethodEvent ev;
+    de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm;
      /*
       * Creates new form JIFrameCustomerSearch
       */
@@ -72,19 +75,19 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void jTable1MouseClicked(MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
 
 
 
         int rowcount = jTable1.getSelectedRow();
-       
-       
-         
-        
+        kdstamm.kdrowcount = rowcount;
+        //kdstamm.setKdrowcount(rowcount);
+
         this.dispose();
 
-        
+
+
     }//GEN-LAST:event_jTable1MouseClicked
 
 
