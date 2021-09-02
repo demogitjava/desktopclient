@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package de.jsoft.jdesktop.kundenstamm;
 
 import java.io.Serializable;
@@ -17,56 +12,86 @@ import javax.validation.constraints.Size;
 public class MKundenstamm implements Serializable {
 
     private static final long serialVersionUID = 1L;
-   
+
     private String kundennummer;
-   
-     private String kundenname;
-    
+
+    private String kundenname;
+
     private String land;
-    
+
     private String nameAnschrift1;
-  
+
     private String nameAnschrift2;
-   
+
     private String nameAnschrift3;
-    
+
     private String nameAnschrift4;
-   
+
     private String strasse;
-    
+
     private Integer plz;
-   
+
     private String ort;
-   
+
     private String iban;
-    
+
     private String blz;
-  
+
     private String kontoNr;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
-   
+
     private Double kreditlimit;
-   
+
     private String telefon;
-  
+
     private String mobil1;
-   
+
     private String mobil2;
-   
+
     private String sip;
-    // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
-  
+
     private String email;
-  
+
     private String ansprechpartner;
-  
+
     private Float umsatzLfdJahr;
-  
+
     private Float umsatzJahr1;
-  
+
     private Float umsatzJahr2;
-   
+
     private Date timestamp;
+
+    private int gebiet;
+
+    private int vertreter;
+
+    private String bankverbindung;
+
+    public int getVertreter() {
+        return vertreter;
+    }
+
+    public void setVertreter(int vertreter) {
+        this.vertreter = vertreter;
+    }
+
+    public String getBankverbindung() {
+        return bankverbindung;
+    }
+
+    public void setBankverbindung(String bankverbindung) {
+        this.bankverbindung = bankverbindung;
+    }
+
+    public int getGebiet() {
+        return gebiet;
+    }
+
+    public void setGebiet(int gebiet) {
+        this.gebiet = gebiet;
+    }
+
+
 
     public MKundenstamm() {
     }
@@ -79,9 +104,9 @@ public class MKundenstamm implements Serializable {
         this.kundenname = kundenname;
     }
 
-    
-    
-    
+
+
+
     public MKundenstamm(String kundennummer) {
         this.kundennummer = kundennummer;
     }
@@ -294,5 +319,5 @@ public class MKundenstamm implements Serializable {
     public String toString() {
         return "de.jsoft.model.data.Kundenstamm[ kundennummer=" + kundennummer + " ]";
     }
-    
+
 }

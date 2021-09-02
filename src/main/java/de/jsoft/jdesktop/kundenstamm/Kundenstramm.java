@@ -45,6 +45,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import de.jsoft.JDesktop;
 import static de.jsoft.JDesktop.rtemp;
 import java.awt.Dimension;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -89,6 +90,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     public static List<MKundenstamm> searchresult;
 
     public static int kdrowcount;
+    
+    public ActionEvent aevent;
     /**
      * Creates new form Kundenstramm
      */
@@ -241,6 +244,10 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jButton11 = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField25 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTextField24 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -323,7 +330,13 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jLabel9.setText("Kundenummer");
 
         jTextField13.setText("jTextField13");
-
+        jTextField13.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jTextField13InputMethodTextChanged(evt);
+            }
+        });
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField13ActionPerformed(evt);
@@ -410,6 +423,30 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 jButton12ActionPerformed(evt);
             }
         });
+        jButton12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton12KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jButton12KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jButton12KeyTyped(evt);
+            }
+        });
+
+        jButton13.setText("Kunden anzeigen");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent avent) {
+                jButton13ActionPerformed(avent);
+            }
+        });
+
+        jLabel19.setText("Vertreter");
+
+        jTextField25.setText("jTextField25");
+
+        jLabel20.setText("Gebiet");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -420,10 +457,10 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -440,32 +477,10 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel2))
                                     .addComponent(jLabel12)
                                     .addComponent(jLabel11)
                                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -488,7 +503,18 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel16)))
+                                        .addComponent(jLabel16))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel2)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jTextField15)
@@ -504,8 +530,29 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                             .addComponent(jTextField19)
                             .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField20)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(113, Short.MAX_VALUE))
+                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                            .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -516,25 +563,31 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton13))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(jLabel19)))
+                .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -544,7 +597,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -595,7 +649,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kundenstamm", jPanel1);
@@ -704,9 +758,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
            
-        
-      
-       // de.jsoft.JDesktop.baseUrl + "/customer/getCustomerbyName/" + jTextField13.getText()
+     
+        // de.jsoft.JDesktop.baseUrl + "/customer/getCustomerbyName/" + jTextField13.getText()
      
         HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
         
@@ -746,32 +799,111 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             JDesktop.jdeskpane.setSelectedFrame(customersearchtable);
             
          }
-         JDesktop.jdeskpane.setSelectedFrame(this);
-         
-       
-
-         if(searchresult == null)
-         {
-             System.out.print("list is null" + "\n");
-         }
-         
-         else
-         {
-             clearTextFieldsblank();
-             jTextField13.setText(searchresult.get(kdrowcount).getKundennummer());
-         }
         
 
     }//GEN-LAST:event_jButton12ActionPerformed
 
+  
+    public void updateJTextFields(ActionEvent aevent)
+    {
+       
+        jButton13ActionPerformed(aevent);
+    }
+    
     private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
         // TODO add your handling code here:
+      
     }//GEN-LAST:event_jTextField13ActionPerformed
 
     public void jTextField13InputMethodTextChanged(java.awt.event.InputMethodEvent ev) {//GEN-FIRST:event_jTextField13InputMethodTextChanged
 
+        
 
     }//GEN-LAST:event_jTextField13InputMethodTextChanged
+
+    private void jButton12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyReleased
+        // TODO add your handling code here:
+        jTextField13.setText(searchresult.get(kdrowcount).getKundennummer());
+    }//GEN-LAST:event_jButton12KeyReleased
+
+    private void jButton12KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyPressed
+        // TODO add your handling code here:
+        jTextField13.setText(searchresult.get(kdrowcount).getKundennummer());
+    }//GEN-LAST:event_jButton12KeyPressed
+
+    private void jButton12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyTyped
+        // TODO add your handling code here:
+        jTextField13.setText(searchresult.get(kdrowcount).getKundennummer());
+    }//GEN-LAST:event_jButton12KeyTyped
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent aevent) {//GEN-FIRST:event_jButton13ActionPerformed
+        
+        // kundennummer
+        jTextField13.setText(searchresult.get(kdrowcount).getKundennummer());
+        
+        
+        // land
+        jTextField14.setText(searchresult.get(kdrowcount).getLand());
+        
+        
+        // verteter
+        jTextField25.setText(String.valueOf(searchresult.get(kdrowcount).getVertreter()));
+        
+        
+        // gebiet
+        jTextField1.setText(String.valueOf(searchresult.get(kdrowcount).getGebiet()));
+        
+        // kundenname
+        jTextField4.setText(searchresult.get(kdrowcount).getKundenname());
+        
+        // strasse
+        jTextField5.setText(searchresult.get(kdrowcount).getStrasse());
+         
+        // plz
+        jTextField6.setText(String.valueOf(searchresult.get(kdrowcount).getPlz()));
+       
+         // Ort
+         jTextField7.setText(searchresult.get(kdrowcount).getOrt());
+            
+         // bankverbindung  
+         jTextField15.setText(searchresult.get(kdrowcount).getBankverbindung());
+         
+         // iban
+         jTextField18.setText(searchresult.get(kdrowcount).getIban());
+         
+          // blz
+          jTextField19.setText(searchresult.get(kdrowcount).getBlz());
+          
+          // konto - nummer 
+          jTextField10.setText(searchresult.get(kdrowcount).getKontoNr());
+         
+          // kreditlimit
+          jTextField23.setText(String.valueOf(searchresult.get(kdrowcount).getKreditlimit()));
+          
+          // telefon
+          jTextField11.setText(searchresult.get(kdrowcount).getTelefon());
+          
+           // mobil 1
+           jTextField12.setText(searchresult.get(kdrowcount).getMobil1());
+          
+           // mobil 2
+           jTextField16.setText(searchresult.get(kdrowcount).getMobil2());
+          
+           // sip
+           jTextField17.setText(searchresult.get(kdrowcount).getSip());
+           
+           // email 
+           jTextField18.setText(searchresult.get(kdrowcount).getEmail());
+           
+           // ansprechpartner
+           jTextField22.setText(searchresult.get(kdrowcount).getAnsprechpartner());
+            
+           // umsatz
+           jTextField19.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzLfdJahr()));
+           jTextField20.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzJahr1()));
+           jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzJahr2()));  
+          
+    }//GEN-LAST:event_jButton13ActionPerformed
 
 
     private void clearTextFieldsblank()
@@ -803,7 +935,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jTextField22.setText("");
         jTextField23.setText("");
       
-        
+        jTextField25.setText("");
         
     }
     
@@ -933,7 +1065,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     }
     
        
-      private void setTextSpanishEntity(List<Desktoplayout> customerlistlabels)
+    private void setTextSpanishEntity(List<Desktoplayout> customerlistlabels)
     {
         
         // customerpanel title
@@ -1058,7 +1190,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }
       
-        private void setTextFrenshEntity(List<Desktoplayout> customerlistlabels)
+    private void setTextFrenshEntity(List<Desktoplayout> customerlistlabels)
     {
         
         // customerpanel title
@@ -1183,7 +1315,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }  
         
-       private void setTextItalyEntity(List<Desktoplayout> customerlistlabels)
+    private void setTextItalyEntity(List<Desktoplayout> customerlistlabels)
     {
         
         // customerpanel title
@@ -1308,7 +1440,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }  
        
-           private void setTextTuerkyEntity(List<Desktoplayout> customerlistlabels)
+    private void setTextTuerkyEntity(List<Desktoplayout> customerlistlabels)
     {
         
         // customerpanel title
@@ -1433,7 +1565,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }  
             
-          private void setTextEnglishEntity(List<Desktoplayout> customerlistlabels)
+    private void setTextEnglishEntity(List<Desktoplayout> customerlistlabels)
     {
         
         // customerpanel title
@@ -1558,12 +1690,23 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
     }
 
+    public ActionEvent getAevent() {
+        return aevent;
+    }
+
+    public void setAevent(ActionEvent aevent) {
+        this.aevent = aevent;
+    }
+
+    
+    
      
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1582,7 +1725,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1606,7 +1751,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
-    public javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
@@ -1619,6 +1764,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
@@ -1831,4 +1977,6 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     {
         Kundenstramm.kdrowcount = kdrowcount;
     }
+
+   
 }

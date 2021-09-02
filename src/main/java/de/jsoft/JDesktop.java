@@ -37,7 +37,7 @@ public class JDesktop
     
     public JDesktop()
     {
-
+           
     }
     
     public static Integer setLgtoPanel(int indexlanguage)

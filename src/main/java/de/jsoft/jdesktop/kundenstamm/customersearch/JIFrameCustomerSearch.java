@@ -5,8 +5,10 @@
  */
 package de.jsoft.jdesktop.kundenstamm.customersearch;
 
+import de.jsoft.JDesktop;
 import de.jsoft.jdesktop.kundenstamm.Kundenstramm;
 import de.jsoft.jdesktop.kundenstamm.MKundenstamm;
+import java.awt.Desktop;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +24,8 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import static org.springframework.shell.table.CellMatchers.table;
+
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -39,6 +43,9 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
      DefaultTableModel model;
     java.awt.event.InputMethodEvent ev;
     de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm;
+    
+    java.awt.event.ActionEvent aevent;
+    
      /*
       * Creates new form JIFrameCustomerSearch
       */
@@ -78,16 +85,30 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
     private void jTable1MouseClicked(MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
 
-
-
         int rowcount = jTable1.getSelectedRow();
-        kdstamm.kdrowcount = rowcount;
-        //kdstamm.setKdrowcount(rowcount);
+        Kundenstramm.kdrowcount = rowcount;
+   
+        
 
+        
+        kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
+        
+      
+        try
+        {
+            
+            kdstamm.updateJTextFields(aevent);
+        } catch (Exception e)
+        {
+            System.out.print("Fehler " + e);
+        }
+        JDesktop.jdeskpane.add(kdstamm);
+     
+     
+        
+  
+     
         this.dispose();
-
-
-
     }//GEN-LAST:event_jTable1MouseClicked
 
 
