@@ -9,9 +9,10 @@ import javax.validation.constraints.Size;
  *
  * @author hoscho
  */
-public class MKundenstamm implements Serializable {
+public class MKundenstamm {
 
-    private static final long serialVersionUID = 1L;
+
+    private int id;
 
     private String kundennummer;
 
@@ -61,19 +62,44 @@ public class MKundenstamm implements Serializable {
 
     private Date timestamp;
 
-    private int gebiet;
+    private Integer gebiet;
 
-    private int vertreter;
+    private Integer vertreter;
 
     private String bankverbindung;
 
-    public int getVertreter() {
+
+
+    public MKundenstamm() {
+    }
+
+    public Integer getGebiet() {
+        return gebiet;
+    }
+
+    public void setGebiet(Integer gebiet) {
+        this.gebiet = gebiet;
+    }
+
+    public Integer getVertreter() {
         return vertreter;
     }
 
-    public void setVertreter(int vertreter) {
+    public void setVertreter(Integer vertreter) {
         this.vertreter = vertreter;
     }
+
+    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+   
 
     public String getBankverbindung() {
         return bankverbindung;
@@ -83,18 +109,7 @@ public class MKundenstamm implements Serializable {
         this.bankverbindung = bankverbindung;
     }
 
-    public int getGebiet() {
-        return gebiet;
-    }
 
-    public void setGebiet(int gebiet) {
-        this.gebiet = gebiet;
-    }
-
-
-
-    public MKundenstamm() {
-    }
 
     public String getKundenname() {
         return kundenname;

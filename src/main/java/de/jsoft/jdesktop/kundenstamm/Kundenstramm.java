@@ -5,74 +5,36 @@
  */
 package de.jsoft.jdesktop.kundenstamm;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import de.jsoft.JDesktop;
-import static de.jsoft.JDesktop.baseUrl;
 import static de.jsoft.jdesktop.config.LoginProvider.client;
-import de.jsoft.jdesktop.login.LoginFrame;
-import de.jsoft.jdesktop.login.MLoginData;
-import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
-import static de.jsoft.jdesktop.login.NewJInternalFrame.httpentity;
-import static de.jsoft.jdesktop.login.NewJInternalFrame.interceptors;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import de.jsoft.jdesktop.login.NewJInternalFrame;
-import de.jsoft.jdesktop.mainframe.MainFrame;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
-import org.json.simple.JSONObject;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.client.ClientHttpRequestInterceptor;
-import org.springframework.web.client.RestClientException;
 import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 //import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
-import static de.jsoft.jdesktop.login.NewJInternalFrame.jComboBox1;
-import org.apache.http.impl.client.CloseableHttpClient;
 import de.jsoft.JDesktop;
-import static de.jsoft.JDesktop.rtemp;
-import java.awt.Dimension;
-import java.awt.event.MouseEvent;
+import de.jsoft.jdesktop.login.LoginFrame;
+import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
-import org.springframework.stereotype.Controller;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.UUID;
-//import org.springframework.boot.developertools.remote.client.HttpHeaderInterceptor;
-import org.springframework.boot.devtools.remote.client.HttpHeaderInterceptor;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Import;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
-import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.RestTemplate;
-
+import org.apache.http.impl.client.CloseableHttpClient;
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
+import org.apache.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
 
-
+import org.apache.http.impl.client.CloseableHttpClient;
 //Auskunft Kreditreform url
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
 
@@ -92,6 +54,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     public static int kdrowcount;
     
     public ActionEvent aevent;
+    
+    private ResponseEntity<MKundenstamm> newcustomer;
+   
     /**
      * Creates new form Kundenstramm
      */
@@ -405,9 +370,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jButton8.setText("Neu");
         jButton8.setPreferredSize(new java.awt.Dimension(50, 27));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("Speichern");
         jButton9.setPreferredSize(new java.awt.Dimension(70, 27));
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setText("Löschen");
         jButton10.setPreferredSize(new java.awt.Dimension(70, 27));
@@ -437,8 +412,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jButton13.setText("Kunden anzeigen");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent avent) {
-                jButton13ActionPerformed(avent);
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
             }
         });
 
@@ -763,7 +738,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
      
         HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
         
-         ResponseEntity<List<MKundenstamm>> customerentity = JDesktop.rtemp.exchange(
+        ResponseEntity<List<MKundenstamm>> customerentity = JDesktop.rtemp.exchange(
                 de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/" + jTextField13.getText(),
                 HttpMethod.GET,
                 requestEntity,
@@ -904,6 +879,83 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
            jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzJahr2()));  
           
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    /*
+        save data
+    */
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        MKundenstamm mkdstamm = new MKundenstamm();
+        
+        mkdstamm.setKontoNr(jTextField13.getText());    
+        
+        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));
+        
+        mkdstamm.setLand(jTextField14.getText());
+        mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
+        
+        // ? jTextField2
+        
+        mkdstamm.setKundenname(jTextField3.getText());
+        mkdstamm.setAnsprechpartner(jTextField4.getText());
+        
+        mkdstamm.setStrasse(jTextField5.getText());
+        mkdstamm.setPlz(Integer.parseInt(jTextField6.getText()));
+        mkdstamm.setOrt(jTextField7.getText());
+        
+        mkdstamm.setBankverbindung(jTextField13.getText());
+        mkdstamm.setIban(jTextField8.getText());
+        mkdstamm.setBlz(jTextField9.getText());
+        mkdstamm.setKontoNr(jTextField10.getText());
+        
+        mkdstamm.setKreditlimit(Double.parseDouble(jTextField23.getText()));
+        mkdstamm.setTelefon(jTextField11.getText());
+        mkdstamm.setMobil1(jTextField12.getText());
+        mkdstamm.setMobil2(jTextField12.getText());
+        
+        mkdstamm.setSip(jTextField17.getText());
+        mkdstamm.setEmail(jTextField18.getText());
+        mkdstamm.setAnsprechpartner(jTextField22.getText());
+        
+     
+        //HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+      
+        /*
+        ResponseEntity<List<MKundenstamm>> textlabelresponse = JDesktop.rtemp.exchange(
+                JDesktop.baseUrl + "/createnewcustomer",
+                HttpMethod.POST,
+                requestEntity,
+                new ParameterizedTypeReference<List<MKundenstamm>>(){});
+        
+        
+          HttpEntity request = new HttpEntity(requestBody, headers);
+            String apiResponse = getRestTemplate().postForObject(apiEndpoint,
+                    request, String.class);
+            System.out.println(apiResponse);
+        
+        */
+        
+        HttpEntity<MKundenstamm> requestEntity = new HttpEntity<MKundenstamm>(mkdstamm, de.jsoft.jdesktop.login.NewJInternalFrame.header);
+      
+        ResponseEntity<MKundenstamm> responseEntity = JDesktop.rtemp.exchange(
+                JDesktop.baseUrl + "customer/createnewcustomer",
+                HttpMethod.POST,
+                requestEntity,
+                MKundenstamm.class);
+        
+        org.springframework.http.HttpStatus statuscode = responseEntity.getStatusCode();
+        System.out.print("der status code ist " + statuscode);
+        
+                
+        
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    // new customer
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        
+        clearTextFieldsblank();
+    }//GEN-LAST:event_jButton8ActionPerformed
 
 
     private void clearTextFieldsblank()

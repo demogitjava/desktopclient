@@ -453,6 +453,14 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame {
     	//de.jsoft.JDesktop.headers.set("Authorization", "Basic " + authStringEnc);
     }
 
+    public static HttpHeaders getHeaders() {
+        return headers;
+    }
+
+    public static void setHeaders(HttpHeaders headers) {
+        NewJInternalFrame.headers = headers;
+    }
+
    
     
     
