@@ -918,34 +918,13 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         mkdstamm.setAnsprechpartner(jTextField22.getText());
         
      
-        //HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+     
+          HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+ 
       
-        /*
-        ResponseEntity<List<MKundenstamm>> textlabelresponse = JDesktop.rtemp.exchange(
-                JDesktop.baseUrl + "/createnewcustomer",
-                HttpMethod.POST,
-                requestEntity,
-                new ParameterizedTypeReference<List<MKundenstamm>>(){});
-        
-        
-          HttpEntity request = new HttpEntity(requestBody, headers);
-            String apiResponse = getRestTemplate().postForObject(apiEndpoint,
-                    request, String.class);
-            System.out.println(apiResponse);
-        
-        */
-        
-        HttpEntity<MKundenstamm> requestEntity = new HttpEntity<MKundenstamm>(mkdstamm, de.jsoft.jdesktop.login.NewJInternalFrame.header);
+       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/createnewcustomer", HttpMethod.POST, entity, String.class);
       
-        ResponseEntity<MKundenstamm> responseEntity = JDesktop.rtemp.exchange(
-                JDesktop.baseUrl + "customer/createnewcustomer",
-                HttpMethod.POST,
-                requestEntity,
-                MKundenstamm.class);
-        
-        org.springframework.http.HttpStatus statuscode = responseEntity.getStatusCode();
-        System.out.print("der status code ist " + statuscode);
-        
+       System.out.print("body " + entity.getBody() + "\n");
                 
         
     }//GEN-LAST:event_jButton9ActionPerformed
