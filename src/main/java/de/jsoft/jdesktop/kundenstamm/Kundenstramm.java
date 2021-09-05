@@ -935,7 +935,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         */
         HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
-
+ 
       
        ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/createnewcustomer", HttpMethod.POST, entity, String.class);
       

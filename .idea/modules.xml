@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JDesktop.iml" filepath="$PROJECT_DIR$/JDesktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LanServer/LanServer.iml" filepath="$PROJECT_DIR$/../LanServer/LanServer.iml" />
     </modules>
   </component>
 </project>
