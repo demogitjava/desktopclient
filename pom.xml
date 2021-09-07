@@ -24,9 +24,7 @@
     </repositories>
     
     <dependencies>   
-        
-<!-- https://mvnrepository.com/artifact/com.github.jiconfont/jiconfont-font_awesome -->
-        
+                
           <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>
@@ -185,6 +183,15 @@
             <version>2.5.0</version>
             <type>jar</type>
         </dependency>
+        
+        
+       
+<dependency>
+    <groupId>org.eclipse</groupId>
+    <artifactId>swt</artifactId>
+    <version>4.6.1</version>
+</dependency>
+
     </dependencies>   
         
     <pluginRepositories>
