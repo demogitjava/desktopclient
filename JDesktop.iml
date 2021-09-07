@@ -135,5 +135,6 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.28" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse:swt:3.3.0-v3346" level="project" />
   </component>
 </module>

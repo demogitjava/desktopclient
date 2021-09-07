@@ -895,6 +895,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
         
         // ? jTextField2
+      
+      
         
         mkdstamm.setKundenname(jTextField3.getText());
         mkdstamm.setAnsprechpartner(jTextField4.getText());

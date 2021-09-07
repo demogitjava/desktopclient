@@ -186,11 +186,11 @@
         
         
        
-<dependency>
-    <groupId>org.eclipse</groupId>
-    <artifactId>swt</artifactId>
-    <version>4.6.1</version>
-</dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>swt</artifactId>
+            <version>3.3.0-v3346</version>
+        </dependency>
 
     </dependencies>   
         
