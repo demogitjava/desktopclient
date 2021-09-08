@@ -887,7 +887,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         MKundenstamm mkdstamm = new MKundenstamm();
         
-        mkdstamm.setKontoNr(jTextField13.getText());    
+        mkdstamm.setKundennummer(jTextField13.getText());    
         
         mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));
         
