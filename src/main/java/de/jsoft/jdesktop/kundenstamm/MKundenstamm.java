@@ -2,6 +2,7 @@ package de.jsoft.jdesktop.kundenstamm;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -9,10 +10,13 @@ import javax.validation.constraints.Size;
  *
  * @author hoscho
  */
-public class MKundenstamm {
+
+public class MKundenstamm implements Serializable
+{
 
 
-    
+
+ 
     private int id;
 
     private String kundennummer;
@@ -21,13 +25,13 @@ public class MKundenstamm {
 
     private String land;
 
-    private String nameAnschrift1;
+    private String name_Anschrift1;
 
-    private String nameAnschrift2;
+    private String name_Anschrift2;
 
-    private String nameAnschrift3;
+    private String name_Anschrift3;
 
-    private String nameAnschrift4;
+    private String name_Anschrift4;
 
     private String strasse;
 
@@ -39,7 +43,7 @@ public class MKundenstamm {
 
     private String blz;
 
-    private String kontoNr;
+    private String konto_Nr;
 
     private Double kreditlimit;
 
@@ -55,17 +59,17 @@ public class MKundenstamm {
 
     private String ansprechpartner;
 
-    private Float umsatzLfdJahr;
+    private Float umsatz_Lfd_Jahr;
 
-    private Float umsatzJahr1;
+    private Float umsatz_Jahr_1;
 
-    private Float umsatzJahr2;
+    private Float umsatz_Jahr_2;
 
     private Date timestamp;
 
-    private Integer gebiet;
+    private int gebiet;
 
-    private Integer vertreter;
+    private int vertreter;
 
     private String bankverbindung;
 
@@ -74,23 +78,6 @@ public class MKundenstamm {
     public MKundenstamm() {
     }
 
-    public Integer getGebiet() {
-        return gebiet;
-    }
-
-    public void setGebiet(Integer gebiet) {
-        this.gebiet = gebiet;
-    }
-
-    public Integer getVertreter() {
-        return vertreter;
-    }
-
-    public void setVertreter(Integer vertreter) {
-        this.vertreter = vertreter;
-    }
-
-    
 
     public int getId() {
         return id;
@@ -100,7 +87,21 @@ public class MKundenstamm {
         this.id = id;
     }
 
-   
+    public int getGebiet() {
+        return gebiet;
+    }
+
+    public void setGebiet(int gebiet) {
+        this.gebiet = gebiet;
+    }
+
+    public int getVertreter() {
+        return vertreter;
+    }
+
+    public void setVertreter(int vertreter) {
+        this.vertreter = vertreter;
+    }
 
     public String getBankverbindung() {
         return bankverbindung;
@@ -143,38 +144,6 @@ public class MKundenstamm {
         this.land = land;
     }
 
-    public String getNameAnschrift1() {
-        return nameAnschrift1;
-    }
-
-    public void setNameAnschrift1(String nameAnschrift1) {
-        this.nameAnschrift1 = nameAnschrift1;
-    }
-
-    public String getNameAnschrift2() {
-        return nameAnschrift2;
-    }
-
-    public void setNameAnschrift2(String nameAnschrift2) {
-        this.nameAnschrift2 = nameAnschrift2;
-    }
-
-    public String getNameAnschrift3() {
-        return nameAnschrift3;
-    }
-
-    public void setNameAnschrift3(String nameAnschrift3) {
-        this.nameAnschrift3 = nameAnschrift3;
-    }
-
-    public String getNameAnschrift4() {
-        return nameAnschrift4;
-    }
-
-    public void setNameAnschrift4(String nameAnschrift4) {
-        this.nameAnschrift4 = nameAnschrift4;
-    }
-
     public String getStrasse() {
         return strasse;
     }
@@ -215,13 +184,16 @@ public class MKundenstamm {
         this.blz = blz;
     }
 
-    public String getKontoNr() {
-        return kontoNr;
+    public String getKonto_Nr() {
+        return konto_Nr;
     }
 
-    public void setKontoNr(String kontoNr) {
-        this.kontoNr = kontoNr;
+    public void setKonto_Nr(String konto_Nr) {
+        this.konto_Nr = konto_Nr;
     }
+
+  
+    
 
     public Double getKreditlimit() {
         return kreditlimit;
@@ -279,29 +251,7 @@ public class MKundenstamm {
         this.ansprechpartner = ansprechpartner;
     }
 
-    public Float getUmsatzLfdJahr() {
-        return umsatzLfdJahr;
-    }
 
-    public void setUmsatzLfdJahr(Float umsatzLfdJahr) {
-        this.umsatzLfdJahr = umsatzLfdJahr;
-    }
-
-    public Float getUmsatzJahr1() {
-        return umsatzJahr1;
-    }
-
-    public void setUmsatzJahr1(Float umsatzJahr1) {
-        this.umsatzJahr1 = umsatzJahr1;
-    }
-
-    public Float getUmsatzJahr2() {
-        return umsatzJahr2;
-    }
-
-    public void setUmsatzJahr2(Float umsatzJahr2) {
-        this.umsatzJahr2 = umsatzJahr2;
-    }
 
     public Date getTimestamp() {
         return timestamp;
@@ -310,6 +260,64 @@ public class MKundenstamm {
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
+
+    public String getName_Anschrift1() {
+        return name_Anschrift1;
+    }
+
+    public void setName_Anschrift1(String name_Anschrift1) {
+        this.name_Anschrift1 = name_Anschrift1;
+    }
+
+    public String getName_Anschrift2() {
+        return name_Anschrift2;
+    }
+
+    public void setName_Anschrift2(String name_Anschrift2) {
+        this.name_Anschrift2 = name_Anschrift2;
+    }
+
+    public String getName_Anschrift3() {
+        return name_Anschrift3;
+    }
+
+    public void setName_Anschrift3(String name_Anschrift3) {
+        this.name_Anschrift3 = name_Anschrift3;
+    }
+
+    public String getName_Anschrift4() {
+        return name_Anschrift4;
+    }
+
+    public void setName_Anschrift4(String name_Anschrift4) {
+        this.name_Anschrift4 = name_Anschrift4;
+    }
+
+    public Float getUmsatz_Lfd_Jahr() {
+        return umsatz_Lfd_Jahr;
+    }
+
+    public void setUmsatz_Lfd_Jahr(Float umsatz_Lfd_Jahr) {
+        this.umsatz_Lfd_Jahr = umsatz_Lfd_Jahr;
+    }
+
+    public Float getUmsatz_Jahr_1() {
+        return umsatz_Jahr_1;
+    }
+
+    public void setUmsatz_Jahr_1(Float umsatz_Jahr_1) {
+        this.umsatz_Jahr_1 = umsatz_Jahr_1;
+    }
+
+    public Float getUmsatz_Jahr_2() {
+        return umsatz_Jahr_2;
+    }
+
+    public void setUmsatz_Jahr_2(Float umsatz_Jahr_2) {
+        this.umsatz_Jahr_2 = umsatz_Jahr_2;
+    }
+    
+    
 
     @Override
     public int hashCode() {

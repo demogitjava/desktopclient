@@ -850,7 +850,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
           jTextField19.setText(searchresult.get(kdrowcount).getBlz());
           
           // konto - nummer 
-          jTextField10.setText(searchresult.get(kdrowcount).getKontoNr());
+          jTextField10.setText(searchresult.get(kdrowcount).getKonto_Nr());
          
           // kreditlimit
           jTextField23.setText(String.valueOf(searchresult.get(kdrowcount).getKreditlimit()));
@@ -874,9 +874,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
            jTextField22.setText(searchresult.get(kdrowcount).getAnsprechpartner());
             
            // umsatz
-           jTextField19.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzLfdJahr()));
-           jTextField20.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzJahr1()));
-           jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatzJahr2()));  
+           jTextField19.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Lfd_Jahr()));
+           jTextField20.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_1()));
+           jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_2()));  
           
     }//GEN-LAST:event_jButton13ActionPerformed
 
@@ -908,8 +908,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         mkdstamm.setBankverbindung(jTextField13.getText());
         mkdstamm.setIban(jTextField8.getText());
         mkdstamm.setBlz(jTextField9.getText());
-        mkdstamm.setKontoNr(jTextField10.getText());
-        
+        mkdstamm.setKonto_Nr(jTextField10.getText());
+         
         mkdstamm.setKreditlimit(Double.parseDouble(jTextField23.getText()));
         mkdstamm.setTelefon(jTextField11.getText());
         mkdstamm.setMobil1(jTextField12.getText());
