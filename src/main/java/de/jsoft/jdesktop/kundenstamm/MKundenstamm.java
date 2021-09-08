@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
+import javax.persistence.*;
 /**
  *
  * @author hoscho
@@ -12,6 +12,8 @@ import javax.validation.constraints.Size;
 public class MKundenstamm {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String kundennummer;
