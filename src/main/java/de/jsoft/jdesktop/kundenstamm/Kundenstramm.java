@@ -389,6 +389,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jButton11.setText("Ändern");
         jButton11.setPreferredSize(new java.awt.Dimension(80, 27));
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel18.setText("QR Code");
 
@@ -887,34 +892,27 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         MKundenstamm mkdstamm = new MKundenstamm();
         
-        mkdstamm.setKundennummer(jTextField13.getText());    
-        
-        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));
-        
+        mkdstamm.setKundennummer(jTextField13.getText());
+        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));  
         mkdstamm.setLand(jTextField14.getText());
         mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
         
-        // ? jTextField2
-      
-      
+        mkdstamm.setName_Anschrift1(jTextField2.getText());
+        mkdstamm.setName_Anschrift2(jTextField3.getText());
         
-        mkdstamm.setKundenname(jTextField3.getText());
-        mkdstamm.setAnsprechpartner(jTextField4.getText());
-        
+        mkdstamm.setKundenname(jTextField4.getText());
+        //mkdstamm.setAnsprechpartner(jTextField4.getText());
         mkdstamm.setStrasse(jTextField5.getText());
         mkdstamm.setPlz(Integer.parseInt(jTextField6.getText()));
         mkdstamm.setOrt(jTextField7.getText());
-        
-        mkdstamm.setBankverbindung(jTextField13.getText());
+        mkdstamm.setBankverbindung(jTextField15.getText());
         mkdstamm.setIban(jTextField8.getText());
         mkdstamm.setBlz(jTextField9.getText());
         mkdstamm.setKonto_Nr(jTextField10.getText());
-         
         mkdstamm.setKreditlimit(Double.parseDouble(jTextField23.getText()));
         mkdstamm.setTelefon(jTextField11.getText());
         mkdstamm.setMobil1(jTextField12.getText());
-        mkdstamm.setMobil2(jTextField12.getText());
-        
+        mkdstamm.setMobil2(jTextField16.getText());
         mkdstamm.setSip(jTextField17.getText());
         mkdstamm.setEmail(jTextField18.getText());
         mkdstamm.setAnsprechpartner(jTextField22.getText());
@@ -922,7 +920,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
      
      
        HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
-       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/createnewcustomer", HttpMethod.POST, entity, String.class);
+       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/savenewcustomer", HttpMethod.POST, entity, String.class);
       
        System.out.print("body " + entity.getBody() + "\n");
                 
@@ -935,6 +933,45 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         clearTextFieldsblank();
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        
+        MKundenstamm mkdstamm = new MKundenstamm();
+        
+        mkdstamm.setKundennummer(jTextField13.getText());
+        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));  
+        mkdstamm.setLand(jTextField14.getText());
+        mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
+        
+        mkdstamm.setName_Anschrift1(jTextField2.getText());
+        mkdstamm.setName_Anschrift2(jTextField3.getText());
+        
+        mkdstamm.setKundenname(jTextField4.getText());
+        //mkdstamm.setAnsprechpartner(jTextField4.getText());
+        mkdstamm.setStrasse(jTextField5.getText());
+        mkdstamm.setPlz(Integer.parseInt(jTextField6.getText()));
+        mkdstamm.setOrt(jTextField7.getText());
+        mkdstamm.setBankverbindung(jTextField15.getText());
+        mkdstamm.setIban(jTextField8.getText());
+        mkdstamm.setBlz(jTextField9.getText());
+        mkdstamm.setKonto_Nr(jTextField10.getText());
+        mkdstamm.setKreditlimit(Double.parseDouble(jTextField23.getText()));
+        mkdstamm.setTelefon(jTextField11.getText());
+        mkdstamm.setMobil1(jTextField12.getText());
+        mkdstamm.setMobil2(jTextField16.getText());
+        mkdstamm.setSip(jTextField17.getText());
+        mkdstamm.setEmail(jTextField18.getText());
+        mkdstamm.setAnsprechpartner(jTextField22.getText());
+        
+     
+     
+       HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
+       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/updatenewcustomer", HttpMethod.POST, entity, String.class);
+      
+       System.out.print("body " + entity.getBody() + "\n");
+                
+    }//GEN-LAST:event_jButton11ActionPerformed
 
 
     private void clearTextFieldsblank()
