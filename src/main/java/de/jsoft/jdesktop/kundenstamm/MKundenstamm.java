@@ -17,9 +17,9 @@ public class MKundenstamm implements Serializable
 
 
  
-    private int id;
+    private Long id;
 
-    private String kundennummer;
+    private Long kundennummer;
 
     private String kundenname;
 
@@ -78,14 +78,25 @@ public class MKundenstamm implements Serializable
     public MKundenstamm() {
     }
 
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
+
+    public Long getKundennummer() {
+        return kundennummer;
+    }
+
+    public void setKundennummer(Long kundennummer) {
+        this.kundennummer = kundennummer;
+    }
+
+
+    
+   
 
     public int getGebiet() {
         return gebiet;
@@ -124,17 +135,8 @@ public class MKundenstamm implements Serializable
 
 
 
-    public MKundenstamm(String kundennummer) {
-        this.kundennummer = kundennummer;
-    }
-
-    public String getKundennummer() {
-        return kundennummer;
-    }
-
-    public void setKundennummer(String kundennummer) {
-        this.kundennummer = kundennummer;
-    }
+   
+   
 
     public String getLand() {
         return land;

@@ -132,7 +132,7 @@ public class JIFrameCustomerSearch extends javax.swing.JInternalFrame  {
         
          for(int i = 0; i < searchresult.size(); i++)
        {
-              kdnummer = searchresult.get(i).getKundennummer();
+              kdnummer = String.valueOf(searchresult.get(i).getKundennummer());
               searchuser = searchresult.get(i).getKundenname();
               searchstrasse = searchresult.get(i).getStrasse();
               searchplz = searchresult.get(i).getPlz();
