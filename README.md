@@ -6,7 +6,7 @@ Demo Desktop Client
 
 this Java Swing Application connects with 
 
-http basic auth over port 8443.
+http basic (RFC 2617) auth over port 8443.
 
 
 
