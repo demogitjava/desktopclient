@@ -936,6 +936,30 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         
         clearTextFieldsblank();
+
+
+        MKundenstamm mdkstamm = new MKundenstamm();
+        HttpEntity entity = new HttpEntity(mdkstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+
+
+        //   ResponseEntity<String> newcustomerlist = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/newCustomer", HttpMethod.GET, entity, String.class);
+        //   newcustomerlist.getBody();
+
+        ResponseEntity<List<MKundenstamm>> newcustomer = JDesktop.rtemp.exchange(
+                JDesktop.baseUrl + "customer/newCustomer",
+                HttpMethod.GET,
+                entity,
+                new ParameterizedTypeReference<List<MKundenstamm>>(){});
+
+        newcustomer.getBody();
+
+        Long newid = (Long) newcustomer.getBody().get(0).getId();
+        Long newcustomernumber = (Long) newcustomer.getBody().get(0).getKundennummer();
+
+        jLabel21.setText(String.valueOf(newid));
+        jTextField13.setText(String.valueOf(newcustomernumber));
+
+        // /getCustomerbyName/newcustomer
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
