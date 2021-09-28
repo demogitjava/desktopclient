@@ -7,7 +7,9 @@ package de.jsoft.jdesktop.kundenstamm;
 import com.google.gson.Gson;
 import static de.jsoft.jdesktop.config.LoginProvider.client;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.peer.LightweightPeer;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,6 +26,8 @@ import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import org.krysalis.barcode4j.impl.upcean.EAN13Bean;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -33,6 +37,17 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import javax.swing.*;
 import org.apache.http.HttpStatus;
 import org.springframework.http.HttpHeaders;
+
+import java.awt.image.BufferedImage;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+
+import org.krysalis.barcode4j.BarcodeException;
+import org.krysalis.barcode4j.BarcodeGenerator;
+import org.krysalis.barcode4j.BarcodeUtil;
+import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 
 import org.apache.http.impl.client.CloseableHttpClient;
 //Auskunft Kreditreform url
@@ -396,7 +411,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel18.setText("QR Code");
+        jLabel18.setText("");
 
         jButton12.setText("suchen");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -886,7 +901,16 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
            jTextField20.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_1()));
            jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_2()));  
           
-           jLabel21.setText(String.valueOf(searchresult.get(kdrowcount).getId()));  
+           jLabel21.setText(String.valueOf(searchresult.get(kdrowcount).getId()));
+
+           String barcodeText = String.valueOf(searchresult.get(kdrowcount).getKundennummer());
+           generateEAN13BarcodeImage(barcodeText + "0000");
+
+            ImageIcon imgThisImg = new ImageIcon(generateEAN13BarcodeImage(barcodeText + "0000"));
+
+            jLabel18.setIcon(imgThisImg);
+
+          
     }//GEN-LAST:event_jButton13ActionPerformed
 
     /*
@@ -921,7 +945,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         mkdstamm.setEmail(jTextField18.getText());
         mkdstamm.setAnsprechpartner(jTextField22.getText());
         
-     
+       
      
        HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
        ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/savenewcustomer", HttpMethod.POST, entity, String.class);
@@ -958,6 +982,35 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jLabel21.setText(String.valueOf(newid));
         jTextField13.setText(String.valueOf(newcustomernumber));
+
+        // .setBackground(Color.LIGHT_GRAY);
+
+        jTextField25.setBackground(Color.LIGHT_GRAY);
+        jTextField14.setBackground(Color.LIGHT_GRAY);
+        jTextField1.setBackground(Color.LIGHT_GRAY);
+
+        jTextField2.setBackground(Color.LIGHT_GRAY);
+        jTextField3.setBackground(Color.LIGHT_GRAY);
+
+        jTextField4.setBackground(Color.LIGHT_GRAY);
+        jTextField5.setBackground(Color.LIGHT_GRAY);
+        jTextField6.setBackground(Color.LIGHT_GRAY);
+
+        jTextField7.setBackground(Color.LIGHT_GRAY);
+        jTextField15.setBackground(Color.LIGHT_GRAY);
+        jTextField8.setBackground(Color.LIGHT_GRAY);
+        jTextField9.setBackground(Color.LIGHT_GRAY);
+
+        jTextField10.setBackground(Color.LIGHT_GRAY);
+        jTextField23.setBackground(Color.LIGHT_GRAY);
+        jTextField11.setBackground(Color.LIGHT_GRAY);
+        jTextField12.setBackground(Color.LIGHT_GRAY);
+        jTextField16.setBackground(Color.LIGHT_GRAY);
+        jTextField17.setBackground(Color.LIGHT_GRAY);
+
+        jTextField18.setBackground(Color.LIGHT_GRAY);
+        jTextField22.setBackground(Color.LIGHT_GRAY);
+
 
         // /getCustomerbyName/newcustomer
     }//GEN-LAST:event_jButton8ActionPerformed
@@ -1035,7 +1088,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jTextField25.setText("");
         
         jLabel21.setText("");
-        
+        jLabel18.setText("");
     }
     
     private void setTextGermanEntity(List<Desktoplayout> customerlistlabels)
@@ -2076,6 +2129,15 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     public void setKdrowcount(int kdrowcount)
     {
         Kundenstramm.kdrowcount = kdrowcount;
+    }
+
+    public static BufferedImage generateEAN13BarcodeImage(String barcodeText) {
+        EAN13Bean barcodeGenerator = new EAN13Bean();
+        BitmapCanvasProvider canvas =
+                new BitmapCanvasProvider(160, BufferedImage.TYPE_BYTE_BINARY, false, 0);
+
+        barcodeGenerator.generateBarcode(canvas, barcodeText);
+        return canvas.getBufferedImage();
     }
 
    
