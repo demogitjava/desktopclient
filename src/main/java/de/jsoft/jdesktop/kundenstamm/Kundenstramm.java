@@ -402,6 +402,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jButton10.setText("Löschen");
         jButton10.setPreferredSize(new java.awt.Dimension(70, 27));
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("Ändern");
         jButton11.setPreferredSize(new java.awt.Dimension(80, 27));
@@ -411,7 +416,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel18.setText("");
+        jLabel18.setText("QR Code");
 
         jButton12.setText("suchen");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -1055,11 +1060,21 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 
     }//GEN-LAST:event_jButton11ActionPerformed
 
+    // delte customer
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        
+        MKundenstamm mkdstamm = new MKundenstamm();
+        mkdstamm.setId(Long.parseLong(jLabel21.getText()));
+       HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/deletecustomer", HttpMethod.POST, entity, String.class);
+      
+    }//GEN-LAST:event_jButton10ActionPerformed
+
 
     private void clearTextFieldsblank()
     {
-        
-        
+
         // Kundenstamm
         jTextField1.setText("");
         jTextField2.setText("");

@@ -194,8 +194,6 @@ public class MKundenstamm implements Serializable
         this.konto_Nr = konto_Nr;
     }
 
-  
-    
 
     public Double getKreditlimit() {
         return kreditlimit;
