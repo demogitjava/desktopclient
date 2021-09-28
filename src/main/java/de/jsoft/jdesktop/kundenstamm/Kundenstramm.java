@@ -1229,6 +1229,17 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         this.jButton12.setText(stbutton12);
         
         
+        // id 37 Text Verteter
+        String stlabel37 = (String) customerlistlabels.get(32).getDe();
+        this.jLabel19.setText(stlabel37);
+        
+        // id 38 Text Gebeit
+        String stlabel38 = (String) customerlistlabels.get(33).getDe();
+        this.jLabel20.setText(stlabel38);
+        
+        // id 39 Text Kunden anzeigen
+        String stbutton13 = (String) customerlistlabels.get(34).getDe();
+        this.jButton13.setText(stbutton13);
     }
     
        
@@ -1355,6 +1366,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         this.jButton12.setText(stbutton12);
         
         
+         // id 37 Text Verteter
+        String stlabel37 = (String) customerlistlabels.get(32).getEsp();
+        this.jLabel19.setText(stlabel37);
+        
+        // id 38 Text Gebeit
+        String stlabel38 = (String) customerlistlabels.get(33).getEsp();
+        this.jLabel20.setText(stlabel38);
+        
+        // id 39 Text Kunden anzeigen
+        String stbutton13 = (String) customerlistlabels.get(34).getEsp();
+        this.jButton13.setText(stbutton13);
+        
+        
     }
       
     private void setTextFrenshEntity(List<Desktoplayout> customerlistlabels)
@@ -1478,6 +1502,18 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 36 Text JButton12
         String stbutton12 = (String) customerlistlabels.get(31).getFr();
         this.jButton12.setText(stbutton12);
+        
+          // id 37 Text Verteter
+        String stlabel37 = (String) customerlistlabels.get(32).getFr();
+        this.jLabel19.setText(stlabel37);
+        
+        // id 38 Text Gebeit
+        String stlabel38 = (String) customerlistlabels.get(33).getFr();
+        this.jLabel20.setText(stlabel38);
+        
+        // id 39 Text Kunden anzeigen
+        String stbutton13 = (String) customerlistlabels.get(34).getFr();
+        this.jButton13.setText(stbutton13);
         
         
     }  
@@ -1605,6 +1641,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         this.jButton12.setText(stbutton12);
         
         
+              // id 37 Text Verteter
+        String stlabel37 = (String) customerlistlabels.get(32).getIt();
+        this.jLabel19.setText(stlabel37);
+        
+        // id 38 Text Gebeit
+        String stlabel38 = (String) customerlistlabels.get(33).getIt();
+        this.jLabel20.setText(stlabel38);
+        
+        // id 39 Text Kunden anzeigen
+        String stbutton13 = (String) customerlistlabels.get(34).getIt();
+        this.jButton13.setText(stbutton13);
+        
+        
     }  
        
     private void setTextTuerkyEntity(List<Desktoplayout> customerlistlabels)
@@ -1728,6 +1777,18 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 36 Text JButton12
         String stbutton12 = (String) customerlistlabels.get(31).getTr();
         this.jButton12.setText(stbutton12);
+        
+              // id 37 Text Verteter
+        String stlabel37 = (String) customerlistlabels.get(32).getTr();
+        this.jLabel19.setText(stlabel37);
+        
+        // id 38 Text Gebeit
+        String stlabel38 = (String) customerlistlabels.get(33).getTr();
+        this.jLabel20.setText(stlabel38);
+        
+        // id 39 Text Kunden anzeigen
+        String stbutton13 = (String) customerlistlabels.get(34).getTr();
+        this.jButton13.setText(stbutton13);
         
         
     }  
@@ -1853,6 +1914,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 36 Text JButton12
         String stbutton12 = (String) customerlistlabels.get(31).getUk();
         this.jButton12.setText(stbutton12);
+        
+        
+                   // id 37 Text Verteter
+        String stlabel37 = (String) customerlistlabels.get(32).getUk();
+        this.jLabel19.setText(stlabel37);
+        
+        // id 38 Text Gebeit
+        String stlabel38 = (String) customerlistlabels.get(33).getUk();
+        this.jLabel20.setText(stlabel38);
+        
+        // id 39 Text Kunden anzeigen
+        String stbutton13 = (String) customerlistlabels.get(34).getUk();
+        this.jButton13.setText(stbutton13);
         
         
     }
