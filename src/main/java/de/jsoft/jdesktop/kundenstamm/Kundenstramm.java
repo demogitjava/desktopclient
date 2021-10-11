@@ -1104,6 +1104,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         jLabel21.setText("");
         jLabel18.setText("");
+
+        jTextField24.setText("");
+
     }
     
     private void setTextGermanEntity(List<Desktoplayout> customerlistlabels)
@@ -1123,7 +1126,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         // Text JTabbedPane1
         String stcustomertextentity = (String) customerlistlabels.get(1).getDe();
-        this.jTabbedPane1.setTitleAt(0, stcustomertextentity);
+        this.jTabbedPane1.setTitleAt(1, stcustomertextentity);
         
         // id 7  Text jLabel1   
         String stlabel1 = (String) customerlistlabels.get(2).getDe();
@@ -1240,9 +1243,41 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 39 Text Kunden anzeigen
         String stbutton13 = (String) customerlistlabels.get(34).getDe();
         this.jButton13.setText(stbutton13);
+
+
+
+        /*
+
+            JTabbedPane1
+            Artikel search
+       */
+        // id 31 Text Angebot erstellen
+        String sttabpane = (String) customerlistlabels.get(26).getDe();
+        this.jTabbedPane1.setTitleAt(1, sttabpane);
+
+
+
+        //  id 34 Text Artikel suchen
+        String startsearch = (String) customerlistlabels.get(29).getDe();
+        this.jButton6.setText(startsearch);
+
+
+        // id 35 Text  -- bearbeiten
+        String stbearbeiten = (String) customerlistlabels.get(30).getDe();
+        this.jButton7.setText(stbearbeiten);
+
+        // id 33 Text  -- per mail versenden
+        String stsendperemail = (String) customerlistlabels.get(28).getDe();
+        this.jButton5.setText(stsendperemail);
+
+        // id 32 Text -- speichern
+        String stspeichern = (String) customerlistlabels.get(27).getDe();
+        this.jButton4.setText(stspeichern);
+
+           
+
     }
-    
-       
+
     private void setTextSpanishEntity(List<Desktoplayout> customerlistlabels)
     {
         
@@ -1377,8 +1412,40 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 39 Text Kunden anzeigen
         String stbutton13 = (String) customerlistlabels.get(34).getEsp();
         this.jButton13.setText(stbutton13);
+
+
+
+
+  /*
+
+            JTabbedPane1
+            Artikel search
+       */
+        // id 31 Text Angebot erstellen
+        String sttabpane = (String) customerlistlabels.get(26).getEsp();
+        this.jTabbedPane1.setTitleAt(1, sttabpane);
+
+
+
+        //  id 34 Text Artikel suchen
+        String startsearch = (String) customerlistlabels.get(29).getEsp();
+        this.jButton6.setText(startsearch);
+
+
+        // id 35 Text  -- bearbeiten
+        String stbearbeiten = (String) customerlistlabels.get(30).getEsp();
+        this.jButton7.setText(stbearbeiten);
+
+        // id 33 Text  -- per mail versenden
+        String stsendperemail = (String) customerlistlabels.get(28).getEsp();
+        this.jButton5.setText(stsendperemail);
+
+        // id 32 Text -- speichern
+        String stspeichern = (String) customerlistlabels.get(27).getEsp();
+        this.jButton4.setText(stspeichern);
         
-        
+
+
     }
       
     private void setTextFrenshEntity(List<Desktoplayout> customerlistlabels)
@@ -1514,6 +1581,39 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 39 Text Kunden anzeigen
         String stbutton13 = (String) customerlistlabels.get(34).getFr();
         this.jButton13.setText(stbutton13);
+
+        
+        
+        /*
+
+            JTabbedPane1
+            Artikel search
+       */
+        // id 31 Text Angebot erstellen
+        String sttabpane = (String) customerlistlabels.get(26).getFr();
+        this.jTabbedPane1.setTitleAt(1, sttabpane);
+
+
+
+        //  id 34 Text Artikel suchen
+        String startsearch = (String) customerlistlabels.get(29).getFr();
+        this.jButton6.setText(startsearch);
+
+
+        // id 35 Text  -- bearbeiten
+        String stbearbeiten = (String) customerlistlabels.get(30).getFr();
+        this.jButton7.setText(stbearbeiten);
+
+        // id 33 Text  -- per mail versenden
+        String stsendperemail = (String) customerlistlabels.get(28).getFr();
+        this.jButton5.setText(stsendperemail);
+
+        // id 32 Text -- speichern
+        String stspeichern = (String) customerlistlabels.get(27).getFr();
+        this.jButton4.setText(stspeichern);
+        
+
+
         
         
     }  
@@ -1652,6 +1752,37 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 39 Text Kunden anzeigen
         String stbutton13 = (String) customerlistlabels.get(34).getIt();
         this.jButton13.setText(stbutton13);
+
+        
+           /*
+
+            JTabbedPane1
+            Artikel search
+       */
+        // id 31 Text Angebot erstellen
+        String sttabpane = (String) customerlistlabels.get(26).getIt();
+        this.jTabbedPane1.setTitleAt(1, sttabpane);
+
+
+
+        //  id 34 Text Artikel suchen
+        String startsearch = (String) customerlistlabels.get(29).getIt();
+        this.jButton6.setText(startsearch);
+
+
+        // id 35 Text  -- bearbeiten
+        String stbearbeiten = (String) customerlistlabels.get(30).getIt();
+        this.jButton7.setText(stbearbeiten);
+
+        // id 33 Text  -- per mail versenden
+        String stsendperemail = (String) customerlistlabels.get(28).getIt();
+        this.jButton5.setText(stsendperemail);
+
+        // id 32 Text -- speichern
+        String stspeichern = (String) customerlistlabels.get(27).getIt();
+        this.jButton4.setText(stspeichern);
+        
+
         
         
     }  
@@ -1789,7 +1920,38 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         // id 39 Text Kunden anzeigen
         String stbutton13 = (String) customerlistlabels.get(34).getTr();
         this.jButton13.setText(stbutton13);
+
+
+           /*
+
+            JTabbedPane1
+            Artikel search
+       */
+        // id 31 Text Angebot erstellen
+        String sttabpane = (String) customerlistlabels.get(26).getTr();
+        this.jTabbedPane1.setTitleAt(1, sttabpane);
+
+
+
+        //  id 34 Text Artikel suchen
+        String startsearch = (String) customerlistlabels.get(29).getTr();
+        this.jButton6.setText(startsearch);
+
+
+        // id 35 Text  -- bearbeiten
+        String stbearbeiten = (String) customerlistlabels.get(30).getTr();
+        this.jButton7.setText(stbearbeiten);
+
+        // id 33 Text  -- per mail versenden
+        String stsendperemail = (String) customerlistlabels.get(28).getTr();
+        this.jButton5.setText(stsendperemail);
+
+        // id 32 Text -- speichern
+        String stspeichern = (String) customerlistlabels.get(27).getTr();
+        this.jButton4.setText(stspeichern);
         
+        
+
         
     }  
             
@@ -1928,7 +2090,38 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         String stbutton13 = (String) customerlistlabels.get(34).getUk();
         this.jButton13.setText(stbutton13);
         
+
         
+        
+        /*
+
+            JTabbedPane1
+            Artikel search
+        */
+        // id 31 Text Angebot erstellen
+        String sttabpane = (String) customerlistlabels.get(26).getUk();
+        this.jTabbedPane1.setTitleAt(1, sttabpane);
+
+
+
+        //  id 34 Text Artikel suchen
+        String startsearch = (String) customerlistlabels.get(29).getUk();
+        this.jButton6.setText(startsearch);
+
+
+        // id 35 Text  -- bearbeiten
+        String stbearbeiten = (String) customerlistlabels.get(30).getUk();
+        this.jButton7.setText(stbearbeiten);
+
+        // id 33 Text  -- per mail versenden
+        String stsendperemail = (String) customerlistlabels.get(28).getUk();
+        this.jButton5.setText(stsendperemail);
+
+        // id 32 Text -- speichern
+        String stspeichern = (String) customerlistlabels.get(27).getUk();
+        this.jButton4.setText(stspeichern);
+
+
     }
 
     public ActionEvent getAevent() {
