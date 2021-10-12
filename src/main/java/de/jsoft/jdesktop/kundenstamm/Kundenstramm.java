@@ -50,6 +50,9 @@ import org.krysalis.barcode4j.BarcodeUtil;
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 
 import org.apache.http.impl.client.CloseableHttpClient;
+
+
+
 //Auskunft Kreditreform url
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
 
@@ -66,6 +69,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
     public static List<MKundenstamm> searchresult;
 
+    public static List<Artikelstamm> selecteditems;
+    
     public static int kdrowcount;
     
     public ActionEvent aevent;
@@ -81,6 +86,29 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         clearTextFieldsblank(); // jTabbedPane1 Kundenstamm 
         loadTextEntitystoPanel();
+        
+        // load custom items 
+        // to jTabbedPane1
+        // tab create offers - // Angebote erstellen
+        loadcustomselectedItems();
+    }
+    
+    
+    private void loadcustomselectedItems()
+    {
+       HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        
+        ResponseEntity<List<Artikelstamm>> selectedcustomitems = JDesktop.rtemp.exchange(
+                de.jsoft.JDesktop.baseUrl + "artikelstamm/getselectedArtikel",
+                HttpMethod.GET,
+                requestEntity,
+                new ParameterizedTypeReference<List<Artikelstamm>>(){});
+        
+        
+        de.jsoft.jdesktop.kundenstamm.DaoKundenstamm dkundstamm = new de.jsoft.jdesktop.kundenstamm.DaoKundenstamm();
+        
+        dkundstamm.addDatatoTable(selectedcustomitems.getBody(), jTable1);
+       
     }
     
     private void loadTextEntitystoPanel() 
@@ -690,6 +718,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jButton5.setText("per mail versenden");
 
         jButton6.setText("Artikel suchen");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setText("bearbeiten");
 
@@ -1071,6 +1104,20 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
       
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        
+            de.jsoft.jdesktop.kundenstamm.Artikelstamm artstamm = new de.jsoft.jdesktop.kundenstamm.Artikelstamm();
+            HttpEntity entity = new HttpEntity(artstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        
+            
+            // /artikelstamm/getselectedArtikel
+            
+            
+            
+            
+    }//GEN-LAST:event_jButton6ActionPerformed
+
 
     private void clearTextFieldsblank()
     {
@@ -1416,7 +1463,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
 
 
-  /*
+        /*
 
             JTabbedPane1
             Artikel search
@@ -1754,7 +1801,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         this.jButton13.setText(stbutton13);
 
         
-           /*
+        /*
 
             JTabbedPane1
             Artikel search
@@ -1922,7 +1969,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         this.jButton13.setText(stbutton13);
 
 
-           /*
+        /*
 
             JTabbedPane1
             Artikel search
