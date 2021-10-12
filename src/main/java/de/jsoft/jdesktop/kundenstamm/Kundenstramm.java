@@ -1107,14 +1107,21 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         
-            de.jsoft.jdesktop.kundenstamm.Artikelstamm artstamm = new de.jsoft.jdesktop.kundenstamm.Artikelstamm();
-            HttpEntity entity = new HttpEntity(artstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
         
+        ResponseEntity<List<Artikelstamm>> resposecustomitems = JDesktop.rtemp.exchange(
+                de.jsoft.JDesktop.baseUrl + "artikelstamm/getArtikelbyArtikelbezeichnung/" + jTextField24.getText(),
+                HttpMethod.GET,
+                requestEntity,
+                new ParameterizedTypeReference<List<Artikelstamm>>(){});
+    
+           
+        List<Artikelstamm> selectedcustomitems = resposecustomitems.getBody();
+     
+        de.jsoft.jdesktop.kundenstamm.DaoKundenstamm daokdstamm = new de.jsoft.jdesktop.kundenstamm.DaoKundenstamm();
+        daokdstamm.addDatatoTable((List<Artikelstamm>) selectedcustomitems, jTable1);
             
-            // /artikelstamm/getselectedArtikel
-            
-            
-            
+       
             
     }//GEN-LAST:event_jButton6ActionPerformed
 

@@ -17,7 +17,7 @@ public class DaoKundenstamm
 {
     
     
-    private DefaultTableModel model;
+    public DefaultTableModel model;
     
     // "Artikelnummer", "Artikelbezeichnung", "VK",
     String artnumber;
