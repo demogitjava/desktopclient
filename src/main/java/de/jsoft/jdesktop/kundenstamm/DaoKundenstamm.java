@@ -32,10 +32,12 @@ public class DaoKundenstamm
     
     // JTable 1
     // Create offers
-     public void addDatatoTable(List<Artikelstamm> selectedcustomitems, JTable jTable1)
+     public void addDatatoTable(List<Artikelstamm> selectedcustomitems, JTable jTable2)
     {
-        model = new DefaultTableModel(
         
+       
+        model = new DefaultTableModel(
+                
       new Object[][]
       {
           
@@ -64,8 +66,23 @@ public class DaoKundenstamm
          
               model.addRow(new Object[]{ artnumber, artbezeichnung, vk});
        }
+       
+         
         
-         jTable1.setModel(model);
+         jTable2.setModel(model);
     }
     
+     
+     public void addrowwithdata(List<Artikelstamm> selectedcustomitems, JTable jTable2)
+     {
+         model = (DefaultTableModel) jTable2.getModel();
+         
+         model.addRow(new Object[]
+         {
+             selectedcustomitems.get(0).getArtikelnummer(),
+             selectedcustomitems.get(0).getArtikelbezeichnung(),
+             selectedcustomitems.get(0).getVk()
+         });
+         
+     }
 }

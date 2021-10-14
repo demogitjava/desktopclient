@@ -23,6 +23,8 @@ import com.google.gson.reflect.TypeToken;
 import de.jsoft.JDesktop;
 import de.jsoft.jdesktop.login.LoginFrame;
 import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,6 +52,7 @@ import org.krysalis.barcode4j.BarcodeUtil;
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 
 import org.apache.http.impl.client.CloseableHttpClient;
+import static org.springframework.shell.table.CellMatchers.row;
 
 
 
@@ -267,6 +270,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jTabbedPane3 = new javax.swing.JTabbedPane();
 
@@ -582,7 +587,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                                         .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                             .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -680,7 +685,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kundenstamm", jPanel1);
@@ -698,6 +703,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable1);
 
         jButton4.setText("speichern");
@@ -726,6 +736,16 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
 
         jButton7.setText("bearbeiten");
 
+        jButton14.setText(">>");
+        jButton14.setToolTipText("add to Chart");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("<<");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -736,17 +756,21 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton4))
-                    .addComponent(jTextField24))
-                .addContainerGap(140, Short.MAX_VALUE))
+                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 751, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -762,8 +786,13 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(116, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(107, 107, 107)
+                        .addComponent(jButton14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton15)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Angebote erstellen", jPanel2);
@@ -1124,6 +1153,52 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
        
             
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+       
+       
+            jTable1 = (JTable) evt.getSource();
+            
+            int row = jTable1.getSelectedRow();
+            
+            
+            Artikelstamm artstamm = new Artikelstamm();
+            artstamm.setArtikelnummer(Long.parseLong(jTable1.getModel().getValueAt(row, 0).toString()));
+            artstamm.setArtikelbezeichnung(jTable1.getModel().getValueAt(row,1).toString());
+            artstamm.setVk((double) jTable1.getModel().getValueAt(row,2));
+            
+            List<Artikelstamm> selectedcustomitems = new ArrayList();
+            selectedcustomitems.add(artstamm);
+            
+            DaoKundenstamm daokdstamm = new DaoKundenstamm();
+            daokdstamm.addrowwithdata(selectedcustomitems, jTable2);
+        
+    }//GEN-LAST:event_jTable1MouseClicked
+
+     
+    // add data from jTable1 
+    // to JTable2 by button click
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent aevent) {//GEN-FIRST:event_jButton14ActionPerformed
+     
+        // TODO add your handling code here:
+       
+       
+        int row = jTable1.getSelectedRow();
+        
+         Artikelstamm artstamm = new Artikelstamm();
+            artstamm.setArtikelnummer(Long.parseLong(jTable1.getModel().getValueAt(row, 0).toString()));
+            artstamm.setArtikelbezeichnung(jTable1.getModel().getValueAt(row,1).toString());
+            artstamm.setVk((double) jTable1.getModel().getValueAt(row,2));
+            
+            List<Artikelstamm> selectedcustomitems = new ArrayList();
+            selectedcustomitems.add(artstamm);
+            
+            DaoKundenstamm daokdstamm = new DaoKundenstamm();
+            
+            daokdstamm.addrowwithdata(selectedcustomitems, jTable2);
+                
+        System.out.print("die selected row ist " + row + "\n");
+    }//GEN-LAST:event_jButton14ActionPerformed
 
 
     private void clearTextFieldsblank()
@@ -2195,6 +2270,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
