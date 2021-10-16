@@ -81,11 +81,14 @@ public class DaoKundenstamm
      {
          model = (DefaultTableModel) jTable2.getModel();
          
+       
+       
          model.addRow(new Object[]
          {
              selectedcustomitems.get(0).getArtikelnummer(),
              selectedcustomitems.get(0).getArtikelbezeichnung(),
-             selectedcustomitems.get(0).getVk()
+             selectedcustomitems.get(0).getVk(),
+           
          });
          
         
@@ -119,4 +122,7 @@ public class DaoKundenstamm
             ((DefaultTableModel) jTable2.getModel()).removeRow(selectedRow);
             updateNumberCustomerChart(jTable2, jLabel22);
      }
+     
+     
+    
 }
