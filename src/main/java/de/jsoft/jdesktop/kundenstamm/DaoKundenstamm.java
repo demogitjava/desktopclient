@@ -5,7 +5,9 @@
  */
 package de.jsoft.jdesktop.kundenstamm;
 
+import java.awt.Dimension;
 import java.util.List;
+import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -23,6 +25,8 @@ public class DaoKundenstamm
     String artnumber;
     String artbezeichnung;
     Double vk;
+    
+   
     
     public DaoKundenstamm()
     {
@@ -84,5 +88,35 @@ public class DaoKundenstamm
              selectedcustomitems.get(0).getVk()
          });
          
+        
+     }
+     
+     
+     
+     
+     // Anzahl // jLabel
+     public void updateNumberCustomerChart(JTable jTable2, JLabel jLabel22)
+     {
+      
+    
+         jLabel22.setText(jTable2.getSize().toString());
+        
+      
+         int rows = jTable2.getRowCount();
+         jLabel22.setText(String.valueOf(rows));
+         
+        
+         
+          
+     }
+     
+     
+     public void removeItemCustomerChart(JTable jTable2, JLabel jLabel22)
+     {
+         
+            Integer selectedRow = jTable2.getSelectedRow();
+            
+            ((DefaultTableModel) jTable2.getModel()).removeRow(selectedRow);
+            updateNumberCustomerChart(jTable2, jLabel22);
      }
 }
