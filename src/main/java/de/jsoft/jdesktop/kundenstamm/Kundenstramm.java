@@ -716,6 +716,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jScrollPane2.setViewportView(jTable1);
 
         jButton4.setText("speichern");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -745,6 +750,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         });
 
         jButton7.setText("bearbeiten");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton14.setText(">>");
         jButton14.setToolTipText("add to Chart");
@@ -1258,6 +1268,30 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
           daokdstamm.removeItemCustomerChart(jTable2, jLabel22);
         
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    
+    /*
+        save offer from jTable2 to db
+    */
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+         DaoKundenstamm daokdstamm = new DaoKundenstamm();
+         
+         Buchungsdaten bdaten = new Buchungsdaten();
+         
+         bdaten.setKdnummer(Long.parseLong(jTextField13.getText()));
+         bdaten.setKdname(jTextField4.getText());
+      
+         daokdstamm.saveofferdata(jTable2, bdaten);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     private void clearTextFieldsblank()
@@ -2395,7 +2429,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    public javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
