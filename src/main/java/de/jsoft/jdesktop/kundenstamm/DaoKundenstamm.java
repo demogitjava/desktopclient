@@ -161,12 +161,13 @@ public class DaoKundenstamm
             
              
              // jTable2
-             bdaten = new Buchungsdaten();
+             //bdaten = new Buchungsdaten();
              bdaten.setArtikelnummer(artikelnummer);
              bdaten.setVk(vkpries);
              bdaten.setMenge(anzahl);
              
        
+            
              saveoffer.add(i, bdaten);
              
              

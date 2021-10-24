@@ -1286,8 +1286,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
          
          Buchungsdaten bdaten = new Buchungsdaten();
          
-         bdaten.setKdnummer(Long.parseLong(jTextField13.getText()));
-         bdaten.setKdname(jTextField4.getText());
+        bdaten.setKdnummer(Long.parseLong(jTextField13.getText()));
+             bdaten.setKdname(jTextField4.getText());
       
          daokdstamm.saveofferdata(jTable2, bdaten);
         

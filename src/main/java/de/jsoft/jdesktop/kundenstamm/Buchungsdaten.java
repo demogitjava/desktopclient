@@ -21,7 +21,6 @@ public class Buchungsdaten
     private int beleg;
     private int wg;
     private double vk;
-    private double ek;
     private Date bdatum;
     private Long artikelnummer;
     private int belegart;
@@ -89,14 +88,7 @@ public class Buchungsdaten
         this.vk = vk;
     }
 
-    public double getEk() {
-        return ek;
-    }
-
-    public void setEk(double ek) {
-        this.ek = ek;
-    }
-
+   
     public Date getBdatum() {
         return bdatum;
     }
