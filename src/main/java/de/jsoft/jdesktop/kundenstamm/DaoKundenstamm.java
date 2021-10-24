@@ -175,7 +175,7 @@ public class DaoKundenstamm
          }
          
          HttpEntity entity = new HttpEntity(saveoffer,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
-         ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "offernumber/savenewoffer", HttpMethod.POST, entity, String.class);
+         ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "offer/savenewoffer", HttpMethod.POST, entity, String.class);
       
      
          System.out.print("post offer" + "\n");
