@@ -29,11 +29,19 @@ public class DaoKundenstamm
     public DefaultTableModel model;
     
     // "Artikelnummer", "Artikelbezeichnung", "VK",
+    
+    Long artikelnummer;
     String artnumber;
     String artbezeichnung;
     Double vk;
     
+    Double vkpreis;
+    Integer anzahl;
+    
+    
     List<MJTable2Offer> saveoffer;
+    
+    List<Buchungsdaten> saveofferhttpentity;
     
     public DaoKundenstamm()
     {
@@ -136,45 +144,55 @@ public class DaoKundenstamm
      {
          model = (DefaultTableModel) jTable2.getModel();
          
-         List<Buchungsdaten> saveoffer = new ArrayList();
+         saveofferhttpentity = new ArrayList();
+         
+       
+         
          int rows = jTable2.getRowCount();
          
          for(int i = 0; i < rows; i++)
          {
+             Buchungsdaten buchungsdaten = new Buchungsdaten();
              // überprüft ob anzahl eingeben
              Integer anzahl1 = (Integer) this.model.getValueAt(i, 3);
-             if(anzahl1 == null)
-             {
-                 this.model.setValueAt(1, i, 3);
-             }
+            // if(anzahl1 == null)
+            // {
+              //   model.setValueAt(1, i, 3);
+            // }
              //-----
+             buchungsdaten.setKdnummer(bdaten.getKdnummer());
+             buchungsdaten.setKdname(bdaten.getKdname());
+             artikelnummer = (Long) model.getValueAt(i, 0);
+             buchungsdaten.setArtikelnummer(artikelnummer);
+        
              
-             Long artikelnummer = (Long) this.model.getValueAt(i, 0);
-             String artbezeichnung = (String) this.model.getValueAt(i, 1);
-             Double vkpries = (Double) this.model.getValueAt(i, 2);
-             Integer anzahl = (Integer) this.model.getValueAt(i, 3);
-             if(anzahl == null)
+             artbezeichnung = (String) model.getValueAt(i, 1);
+           
+             
+            vkpreis = (Double) model.getValueAt(i, 2);
+          
+            buchungsdaten.setVk(vkpreis);
+                
+            anzahl = (Integer) model.getValueAt(i, 3);
+        
+            // if null then set to 
+            if(anzahl == null)
              {
-                 this.model.setValueAt(1, i, 3);
+                 model.setValueAt(1, i, 3);
              }
-             
             
-             
+            buchungsdaten.setMenge((Integer) model.getValueAt(i, 3));
+            
+            saveofferhttpentity.add(buchungsdaten);
+            
+           
              // jTable2
              //bdaten = new Buchungsdaten();
-             bdaten.setArtikelnummer(artikelnummer);
-             bdaten.setVk(vkpries);
-             bdaten.setMenge(anzahl);
-             
-       
-            
-             saveoffer.add(i, bdaten);
-             
-             
+           
              
          }
          
-         HttpEntity entity = new HttpEntity(saveoffer,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
+         HttpEntity entity = new HttpEntity(saveofferhttpentity,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
          ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "offer/savenewoffer", HttpMethod.POST, entity, String.class);
       
      
