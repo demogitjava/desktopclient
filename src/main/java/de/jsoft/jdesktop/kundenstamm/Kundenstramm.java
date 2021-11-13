@@ -1305,7 +1305,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         bdaten.setKdnummer(Long.parseLong(jTextField13.getText()));
              bdaten.setKdname(jTextField4.getText());
       
-         daokdstamm.saveofferdata(jTable2, bdaten, jLabel27);
+         daokdstamm.saveofferdata(jTable2, bdaten, jLabel27, jLabel25);
         
     }//GEN-LAST:event_jButton4ActionPerformed
 

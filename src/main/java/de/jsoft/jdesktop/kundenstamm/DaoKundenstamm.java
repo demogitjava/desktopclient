@@ -8,6 +8,7 @@ package de.jsoft.jdesktop.kundenstamm;
 import com.google.gson.Gson;
 import de.jsoft.JDesktop;
 import java.awt.Dimension;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -143,7 +144,7 @@ public class DaoKundenstamm
      
      // get values from jTable2
      // post list to  /offer/savenewoffer
-     public void saveofferdata(JTable jTable2, Buchungsdaten bdaten, JLabel jLabel27)
+     public void saveofferdata(JTable jTable2, Buchungsdaten bdaten, JLabel jLabel27, JLabel jLabel25)
      {
          model = (DefaultTableModel) jTable2.getModel();
          
@@ -202,10 +203,37 @@ public class DaoKundenstamm
         
         
          int belegnummer = responseentitybeleg.getBody().get(0).getBeleg();
-         
          jLabel27.setText(String.valueOf(belegnummer));
          
-       
+        
+         sumtoaloffer(responseentitybeleg, jLabel25);  // double offer total  jLabel25
      }
+
+    public Double sumtoaloffer(ResponseEntity<List<Buchungsdaten>> responseentitybeleg, JLabel jLabel25) 
+    {
+        Double totaloffer = 0.00;
+        
+        int listsize = responseentitybeleg.getBody().size();
+        
+        for(int i = 0; i < listsize; i++)
+        {
+            int responsemenge = responseentitybeleg.getBody().get(i).getMenge();
+            double preisoffer = responseentitybeleg.getBody().get(i).getVk();
+            
+            double rowdouble = responsemenge * preisoffer;
+            totaloffer = totaloffer + rowdouble;
+        }
+        DecimalFormat df = new DecimalFormat("0.00");
+        jLabel25.setText(String.valueOf(df.format(totaloffer)));
+        
+        
+        return totaloffer;
+    }
+     
+     
+   
+    
+    
+        
     
 }
