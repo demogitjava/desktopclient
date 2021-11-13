@@ -5,10 +5,13 @@
  */
 package de.jsoft.jdesktop.kundenstamm;
 
+import com.google.gson.Gson;
 import de.jsoft.JDesktop;
 import java.awt.Dimension;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -140,7 +143,7 @@ public class DaoKundenstamm
      
      // get values from jTable2
      // post list to  /offer/savenewoffer
-     public void saveofferdata(JTable jTable2, Buchungsdaten bdaten)
+     public void saveofferdata(JTable jTable2, Buchungsdaten bdaten, JLabel jLabel27)
      {
          model = (DefaultTableModel) jTable2.getModel();
          
@@ -192,11 +195,16 @@ public class DaoKundenstamm
              
          }
          
+         
+         // Template[] list = restTemplate.getForEntity(urlFullTemplates, Template[].class).getBody();
          HttpEntity entity = new HttpEntity(saveofferhttpentity,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
-         ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "offer/savenewoffer", HttpMethod.POST, entity, String.class);
-      
-     
-         System.out.print("post offer" + "\n");
+         ResponseEntity<List<Buchungsdaten>> responseentitybeleg = JDesktop.rtemp.exchange(JDesktop.baseUrl + "offer/savenewoffer", HttpMethod.POST, entity, new ParameterizedTypeReference<List<Buchungsdaten>>(){});
+        
+        
+         int belegnummer = responseentitybeleg.getBody().get(0).getBeleg();
+         
+         jLabel27.setText(String.valueOf(belegnummer));
+         
        
      }
     

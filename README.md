@@ -26,6 +26,8 @@ You can get the open java jdk from here:
 java Open JDK
 https://openjdk.java.net/
 
+or Java Bell Soft
+https://bell-sw.com/pages/downloads/#mn
 
 
 to run the application 
