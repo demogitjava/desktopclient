@@ -282,8 +282,14 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jTextField26 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -695,7 +701,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kundenstamm", jPanel1);
@@ -743,6 +749,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jScrollPane3.setViewportView(jTable2);
 
         jButton5.setText("per mail versenden");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Artikel suchen");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -858,21 +869,78 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(jLabel25))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Angebote erstellen", jPanel2);
-        jTabbedPane1.addTab("Lieferscheine & Aufträge", jTabbedPane2);
-        jTabbedPane1.addTab("Rechnungen & Mahnwesen", jTabbedPane3);
+
+        jTextField26.setText("jTextField26");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList1);
+
+        jButton16.setText("anzeigen");
+
+        jButton17.setText("lieferschein -> rechnung");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextField26, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(15, 15, 15)
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton16)
+                    .addComponent(jButton17))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Lieferscheine & Auftrage", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 810, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 659, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Rechnungen & Mahnwesen", jPanel4);
 
         getContentPane().add(jTabbedPane1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -887,70 +955,179 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
       
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-           
-     
-        // de.jsoft.JDesktop.baseUrl + "/customer/getCustomerbyName/" + jTextField13.getText()
-     
-        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
-        
-        ResponseEntity<List<MKundenstamm>> customerentity = JDesktop.rtemp.exchange(
-                de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/" + jTextField13.getText(),
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<List<MKundenstamm>>(){});
-    
-         
-         /*
-            
-                response from search Field 
-                jTextField13 to JTable
-         
-         */
-        
-         if(customerentity.getBody().size() == 0)
-         {
-             System.out.print("0 customer avilable!" + "\n");
-             // add Data to Customer Panel
-         }
-         else
-         {
-             // more then one customer is there
-             // load data to JTable
-             
-            de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch customersearchtable = new de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch();
-            customersearchtable.setVisible(true);
-            customersearchtable.setMaximizable(true);
-            customersearchtable.pack();
-            
-            searchresult = (List<MKundenstamm>) customerentity.getBody();
-            customersearchtable.addDatatoTable(searchresult);
-
-            JDesktop.jdeskpane.add(customersearchtable);
-            JDesktop.jdeskpane.setSelectedFrame(customersearchtable);
-            
-         }
-        
-
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-  
-    public void updateJTextFields(ActionEvent aevent)
-    {
-       
-        jButton13ActionPerformed(aevent);
-    }
-    
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-      
-    }//GEN-LAST:event_jTextField13ActionPerformed
 
-    public void jTextField13InputMethodTextChanged(java.awt.event.InputMethodEvent ev) {//GEN-FIRST:event_jTextField13InputMethodTextChanged
+        DaoKundenstamm daokdstamm = new DaoKundenstamm();
+        daokdstamm.removeItemCustomerChart(jTable2, jLabel22);
 
-        
+    }//GEN-LAST:event_jButton15ActionPerformed
 
-    }//GEN-LAST:event_jTextField13InputMethodTextChanged
+    // add data from jTable1 
+    // to JTable2 by button click
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+
+        // TODO add your handling code here:
+
+        int row = jTable1.getSelectedRow();
+
+        Artikelstamm artstamm = new Artikelstamm();
+        artstamm.setArtikelnummer(Long.parseLong(jTable1.getModel().getValueAt(row, 0).toString()));
+        artstamm.setArtikelbezeichnung(jTable1.getModel().getValueAt(row,1).toString());
+        artstamm.setVk((double) jTable1.getModel().getValueAt(row,2));
+
+        List<Artikelstamm> selectedcustomitems = new ArrayList();
+        selectedcustomitems.add(artstamm);
+
+        DaoKundenstamm daokdstamm = new DaoKundenstamm();
+
+        daokdstamm.addrowwithdata(selectedcustomitems, jTable2);
+        daokdstamm.updateNumberCustomerChart(jTable2, jLabel22);
+
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+
+        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+
+        ResponseEntity<List<Artikelstamm>> resposecustomitems = JDesktop.rtemp.exchange(
+            de.jsoft.JDesktop.baseUrl + "artikelstamm/getArtikelbyArtikelbezeichnung/" + jTextField24.getText(),
+            HttpMethod.GET,
+            requestEntity,
+            new ParameterizedTypeReference<List<Artikelstamm>>(){});
+
+        List<Artikelstamm> selectedcustomitems = resposecustomitems.getBody();
+
+        de.jsoft.jdesktop.kundenstamm.DaoKundenstamm daokdstamm = new de.jsoft.jdesktop.kundenstamm.DaoKundenstamm();
+        daokdstamm.addDatatoTable((List<Artikelstamm>) selectedcustomitems, jTable1);
+
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    /*
+        save offer from jTable2 to db
+    */
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+
+        DaoKundenstamm daokdstamm = new DaoKundenstamm();
+
+        Buchungsdaten bdaten = new Buchungsdaten();
+
+        bdaten.setKdnummer(Long.parseLong(jTextField13.getText()));
+        bdaten.setKdname(jTextField4.getText());
+
+        daokdstamm.saveofferdata(jTable2, bdaten, jLabel27, jLabel25);
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+
+        jTable1 = (JTable) evt.getSource();
+
+        int row = jTable1.getSelectedRow();
+
+        Artikelstamm artstamm = new Artikelstamm();
+        artstamm.setArtikelnummer(Long.parseLong(jTable1.getModel().getValueAt(row, 0).toString()));
+        artstamm.setArtikelbezeichnung(jTable1.getModel().getValueAt(row,1).toString());
+        artstamm.setVk((double) jTable1.getModel().getValueAt(row,2));
+
+        Integer intmenge = 1;
+
+        List<Artikelstamm> selectedcustomitems = new ArrayList();
+        selectedcustomitems.add(artstamm);
+
+        DaoKundenstamm daokdstamm = new DaoKundenstamm();
+        daokdstamm.addrowwithdata(selectedcustomitems, jTable2);
+
+        daokdstamm.updateNumberCustomerChart(jTable2, jLabel22);
+
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+
+        // kundennummer
+        jTextField13.setText(String.valueOf(searchresult.get(kdrowcount).getKundennummer()));
+
+        // land
+        jTextField14.setText(searchresult.get(kdrowcount).getLand());
+
+        // verteter
+        jTextField25.setText(String.valueOf(searchresult.get(kdrowcount).getVertreter()));
+
+        // gebiet
+        jTextField1.setText(String.valueOf(searchresult.get(kdrowcount).getGebiet()));
+
+        // kundenname
+        jTextField4.setText(searchresult.get(kdrowcount).getKundenname());
+
+        // strasse
+        jTextField5.setText(searchresult.get(kdrowcount).getStrasse());
+
+        // plz
+        jTextField6.setText(String.valueOf(searchresult.get(kdrowcount).getPlz()));
+
+        // Ort
+        jTextField7.setText(searchresult.get(kdrowcount).getOrt());
+
+        // bankverbindung
+        jTextField15.setText(searchresult.get(kdrowcount).getBankverbindung());
+
+        // iban
+        jTextField18.setText(searchresult.get(kdrowcount).getIban());
+
+        // blz
+        jTextField19.setText(searchresult.get(kdrowcount).getBlz());
+
+        // konto - nummer
+        jTextField10.setText(searchresult.get(kdrowcount).getKonto_Nr());
+
+        // kreditlimit
+        jTextField23.setText(String.valueOf(searchresult.get(kdrowcount).getKreditlimit()));
+
+        // telefon
+        jTextField11.setText(searchresult.get(kdrowcount).getTelefon());
+
+        // mobil 1
+        jTextField12.setText(searchresult.get(kdrowcount).getMobil1());
+
+        // mobil 2
+        jTextField16.setText(searchresult.get(kdrowcount).getMobil2());
+
+        // sip
+        jTextField17.setText(searchresult.get(kdrowcount).getSip());
+
+        // email
+        jTextField18.setText(searchresult.get(kdrowcount).getEmail());
+
+        // ansprechpartner
+        jTextField22.setText(searchresult.get(kdrowcount).getAnsprechpartner());
+
+        // umsatz
+        jTextField19.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Lfd_Jahr()));
+        jTextField20.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_1()));
+        jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_2()));
+
+        jLabel21.setText(String.valueOf(searchresult.get(kdrowcount).getId()));
+
+        String barcodeText = String.valueOf(searchresult.get(kdrowcount).getKundennummer());
+        generateEAN13BarcodeImage(barcodeText + "0000");
+
+        ImageIcon imgThisImg = new ImageIcon(generateEAN13BarcodeImage(barcodeText + "0000"));
+
+        jLabel18.setIcon(imgThisImg);
+
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyTyped
+        // TODO add your handling code here:
+        jTextField13.setText(String.valueOf(searchresult.get(kdrowcount).getKundennummer()));
+    }//GEN-LAST:event_jButton12KeyTyped
 
     private void jButton12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyReleased
         // TODO add your handling code here:
@@ -962,105 +1139,63 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jTextField13.setText(String.valueOf(searchresult.get(kdrowcount).getKundennummer()));
     }//GEN-LAST:event_jButton12KeyPressed
 
-    private void jButton12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton12KeyTyped
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+
+        // de.jsoft.JDesktop.baseUrl + "/customer/getCustomerbyName/" + jTextField13.getText()
+
+        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+
+        ResponseEntity<List<MKundenstamm>> customerentity = JDesktop.rtemp.exchange(
+            de.jsoft.JDesktop.baseUrl + "customer/getCustomerbyName/" + jTextField13.getText(),
+            HttpMethod.GET,
+            requestEntity,
+            new ParameterizedTypeReference<List<MKundenstamm>>(){});
+
+        /*
+
+        response from search Field
+        jTextField13 to JTable
+
+        */
+
+        if(customerentity.getBody().size() == 0)
+        {
+            System.out.print("0 customer avilable!" + "\n");
+            // add Data to Customer Panel
+        }
+        else
+        {
+            // more then one customer is there
+            // load data to JTable
+
+            de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch customersearchtable = new de.jsoft.jdesktop.kundenstamm.customersearch.JIFrameCustomerSearch();
+            customersearchtable.setVisible(true);
+            customersearchtable.setMaximizable(true);
+            customersearchtable.pack();
+
+            searchresult = (List<MKundenstamm>) customerentity.getBody();
+            customersearchtable.addDatatoTable(searchresult);
+
+            JDesktop.jdeskpane.add(customersearchtable);
+            JDesktop.jdeskpane.setSelectedFrame(customersearchtable);
+
+        }
+
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        jTextField13.setText(String.valueOf(searchresult.get(kdrowcount).getKundennummer()));
-    }//GEN-LAST:event_jButton12KeyTyped
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent aevent) {//GEN-FIRST:event_jButton13ActionPerformed
-     
-        // kundennummer
-        jTextField13.setText(String.valueOf(searchresult.get(kdrowcount).getKundennummer()));
-        
-        
-        // land
-        jTextField14.setText(searchresult.get(kdrowcount).getLand());
-        
-        
-        // verteter
-        jTextField25.setText(String.valueOf(searchresult.get(kdrowcount).getVertreter()));
-        
-        
-        // gebiet
-        jTextField1.setText(String.valueOf(searchresult.get(kdrowcount).getGebiet()));
-        
-        // kundenname
-        jTextField4.setText(searchresult.get(kdrowcount).getKundenname());
-        
-        // strasse
-        jTextField5.setText(searchresult.get(kdrowcount).getStrasse());
-         
-        // plz
-        jTextField6.setText(String.valueOf(searchresult.get(kdrowcount).getPlz()));
-       
-         // Ort
-         jTextField7.setText(searchresult.get(kdrowcount).getOrt());
-            
-         // bankverbindung  
-         jTextField15.setText(searchresult.get(kdrowcount).getBankverbindung());
-         
-         // iban
-         jTextField18.setText(searchresult.get(kdrowcount).getIban());
-         
-          // blz
-          jTextField19.setText(searchresult.get(kdrowcount).getBlz());
-          
-          // konto - nummer 
-          jTextField10.setText(searchresult.get(kdrowcount).getKonto_Nr());
-         
-          // kreditlimit
-          jTextField23.setText(String.valueOf(searchresult.get(kdrowcount).getKreditlimit()));
-          
-          // telefon
-          jTextField11.setText(searchresult.get(kdrowcount).getTelefon());
-          
-           // mobil 1
-           jTextField12.setText(searchresult.get(kdrowcount).getMobil1());
-          
-           // mobil 2
-           jTextField16.setText(searchresult.get(kdrowcount).getMobil2());
-          
-           // sip
-           jTextField17.setText(searchresult.get(kdrowcount).getSip());
-           
-           // email 
-           jTextField18.setText(searchresult.get(kdrowcount).getEmail());
-           
-           // ansprechpartner
-           jTextField22.setText(searchresult.get(kdrowcount).getAnsprechpartner());
-            
-           // umsatz
-           jTextField19.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Lfd_Jahr()));
-           jTextField20.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_1()));
-           jTextField21.setText(String.valueOf(searchresult.get(kdrowcount).getUmsatz_Jahr_2()));  
-          
-           jLabel21.setText(String.valueOf(searchresult.get(kdrowcount).getId()));
-
-           String barcodeText = String.valueOf(searchresult.get(kdrowcount).getKundennummer());
-           generateEAN13BarcodeImage(barcodeText + "0000");
-
-            ImageIcon imgThisImg = new ImageIcon(generateEAN13BarcodeImage(barcodeText + "0000"));
-
-            jLabel18.setIcon(imgThisImg);
-
-          
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    /*
-        save data
-    */
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
         MKundenstamm mkdstamm = new MKundenstamm();
-         
+
         mkdstamm.setKundennummer(Long.parseLong(jTextField13.getText()));
-        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));  
+        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));
         mkdstamm.setLand(jTextField14.getText());
         mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
-        
+
         mkdstamm.setName_Anschrift1(jTextField2.getText());
         mkdstamm.setName_Anschrift2(jTextField3.getText());
-        
+
         mkdstamm.setKundenname(jTextField4.getText());
         //mkdstamm.setAnsprechpartner(jTextField4.getText());
         mkdstamm.setStrasse(jTextField5.getText());
@@ -1077,36 +1212,83 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         mkdstamm.setSip(jTextField17.getText());
         mkdstamm.setEmail(jTextField18.getText());
         mkdstamm.setAnsprechpartner(jTextField22.getText());
-        
-       
-     
-       HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
-       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/savenewcustomer", HttpMethod.POST, entity, String.class);
-      
-       System.out.print("body " + entity.getBody() + "\n");
-                
-        
+
+        mkdstamm.setId(Long.parseLong(jLabel21.getText()));
+
+        HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/updatenewcustomer", HttpMethod.POST, entity, String.class);
+
+        System.out.print("body " + entity.getBody() + "\n");
+
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    // delte customer
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+
+        MKundenstamm mkdstamm = new MKundenstamm();
+        mkdstamm.setId(Long.parseLong(jLabel21.getText()));
+        HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/deletecustomer", HttpMethod.POST, entity, String.class);
+
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    /*
+        save data
+    */
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        MKundenstamm mkdstamm = new MKundenstamm();
+
+        mkdstamm.setKundennummer(Long.parseLong(jTextField13.getText()));
+        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));
+        mkdstamm.setLand(jTextField14.getText());
+        mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
+
+        mkdstamm.setName_Anschrift1(jTextField2.getText());
+        mkdstamm.setName_Anschrift2(jTextField3.getText());
+
+        mkdstamm.setKundenname(jTextField4.getText());
+        //mkdstamm.setAnsprechpartner(jTextField4.getText());
+        mkdstamm.setStrasse(jTextField5.getText());
+        mkdstamm.setPlz(Integer.parseInt(jTextField6.getText()));
+        mkdstamm.setOrt(jTextField7.getText());
+        mkdstamm.setBankverbindung(jTextField15.getText());
+        mkdstamm.setIban(jTextField8.getText());
+        mkdstamm.setBlz(jTextField9.getText());
+        mkdstamm.setKonto_Nr(jTextField10.getText());
+        mkdstamm.setKreditlimit(Double.parseDouble(jTextField23.getText()));
+        mkdstamm.setTelefon(jTextField11.getText());
+        mkdstamm.setMobil1(jTextField12.getText());
+        mkdstamm.setMobil2(jTextField16.getText());
+        mkdstamm.setSip(jTextField17.getText());
+        mkdstamm.setEmail(jTextField18.getText());
+        mkdstamm.setAnsprechpartner(jTextField22.getText());
+
+        HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/savenewcustomer", HttpMethod.POST, entity, String.class);
+
+        System.out.print("body " + entity.getBody() + "\n");
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     // new customer
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        
-        clearTextFieldsblank();
 
+        clearTextFieldsblank();
 
         MKundenstamm mdkstamm = new MKundenstamm();
         HttpEntity entity = new HttpEntity(mdkstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
-
 
         //   ResponseEntity<String> newcustomerlist = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/newCustomer", HttpMethod.GET, entity, String.class);
         //   newcustomerlist.getBody();
 
         ResponseEntity<List<MKundenstamm>> newcustomer = JDesktop.rtemp.exchange(
-                JDesktop.baseUrl + "customer/newCustomer",
-                HttpMethod.GET,
-                entity,
-                new ParameterizedTypeReference<List<MKundenstamm>>(){});
+            JDesktop.baseUrl + "customer/newCustomer",
+            HttpMethod.GET,
+            entity,
+            new ParameterizedTypeReference<List<MKundenstamm>>(){});
 
         newcustomer.getBody();
 
@@ -1144,171 +1326,49 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         jTextField18.setBackground(Color.LIGHT_GRAY);
         jTextField22.setBackground(Color.LIGHT_GRAY);
 
-
         // /getCustomerbyName/newcustomer
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTextField13ActionPerformed
+
+    private void jTextField13InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextField13InputMethodTextChanged
+
+    }//GEN-LAST:event_jTextField13InputMethodTextChanged
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        MKundenstamm mkdstamm = new MKundenstamm();
+        // send offer over email
         
-        mkdstamm.setKundennummer(Long.parseLong(jTextField13.getText()));
-        mkdstamm.setVertreter(Integer.parseInt(jTextField25.getText()));  
-        mkdstamm.setLand(jTextField14.getText());
-        mkdstamm.setGebiet(Integer.parseInt(jTextField1.getText()));
+        de.jsoft.jdesktop.kundenstamm.sendemail.icustomersendmail customeremial = new de.jsoft.jdesktop.kundenstamm.sendemail.icustomersendmail();
+       
+        customeremial.setVisible(true);
+        customeremial.pack();
+        JDesktop.jdeskpane.add(customeremial);
         
-        mkdstamm.setName_Anschrift1(jTextField2.getText());
-        mkdstamm.setName_Anschrift2(jTextField3.getText());
+        String customeremail = jTextField18.getText();
+        String offernumber = (String) jLabel27.getText();
         
-        mkdstamm.setKundenname(jTextField4.getText());
-        //mkdstamm.setAnsprechpartner(jTextField4.getText());
-        mkdstamm.setStrasse(jTextField5.getText());
-        mkdstamm.setPlz(Integer.parseInt(jTextField6.getText()));
-        mkdstamm.setOrt(jTextField7.getText());
-        mkdstamm.setBankverbindung(jTextField15.getText());
-        mkdstamm.setIban(jTextField8.getText());
-        mkdstamm.setBlz(jTextField9.getText());
-        mkdstamm.setKonto_Nr(jTextField10.getText());
-        mkdstamm.setKreditlimit(Double.parseDouble(jTextField23.getText()));
-        mkdstamm.setTelefon(jTextField11.getText());
-        mkdstamm.setMobil1(jTextField12.getText());
-        mkdstamm.setMobil2(jTextField16.getText());
-        mkdstamm.setSip(jTextField17.getText());
-        mkdstamm.setEmail(jTextField18.getText());
-        mkdstamm.setAnsprechpartner(jTextField22.getText());
-        
-        mkdstamm.setId(Long.parseLong(jLabel21.getText()));
+        customeremial.getTexttoEmailData(customeremail, offernumber);
+      
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+  
+    public void updateJTextFields(ActionEvent aevent)
+    {
+       
+        jButton13ActionPerformed(aevent);
+    }
      
      
-       HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);    
-       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/updatenewcustomer", HttpMethod.POST, entity, String.class);
-      
-       System.out.print("body " + entity.getBody() + "\n");
-                
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    // delte customer
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-        
-        MKundenstamm mkdstamm = new MKundenstamm();
-        mkdstamm.setId(Long.parseLong(jLabel21.getText()));
-       HttpEntity entity = new HttpEntity(mkdstamm,de.jsoft.jdesktop.login.NewJInternalFrame.header);
-       ResponseEntity<String> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "customer/deletecustomer", HttpMethod.POST, entity, String.class);
-      
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        
-        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
-        
-        ResponseEntity<List<Artikelstamm>> resposecustomitems = JDesktop.rtemp.exchange(
-                de.jsoft.JDesktop.baseUrl + "artikelstamm/getArtikelbyArtikelbezeichnung/" + jTextField24.getText(),
-                HttpMethod.GET,
-                requestEntity,
-                new ParameterizedTypeReference<List<Artikelstamm>>(){});
     
-           
-        List<Artikelstamm> selectedcustomitems = resposecustomitems.getBody();
-     
-        de.jsoft.jdesktop.kundenstamm.DaoKundenstamm daokdstamm = new de.jsoft.jdesktop.kundenstamm.DaoKundenstamm();
-        daokdstamm.addDatatoTable((List<Artikelstamm>) selectedcustomitems, jTable1);
-            
-       
-            
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-       
-       
-            jTable1 = (JTable) evt.getSource();
-            
-            int row = jTable1.getSelectedRow();
-            
-            
-            Artikelstamm artstamm = new Artikelstamm();
-            artstamm.setArtikelnummer(Long.parseLong(jTable1.getModel().getValueAt(row, 0).toString()));
-            artstamm.setArtikelbezeichnung(jTable1.getModel().getValueAt(row,1).toString());
-            artstamm.setVk((double) jTable1.getModel().getValueAt(row,2));
-            
-            Integer intmenge = 1;
-            
-          
-            
-            List<Artikelstamm> selectedcustomitems = new ArrayList();
-            selectedcustomitems.add(artstamm);
-           
-            
-            DaoKundenstamm daokdstamm = new DaoKundenstamm();
-            daokdstamm.addrowwithdata(selectedcustomitems, jTable2);
-        
-            daokdstamm.updateNumberCustomerChart(jTable2, jLabel22);
-          
-    }//GEN-LAST:event_jTable1MouseClicked
- 
-     
-    // add data from jTable1 
-    // to JTable2 by button click
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent aevent) {//GEN-FIRST:event_jButton14ActionPerformed
-     
-        // TODO add your handling code here:
-       
-       
-        int row = jTable1.getSelectedRow();
-        
-         Artikelstamm artstamm = new Artikelstamm();
-            artstamm.setArtikelnummer(Long.parseLong(jTable1.getModel().getValueAt(row, 0).toString()));
-            artstamm.setArtikelbezeichnung(jTable1.getModel().getValueAt(row,1).toString());
-            artstamm.setVk((double) jTable1.getModel().getValueAt(row,2));
-            
-            List<Artikelstamm> selectedcustomitems = new ArrayList();
-            selectedcustomitems.add(artstamm);
-            
-            DaoKundenstamm daokdstamm = new DaoKundenstamm();
-            
-            daokdstamm.addrowwithdata(selectedcustomitems, jTable2);
-            daokdstamm.updateNumberCustomerChart(jTable2, jLabel22);
-             
-           
-            
-        
-        
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-        
-          DaoKundenstamm daokdstamm = new DaoKundenstamm();
-          daokdstamm.removeItemCustomerChart(jTable2, jLabel22);
-        
-    }//GEN-LAST:event_jButton15ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    
-    /*
-        save offer from jTable2 to db
-    */
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        
-         DaoKundenstamm daokdstamm = new DaoKundenstamm();
-         
-         Buchungsdaten bdaten = new Buchungsdaten();
-         
-        bdaten.setKdnummer(Long.parseLong(jTextField13.getText()));
-             bdaten.setKdname(jTextField4.getText());
-      
-         daokdstamm.saveofferdata(jTable2, bdaten, jLabel27, jLabel25);
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
 
     private void clearTextFieldsblank()
     {
@@ -2381,6 +2441,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2389,6 +2451,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2416,15 +2479,17 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
@@ -2446,6 +2511,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
+    private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
