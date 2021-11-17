@@ -37,6 +37,28 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
+
+import java.util.Date;
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 /**
  *
  * @author hoscho
@@ -59,26 +81,41 @@ public class MailClient
     MimeMultipart mimeMultipart;
     EmailClient eclient = null;
     
+    Properties props;
+    
+    String username;
+    String password;
+    String host;
     
     public MailClient()
     {
-      
+      username = "jgsoftwares@gmx.net";
+      password = "mvpr52k1";
+      host = "imap.gmx.net";
+      props = new Properties();
     }
    
-    public Object connectToStore()
+    public Store connectToStore()
     {
         try {
-            Properties props = System.getProperties();
+            props = System.getProperties();
             
             // Mail-Server properties: Session verlangt die Informationen über Host, User, Passwd etc.
-            props.setProperty("mail.imaps.host", "imap.gmx.net");
-            props.setProperty("mail.imaps.user", "jgsoftwares@gmx.net");
-            props.setProperty("mail.imaps.password", "mvpr52k1");
+            props.setProperty("mail.imaps.host", host);
+            props.setProperty("mail.imaps.user", username);
+            props.setProperty("mail.imaps.password", password);
             props.setProperty("mail.imaps.auth", "true");
             props.setProperty("mail.imaps.starttls.enable", "true");
             props.setProperty("mail.imaps.socketFactory.port", "993");
             props.setProperty("mail.imaps.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
             props.setProperty("mail.imaps.socketFactory.fallback", "false");
+            
+            props.setProperty("mail.smtp.host", "mail.gmx.net");
+            props.setProperty("mail.smtp.port", "465");
+            props.setProperty("mail.smtp.user", "jgsoftwares@gmx.net");
+            props.setProperty("mail.smtp.password", "mvpr52k1");
+            props.setProperty("mail.smtp.ssl.enable", "true");
+            props.setProperty("mail.smtp.auth", "true");
             
             session = Session.getDefaultInstance(props, null);
             store = session.getStore("imaps");
@@ -182,8 +219,35 @@ public class MailClient
         
     }
 
-  
+    public Session getSession() {
+        return session;
+    }
+
+    public Message getMessage() {
+        return message;
+    }
+
+    public Message sendEmail(String emailaddresto) 
+    {
+        
+    
+      
    
+       
+           
+
+        return message;
+     
+    
+    }
+
+ 
+    
+    
+    
+    
+  
+ 
     
     
     

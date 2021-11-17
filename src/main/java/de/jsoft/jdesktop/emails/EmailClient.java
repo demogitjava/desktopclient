@@ -42,10 +42,14 @@ import javax.swing.DefaultListModel;
 import javax.mail.Folder;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Multipart;
 import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import jiconfont.icons.FontAwesome;
 import org.jsoup.Jsoup;
@@ -369,6 +373,38 @@ public class EmailClient extends javax.swing.JInternalFrame
     }
     return "";
 }
+    
+    
+    public Message sendEmail(String emailaddress)
+    {
+      
+        try
+        {
+               message = new MimeMessage(mclient.session);
+               message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jgeist@gmx.net"));
+               message.setSubject("Hello, this is a test mail..");
+
+             
+              
+
+               MimeBodyPart messageBodyPart1 = new MimeBodyPart();
+               messageBodyPart1.setText("No need to reply.");
+           
+               
+            
+
+               Transport.send(message);
+             
+            
+              
+        } catch(MessagingException e)
+        {
+            System.out.print("fehler send mail " + e + "\n");
+        }
+        return message;
+    }
+  
+   
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

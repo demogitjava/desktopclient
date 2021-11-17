@@ -5,25 +5,35 @@
  */
 package de.jsoft.jdesktop.kundenstamm.sendemail;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
 /**
  *
  * @author hoscho
  */
 public class icustomersendmail extends javax.swing.JInternalFrame {
 
+    
+    
+    de.jsoft.jdesktop.emails.EmailClient mailclient;
     /**
      * Creates new form icustomersendmail
      */
     public icustomersendmail() 
     {
-        
-        /*
-                connect to imap store 
-                with session with username and password
-                over imap
-        */
-        de.jsoft.jdesktop.emails.MailClient mailclient = new de.jsoft.jdesktop.emails.MailClient();
-        mailclient.connectToStore();
+        mailclient = new de.jsoft.jdesktop.emails.EmailClient();
+     
         
         
         initComponents();
@@ -152,7 +162,14 @@ public class icustomersendmail extends javax.swing.JInternalFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
+     
+    
         
+        String emailaddresto = jTextField1.getText();
+       
+        de.jsoft.jdesktop.emails.MailClient mailclient = new de.jsoft.jdesktop.emails.MailClient();
+    
+        mailclient.sendEmail(emailaddresto);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     
