@@ -9,6 +9,8 @@ import com.sun.mail.imap.IMAPFolder;
 import javax.mail.*;
 
 import java.io.*;
+import java.net.InetAddress;
+import java.net.Socket;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,13 +60,27 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.mail.MailException;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.stereotype.Component;
+import static sun.security.jgss.GSSUtil.login;
 
+import javax.mail.PasswordAuthentication;
 /**
  *
  * @author hoscho
  */
 public class MailClient 
 {
+    
+    
+    @Autowired
+    private JavaMailSender emailSender;
+    
     Store store;
     Session session;
     String stfolder;
@@ -86,6 +102,8 @@ public class MailClient
     String username;
     String password;
     String host;
+    
+    JavaMailSenderImpl mailSender;
     
     public MailClient()
     {
@@ -110,12 +128,7 @@ public class MailClient
             props.setProperty("mail.imaps.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
             props.setProperty("mail.imaps.socketFactory.fallback", "false");
             
-            props.setProperty("mail.smtp.host", "mail.gmx.net");
-            props.setProperty("mail.smtp.port", "465");
-            props.setProperty("mail.smtp.user", "jgsoftwares@gmx.net");
-            props.setProperty("mail.smtp.password", "mvpr52k1");
-            props.setProperty("mail.smtp.ssl.enable", "true");
-            props.setProperty("mail.smtp.auth", "true");
+         
             
             session = Session.getDefaultInstance(props, null);
             store = session.getStore("imaps");
@@ -219,39 +232,36 @@ public class MailClient
         
     }
 
-    public Session getSession() {
-        return session;
-    }
-
-    public Message getMessage() {
-        return message;
-    }
-
-    public Message sendEmail(String emailaddresto) 
+    public void sendEmail()
     {
         
-    
-      
-   
-       
-           
-
-        return message;
-     
-    
+        connectToStore();
+        try
+        {
+               Folder emailFolder = store.getFolder("OUTBOX");
+               emailFolder.open(Folder.READ_WRITE);
+               
+               
+               messages = emailFolder.getMessages();
+               
+               
+              
+                message = new MimeMessage(session);
+                message.setFrom( new InternetAddress( "jgsoftwares@gmx.net" ) );
+                message.addRecipient( Message.RecipientType.TO, new InternetAddress( "jgeist@gmx.net" ) );
+                message.setSubject("dsafd");
+                message.setText("dsfsd");
+                
+                
+                String foldername = emailFolder.getName();
+                System.out.print("der ordnername ist " + foldername);
+             
+                
+                emailFolder.appendMessages(new Message[]{message});
+               
+        } catch(Exception e)
+        {
+            System.out.print("Fehler " +e);
+        }
     }
-
- 
-    
-    
-    
-    
-  
- 
-    
-    
-    
-    
 }
-
-	

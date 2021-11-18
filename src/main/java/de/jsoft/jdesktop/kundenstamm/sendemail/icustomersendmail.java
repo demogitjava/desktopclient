@@ -5,6 +5,14 @@
  */
 package de.jsoft.jdesktop.kundenstamm.sendemail;
 
+import de.jsoft.JDesktop;
+import de.jsoft.jdesktop.kundenstamm.Buchungsdaten;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -17,6 +25,12 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+
+
 
 /**
  *
@@ -162,14 +176,14 @@ public class icustomersendmail extends javax.swing.JInternalFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
-     
-    
-        
         String emailaddresto = jTextField1.getText();
        
+        
         de.jsoft.jdesktop.emails.MailClient mailclient = new de.jsoft.jdesktop.emails.MailClient();
-    
-        mailclient.sendEmail(emailaddresto);
+        
+       
+        mailclient.sendEmail();
+      
     }//GEN-LAST:event_jButton3ActionPerformed
 
     
