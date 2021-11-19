@@ -254,9 +254,7 @@ public class MailClient
                 
                 
                 String foldername = emailFolder.getName();
-                System.out.print("der ordnername ist " + foldername);
              
-                
                 emailFolder.appendMessages(new Message[]{message});
                
         } catch(Exception e)
