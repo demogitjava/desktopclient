@@ -14,8 +14,11 @@ public class EditOffer extends javax.swing.JInternalFrame {
     /**
      * Creates new form EditOffer
      */
-    public EditOffer() {
+    public EditOffer() 
+    {
         initComponents();
+        DaoEditOffer doaeditoffer = new DaoEditOffer();
+        
     }
 
     /**

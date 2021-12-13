@@ -74,7 +74,7 @@ import javax.mail.PasswordAuthentication;
  *
  * @author hoscho
  */
-public class MailClient 
+public class MailClient implements iEmailClient
 {
     
     

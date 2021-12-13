@@ -159,8 +159,6 @@ public class icustomersendmail extends javax.swing.JInternalFrame {
        
         
         de.jsoft.jdesktop.emails.MailClient mailclient = new de.jsoft.jdesktop.emails.MailClient();
-        
-       
         mailclient.sendEmail();
       
     }//GEN-LAST:event_jButton3ActionPerformed
