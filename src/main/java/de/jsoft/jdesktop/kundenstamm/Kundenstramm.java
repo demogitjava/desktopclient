@@ -918,8 +918,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
                     .addComponent(jButton16)
                     .addComponent(jButton17))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 467, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Lieferscheine & Auftrage", jPanel3);
@@ -1355,6 +1355,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
         
         String customeremail = jTextField18.getText();
         String offernumber = (String) jLabel27.getText();
+        
+        
         
         customeremial.getTexttoEmailData(customeremail, offernumber);
       
