@@ -5,6 +5,10 @@ Demo Desktop Client
 used IDE is ApacheNetBeans 12.0
 
 
+default username: admin
+        password: jj78mvpr52k1
+
+
 
 this Java Swing Application connects with 
 
