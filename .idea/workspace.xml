@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/customersendmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iNewJInternalFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/iWindowsMenus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_experimental_spring_native_unknown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/iJDesktop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/MailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/MailClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/offerpanel/EditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/offerpanel/EditOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/icustomersendmail.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/customersendmail.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/icustomersendmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/icustomersendmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDesktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDesktop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/LoginFrame.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -70,6 +55,7 @@
     </option>
     <option name="enabledProfiles">
       <list>
+        <option value="spring-native" />
         <option value="default" />
       </list>
     </option>
@@ -244,7 +230,8 @@
     <MESSAGE value="add qr code image to Cusotmer Panel &#10;add function for new customer" />
     <MESSAGE value="edit pom.xml" />
     <MESSAGE value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
+    <MESSAGE value="add interface to JDesktop start up class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add interface to JDesktop start up class" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

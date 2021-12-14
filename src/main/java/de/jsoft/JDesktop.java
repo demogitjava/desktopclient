@@ -18,7 +18,7 @@ import org.springframework.http.HttpHeaders;
 
 @SpringBootApplication
 //@ComponentScan(basePackages = "de.jsoft")
-public class JDesktop 
+public class JDesktop implements iJDesktop
 {
     
     public static MainFrame mframe;
