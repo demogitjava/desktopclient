@@ -38,7 +38,7 @@ import java.util.Base64;
  * @author hoscho
  *  Login JInternalFrame
  */
-@Controller
+
 public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNewJInternalFrame
 {
 

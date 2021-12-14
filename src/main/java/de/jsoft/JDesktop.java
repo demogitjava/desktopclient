@@ -17,7 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.http.HttpHeaders;
 
-@SpringBootApplication
+
 //@ComponentScan(basePackages = "de.jsoft")
 public class JDesktop implements iJDesktop
 {

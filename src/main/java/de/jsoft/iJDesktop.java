@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.swing.*;
 
-@Service
+
 public interface iJDesktop
 {
 
