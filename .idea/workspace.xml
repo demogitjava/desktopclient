@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_experimental_spring_native_unknown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/iJDesktop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDesktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDesktop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639398982994</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add interface to JDesktop start up class">
+      <created>1639467383714</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639467383714</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

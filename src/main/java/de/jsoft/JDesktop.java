@@ -6,6 +6,7 @@ import de.jsoft.jdesktop.mainframe.MainFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
@@ -29,7 +30,9 @@ public class JDesktop implements iJDesktop
 
     public static int lgglobal;
     public static boolean userislogedin = false;
-    
+
+    @Autowired
+    iJDesktop iJDesktop;
     
     public JDesktop()
     {
