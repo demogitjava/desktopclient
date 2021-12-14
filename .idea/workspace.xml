@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/iJDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/iJDesktop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639467514897</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="remove anntotions from spring boot &#10;application starts with Java SE">
+      <created>1639468480981</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639468480981</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +250,8 @@
     <MESSAGE value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
     <MESSAGE value="add interface to JDesktop start up class" />
     <MESSAGE value="inject Service to starup JDesktopApplication" />
-    <option name="LAST_COMMIT_MESSAGE" value="inject Service to starup JDesktopApplication" />
+    <MESSAGE value="remove anntotions from spring boot &#10;application starts with Java SE" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove anntotions from spring boot &#10;application starts with Java SE" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

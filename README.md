@@ -4,9 +4,13 @@ Demo Desktop Client
 
 used IDE is ApacheNetBeans 12.0
 
+
+
 this Java Swing Application connects with 
 
-http basic (RFC 2617) auth over port 8443.
+http basic (RFC 2617) 
+
+auth over port 8443.
 
 
 
@@ -19,7 +23,9 @@ https://downloads.apache.org/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin
 
 make sure that java is correctly installed and the "JAVA_HOME" path is set.
 
-You can get the open java jdk from here:
+You can get the java jdk from here:
+
+
 
 
 **GraalVM Community **
@@ -49,6 +55,21 @@ make sure that
 https://github.com/demogitjava/LanServer.git
 
 from here is running.
+
+
+
+To run the software in a sandbox you can choose the Docker Desktop from here:
+https://www.docker.com/products/docker-desktop
+
+
+**jgsoftwares/jgsoftwares:latest** 
+
+start the container and open ports for connect:
+
+9092 127.0.0.1 9092
+8443 127.0.0.1 8443
+
+
 
 
 
