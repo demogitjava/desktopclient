@@ -64,7 +64,7 @@ import static org.springframework.shell.table.CellMatchers.row;
  * @author hoscho
  */
 
-public class Kundenstramm extends javax.swing.JInternalFrame {
+public class Kundenstramm extends javax.swing.JInternalFrame implements iKundenstamm {
 
 
     
@@ -1343,11 +1343,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+         // TODO add your handling code here:
         
         // send offer over email
         
-        de.jsoft.jdesktop.kundenstamm.sendemail.icustomersendmail customeremial = new de.jsoft.jdesktop.kundenstamm.sendemail.icustomersendmail();
+        de.jsoft.jdesktop.kundenstamm.sendemail.customersendmail customeremial = new de.jsoft.jdesktop.kundenstamm.sendemail.customersendmail();
        
         customeremial.setVisible(true);
         customeremial.pack();

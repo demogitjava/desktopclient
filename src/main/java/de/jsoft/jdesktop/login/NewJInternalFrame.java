@@ -39,7 +39,8 @@ import java.util.Base64;
  *  Login JInternalFrame
  */
 @Controller
-public class NewJInternalFrame extends javax.swing.JInternalFrame {
+public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNewJInternalFrame
+{
 
     /**
      * Creates new form NewJInternalFrame

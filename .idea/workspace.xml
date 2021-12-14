@@ -5,27 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jzlib_1_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_classlib_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_interop_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_jso_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_jso_apis_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_jso_impl_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_metaprogramming_api_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_metaprogramming_impl_0_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_teavm_teavm_platform_0_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/customersendmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iNewJInternalFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/iWindowsMenus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDesktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDesktop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/MailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/MailClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/offerpanel/EditOffer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/offerpanel/EditOffer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/offerpanel/EditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/offerpanel/EditOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/icustomersendmail.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/customersendmail.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/icustomersendmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/sendemail/icustomersendmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,6 +68,11 @@
         <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="default" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1wzfem31GbpMwNqsLMTLzX9n6aI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -94,7 +93,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.16333333" />
     <property name="project.structure.side.proportion" value="0.27669904" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.run.dashboard.notification" value="false" />
@@ -105,14 +104,28 @@
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
   </component>
-  <component name="RunManager" selected="Remote JVM Debug.Unnamed">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn spring-boot:build-image" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JDesktop">
+    <configuration name="JDesktop" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="de.jsoft.JDesktop" />
+      <module name="JDesktop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
       <module name="JDesktop" />
       <option name="USE_SOCKET_TRANSPORT" value="false" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="localhost" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="8443" />
+      <option name="HOST" />
+      <option name="PORT" value="65535" />
       <option name="AUTO_RESTART" value="false" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="localhost" />
@@ -124,13 +137,15 @@
     <configuration name="JDesktop" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="JDesktop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="de.jsoft.JDesktop" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.JDesktop" />
       <item itemvalue="Remote JVM Debug.Unnamed" />
       <item itemvalue="Spring Boot.JDesktop" />
     </list>
@@ -167,7 +182,9 @@
       <workItem from="1634974998385" duration="61000" />
       <workItem from="1634975110849" duration="1427000" />
       <workItem from="1635146705510" duration="2036000" />
-      <workItem from="1639398157491" duration="532000" />
+      <workItem from="1639398157491" duration="1923000" />
+      <workItem from="1639406553300" duration="18000" />
+      <workItem from="1639463206028" duration="1603000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -197,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632818247660</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar">
+      <created>1639398982994</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639398982994</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +242,9 @@
     <MESSAGE value="removed lanserver module from this project" />
     <MESSAGE value="add new cusotmer &#10;set id and new customernumber to customerpanel" />
     <MESSAGE value="add qr code image to Cusotmer Panel &#10;add function for new customer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add qr code image to Cusotmer Panel &#10;add function for new customer" />
+    <MESSAGE value="edit pom.xml" />
+    <MESSAGE value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

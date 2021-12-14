@@ -22,6 +22,9 @@ make sure that java is correctly installed and the "JAVA_HOME" path is set.
 You can get the open java jdk from here:
 
 
+**GraalVM Community **
+https://www.graalvm.org/downloads/
+
 
 **Open JDK**
 https://openjdk.java.net/

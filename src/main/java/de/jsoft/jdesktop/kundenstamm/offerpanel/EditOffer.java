@@ -9,7 +9,8 @@ package de.jsoft.jdesktop.kundenstamm.offerpanel;
  *
  * @author hoscho
  */
-public class EditOffer extends javax.swing.JInternalFrame {
+public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
+{
 
     /**
      * Creates new form EditOffer

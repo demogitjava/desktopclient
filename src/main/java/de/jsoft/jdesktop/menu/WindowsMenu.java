@@ -23,7 +23,7 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
  *
  * @author hoscho
  */
-public class WindowsMenu 
+public class WindowsMenu implements iWindowsMenus
 {
     
     public JMenuBar bar;
