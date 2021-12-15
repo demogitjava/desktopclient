@@ -7,6 +7,7 @@ package de.jsoft.jdesktop.kundenstamm;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 /**
  *
@@ -59,11 +60,21 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable3MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable3);
 
         jLabel1.setText("Angebot ändern");
 
         jButton2.setText("ändern");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("löschen");
 
@@ -142,6 +153,32 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
         
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+
+        int row = jTable3.getSelectedRow();
+
+        Integer anzahl = (Integer) jTable3.getModel().getValueAt(row, 3);
+        if(anzahl == null)
+        {
+            jTextField1.setText(String.valueOf(1));
+        }
+        else
+        {
+            jTextField1.setText((String) jTable3.getModel().getValueAt(row, 3));
+        }
+
+        double preis = (double) jTable3.getModel().getValueAt(row, 2);
+        jTextField2.setText(String.valueOf(preis));
+
+    }//GEN-LAST:event_jTable3MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public void getofferdatafromCustomerJTable2(JTable jTable2)
     {
