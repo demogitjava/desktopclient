@@ -150,8 +150,9 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
-        this.dispose();
+
+
+       dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
@@ -177,17 +178,24 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+        int row = jTable3.getSelectedRow();
+
+        Integer anzahl = Integer.valueOf(jTextField1.getText());
+        Double preis = Double.valueOf(jTextField2.getText());
+
+        model.setValueAt(anzahl, row, 3);  // anzahl menge
+        model.setValueAt(preis, row,2);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void getofferdatafromCustomerJTable2(JTable jTable2)
     {
 
 
-        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+        DefaultTableModel model1 = (DefaultTableModel) jTable2.getModel();
 
 
-        this.jTable3.setModel(model);
+        this.jTable3.setModel(model1);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

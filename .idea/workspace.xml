@@ -166,7 +166,7 @@
       <workItem from="1639463206028" duration="1603000" />
       <workItem from="1639551287554" duration="3810000" />
       <workItem from="1639555682204" duration="6759000" />
-      <workItem from="1639577165025" duration="3215000" />
+      <workItem from="1639577165025" duration="4310000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -259,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639580373059</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="EditOffer&#10;&#10;edit DefaultTableModel &#10;form DefaultTable model = (DefaultTableModel) jTable3.getModel();&#10;&#10;to &#10;model = (DefaultTableModel) jTable3.getModel();">
+      <created>1639580567927</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1639580567927</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +298,8 @@
     <MESSAGE value="EditOffer JInernalFrame &#10;public void getofferdatafromCustomerJTable2&#10;&#10;get Data from JTable2" />
     <MESSAGE value="EditOffer JInernalFrame &#10;and add fucntion to iEditOffer interface&#10;&#10;the jinternalframe starts up and display &#10;DefaultTableModel from Jtable2 &quot;Kundenstamm&quot;" />
     <MESSAGE value="EditOffer&#10;&#10;add Values to jTextField1&#10;and JTextField2&#10;&#10;by click event from jTable3" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditOffer&#10;&#10;add Values to jTextField1&#10;and JTextField2&#10;&#10;by click event from jTable3" />
+    <MESSAGE value="EditOffer&#10;&#10;edit DefaultTableModel &#10;form DefaultTable model = (DefaultTableModel) jTable3.getModel();&#10;&#10;to &#10;model = (DefaultTableModel) jTable3.getModel();" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditOffer&#10;&#10;edit DefaultTableModel &#10;form DefaultTable model = (DefaultTableModel) jTable3.getModel();&#10;&#10;to &#10;model = (DefaultTableModel) jTable3.getModel();" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
