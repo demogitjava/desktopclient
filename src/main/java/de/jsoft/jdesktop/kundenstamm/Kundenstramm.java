@@ -748,7 +748,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         });
         jScrollPane3.setViewportView(jTable2);
 
-        jButton5.setText("per mail versenden");
+        jButton5.setText("save email/imap");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);

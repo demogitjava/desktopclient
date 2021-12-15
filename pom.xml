@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.jsoft</groupId>
-    <artifactId>JDesktop</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    
+   
     <packaging>jar</packaging>
      <parent>
         <groupId>org.springframework.boot</groupId>
@@ -12,6 +9,12 @@
         <version>2.1.9.RELEASE</version>
         <relativePath/>
     </parent>
+    
+    <groupId>de.jsoft.JDesktop</groupId>
+    <artifactId>LanServer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>JDesktop</name>
+    <description>Java SE DeemoDekstop Client</description>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -240,8 +243,8 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <build>
-        <finalName>JDesktop</finalName>
+  <build>
+        <finalName>JDesktopClient</finalName>
 
         <plugins>
             <plugin>
@@ -257,15 +260,15 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.5.3</version>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <version>2.5.3</version>
 
-                <configuration>
-                    <mainClass>de.jsoft.JDesktop</mainClass>
-                </configuration>
-            </plugin>
+                        <configuration>
+                            <mainClass>de.jsoft.JDeskotp</mainClass>
+                        </configuration>
+                    </plugin>
 
         </plugins>
 
