@@ -127,7 +127,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="store mail to outbox email client"/>
+        <Property name="text" type="java.lang.String" value="Angebot in EmailClient speichern"/>
         <Property name="focusable" type="boolean" value="false"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="verticalTextPosition" type="int" value="3"/>

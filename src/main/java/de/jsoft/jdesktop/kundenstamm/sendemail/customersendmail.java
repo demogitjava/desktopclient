@@ -73,7 +73,7 @@ public class customersendmail extends javax.swing.JInternalFrame implements icus
         });
         jScrollPane2.setViewportView(jList1);
 
-        jButton3.setText("store mail to outbox email client");
+        jButton3.setText("Angebot in EmailClient speichern");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
