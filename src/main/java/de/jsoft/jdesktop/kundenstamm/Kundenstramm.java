@@ -9,7 +9,7 @@ import static de.jsoft.jdesktop.config.LoginProvider.client;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.peer.LightweightPeer;
+//import java.awt.peer.LightweightPeer;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -988,7 +988,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-
+        de.jsoft.jdesktop.kundenstamm.offerpanel.EditOffer editoffer = new de.jsoft.jdesktop.kundenstamm.offerpanel.EditOffer();
+        editoffer.setVisible(true);
+        editoffer.pack();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
