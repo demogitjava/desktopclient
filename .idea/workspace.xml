@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDesktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDesktop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +53,6 @@
         <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
-    <option name="enabledProfiles">
-      <list>
-        <option value="spring-native" />
-        <option value="default" />
-      </list>
-    </option>
   </component>
   <component name="ProjectId" id="1wzfem31GbpMwNqsLMTLzX9n6aI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -90,6 +87,8 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn spring-boot:build-image" />
+      <command value="mvn compile" />
+      <command value="mvn deploy" />
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.JDesktop">
@@ -168,6 +167,7 @@
       <workItem from="1639398157491" duration="1923000" />
       <workItem from="1639406553300" duration="18000" />
       <workItem from="1639463206028" duration="1603000" />
+      <workItem from="1639551287554" duration="314000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>

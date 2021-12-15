@@ -3,6 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
    
     <packaging>jar</packaging>
+
      <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -210,22 +211,19 @@
             <version>2.1</version>
         </dependency>
 
-     <dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-context-support</artifactId>
-    <version>5.2.8.RELEASE</version>
-</dependency>
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>5.2.8.RELEASE</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.teavm</groupId>
+            <artifactId>teavm-classlib</artifactId>
+            <version>0.6.1</version>
+            <scope>provided</scope>
+        </dependency>
 
-
-
-    <dependency>
-        <groupId>org.teavm</groupId>
-        <artifactId>teavm-classlib</artifactId>
-        <version>0.6.1</version>
-        <scope>provided</scope>
-    </dependency>
- 
 
     </dependencies>   
         
@@ -277,95 +275,10 @@
     </build>
 
     <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.0.0-M5</version>
-                        <configuration>
-                            <excludes>
-                                <exclude>**/FunctionalTests.*</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>spring-native</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.springframework.experimental</groupId>
-                    <artifactId>spring-native</artifactId>
-
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.experimental</groupId>
-                        <artifactId>spring-aot-maven-plugin</artifactId>
-
-                        <executions>
-                            <execution>
-                                <id>test-generate</id>
-                                <goals>
-                                    <goal>test-generate</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>generate</id>
-                                <goals>
-                                    <goal>generate</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>build-docker-image</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <configuration>
-                            <image>
-                                <name>hantsy/${project.artifactId}:latest</name>
-                                <builder>paketobuildpacks/builder:tiny</builder>
-                                <env>
-                                    <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
-                                </env>
-                            </image>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>build-native-image</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <configuration>
-                            <classifier>exec</classifier>
-                        </configuration>
-                    </plugin>
 
 
-                </plugins>
-            </build>
-        </profile>
+
+
 
     </profiles>
 </project>
