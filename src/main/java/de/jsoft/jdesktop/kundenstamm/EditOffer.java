@@ -156,7 +156,7 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
+        model = (DefaultTableModel) jTable3.getModel();
 
         int row = jTable3.getSelectedRow();
 
