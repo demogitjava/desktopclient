@@ -19,7 +19,9 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
     /** 
      * Creates new form EditOffer
      */
-    public EditOffer() {
+    public EditOffer()
+    {
+        
         initComponents();
     }
 
@@ -80,13 +82,9 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
 
         jButton4.setText("aktualisieren");
 
-        jTextField1.setText("jTextField1");
-
         jLabel2.setText("Anzahl");
 
         jLabel3.setText("Preis");
-
-        jTextField2.setText("jTextField2");
 
         jButton1.setText("schliessen");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -168,7 +166,7 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
         }
         else
         {
-            jTextField1.setText((String) jTable3.getModel().getValueAt(row, 3));
+            jTextField1.setText(String.valueOf(jTable3.getModel().getValueAt(row, 3)));
         }
 
         double preis = (double) jTable3.getModel().getValueAt(row, 2);
