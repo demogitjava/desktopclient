@@ -4,15 +4,15 @@
  */
 package de.jsoft.jdesktop.kundenstamm;
 
-import de.jsoft.jdesktop.kundenstamm.interf.iEditOffer;
+
 /**
  *
  * @author hoscho
  */
-public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
+public class EditOffer extends javax.swing.JInternalFrame 
 {
 
-    /**
+    /** 
      * Creates new form EditOffer
      */
     public EditOffer() {
@@ -126,8 +126,8 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 

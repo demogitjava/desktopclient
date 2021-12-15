@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDesktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDesktop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/LoginProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/LoginProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/localSettingsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/localSettingsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/MailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/MailClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/iEmailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/iMailClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/interf/iEditOffer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +96,7 @@
       <command value="mvn deploy" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.JDesktop">
+  <component name="RunManager" selected="Application.JDesktop">
     <configuration name="JDesktop" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -167,7 +172,7 @@
       <workItem from="1639398157491" duration="1923000" />
       <workItem from="1639406553300" duration="18000" />
       <workItem from="1639463206028" duration="1603000" />
-      <workItem from="1639551287554" duration="314000" />
+      <workItem from="1639551287554" duration="2296000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -225,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639468480981</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="remove profiles plugins form pom.xml">
+      <created>1639551678721</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639551678721</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +263,8 @@
     <MESSAGE value="add interface to JDesktop start up class" />
     <MESSAGE value="inject Service to starup JDesktopApplication" />
     <MESSAGE value="remove anntotions from spring boot &#10;application starts with Java SE" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove anntotions from spring boot &#10;application starts with Java SE" />
+    <MESSAGE value="remove profiles plugins form pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove profiles plugins form pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

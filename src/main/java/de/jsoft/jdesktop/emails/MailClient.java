@@ -5,20 +5,9 @@
  */
 package de.jsoft.jdesktop.emails;
 
-import com.sun.mail.imap.IMAPFolder;
-import javax.mail.*;
-
-import java.io.*;
-import java.net.InetAddress;
-import java.net.Socket;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.swing.JDesktopPane;
-import javax.swing.JFrame;
-import javax.swing.tree.DefaultMutableTreeNode;
 
 import javax.mail.internet.MimeMultipart;
 import javax.mail.Folder;
@@ -30,51 +19,21 @@ import javax.mail.Store;
 
 import java.util.Properties;
 
-import javax.mail.Address;
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.Message.RecipientType;
-import javax.mail.MessagingException;
-import javax.mail.NoSuchProviderException;
-import javax.mail.Session;
-import javax.mail.Store;
 
-
-import java.util.Date;
-import java.util.Properties;
-
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 
-import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.mail.MailException;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.stereotype.Component;
 //import static sun.security.jgss.GSSUtil.login;
 
-import javax.mail.PasswordAuthentication;
 /**
  *
  * @author hoscho
  */
-public class MailClient implements iEmailClient
+public class MailClient implements iMailClient
 {
     
     

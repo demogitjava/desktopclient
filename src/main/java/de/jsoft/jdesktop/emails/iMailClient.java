@@ -10,7 +10,7 @@ import javax.mail.Store;
 
 
 
-public interface iEmailClient 
+public interface iMailClient
 {
     public Store connectToStore();
     public HashMap listFolders();

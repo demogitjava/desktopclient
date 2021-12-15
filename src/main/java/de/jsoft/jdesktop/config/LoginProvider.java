@@ -29,7 +29,7 @@ import org.springframework.context.annotation.Configuration;
  * @author hoscho
  */
 
-@Configuration
+
 public class LoginProvider 
 {
  
