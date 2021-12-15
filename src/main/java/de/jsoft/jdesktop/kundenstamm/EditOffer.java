@@ -147,24 +147,12 @@ public class EditOffer extends javax.swing.JInternalFrame implements iEditOffer
 
     public void getofferdatafromCustomerJTable2(JTable jTable2)
     {
-        model = new DefaultTableModel(
-
-        new Object[][]
-                        {
-
-                                /*
-                                  {
-                                      searchuser, searchstrasse, searchplz, searchort
-
-                                  },
-                      */
-
-                        },
-                new Object[] { "Artikelnummer", "Artikelbezeichnung", "VK", });
 
 
+        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
 
-        jTable3.setModel(model);
+
+        this.jTable3.setModel(model);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

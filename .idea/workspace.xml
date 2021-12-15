@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/interfaces/IEditOffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +165,7 @@
       <workItem from="1639406553300" duration="18000" />
       <workItem from="1639463206028" duration="1603000" />
       <workItem from="1639551287554" duration="3810000" />
-      <workItem from="1639555682204" duration="5830000" />
+      <workItem from="1639555682204" duration="6759000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -240,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639553853870</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="EditOffer JInernalFrame &#10;public void getofferdatafromCustomerJTable2&#10;&#10;get Data from JTable2">
+      <created>1639574378757</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639574378757</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,18 +272,11 @@
     <MESSAGE value="remove anntotions from spring boot &#10;application starts with Java SE" />
     <MESSAGE value="remove profiles plugins form pom.xml" />
     <MESSAGE value="EditOffer JInernalFrame &#10;for display in JDesktopPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditOffer JInernalFrame &#10;for display in JDesktopPane" />
+    <MESSAGE value="EditOffer JInernalFrame &#10;get DefaultModel data to JInternalFrame" />
+    <MESSAGE value="EditOffer JInernalFrame &#10;public void getofferdatafromCustomerJTable2&#10;&#10;get Data from JTable2" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditOffer JInernalFrame &#10;public void getofferdatafromCustomerJTable2&#10;&#10;get Data from JTable2" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/EditOffer.java</url>
-          <line>149</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.http.ResponseEntity" memberName="body" />
