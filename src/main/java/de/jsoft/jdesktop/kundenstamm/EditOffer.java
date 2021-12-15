@@ -5,8 +5,6 @@
 package de.jsoft.jdesktop.kundenstamm;
 
 
-import de.jsoft.jdesktop.kundenstamm.offerpanel.iEditOffer;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
