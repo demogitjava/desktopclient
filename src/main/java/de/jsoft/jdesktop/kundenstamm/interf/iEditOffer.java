@@ -8,6 +8,7 @@ package de.jsoft.jdesktop.kundenstamm.interf;
  *
  * @author hoscho
  */
-public interface iEditOffer {
+public interface iEditOffer 
+{
     
 }
