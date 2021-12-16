@@ -11,6 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 //import java.awt.peer.LightweightPeer;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -1085,15 +1086,19 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         jTextField15.setText(searchresult.get(kdrowcount).getBankverbindung());
 
         // iban
-        jTextField18.setText(searchresult.get(kdrowcount).getIban());
+        jTextField8.setText(searchresult.get(kdrowcount).getIban());
 
         // blz
-        jTextField19.setText(searchresult.get(kdrowcount).getBlz());
+        jTextField9.setText(searchresult.get(kdrowcount).getBlz());
 
         // konto - nummer
         jTextField10.setText(searchresult.get(kdrowcount).getKonto_Nr());
 
-        // kreditlimit
+                
+        DecimalFormat dc = new DecimalFormat("#0.##");
+        String formattedText = dc.format(searchresult.get(kdrowcount).getKreditlimit());
+        jTextField23.setHorizontalAlignment(JTextField.CENTER);
+
         jTextField23.setText(String.valueOf(searchresult.get(kdrowcount).getKreditlimit()));
 
         // telefon
@@ -1405,7 +1410,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         jTextField21.setText("");
         jTextField22.setText("");
         jTextField23.setText("");
-      
+
+    
+
         jTextField25.setText("");
         
         jLabel21.setText("");

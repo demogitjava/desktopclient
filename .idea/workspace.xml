@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="" />
+    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/interfaces/IEditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/interfaces/IEditOffer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +167,10 @@
       <workItem from="1639463206028" duration="1603000" />
       <workItem from="1639551287554" duration="3810000" />
       <workItem from="1639555682204" duration="6759000" />
-      <workItem from="1639577165025" duration="5811000" />
+      <workItem from="1639577165025" duration="6000000" />
+      <workItem from="1639629689556" duration="47000" />
+      <workItem from="1639639663878" duration="681000" />
+      <workItem from="1639640449575" duration="1777000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -291,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639582842931</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="edit Text form Button &#10;to German">
+      <created>1639583066675</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1639583066675</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +342,8 @@
     <MESSAGE value="EditOffer&#10;&#10;clear &#10;JTextField1 and JTextField2&#10;by loading the JInernalFrame to null.&#10;&#10;setValueAt to DefaultTableModel by&#10;edit value from JTextField1 and JTextField2&#10;to DefaultTableModel" />
     <MESSAGE value="EditOffer&#10;&#10;remove row form JTable3 &#10;from DefaultTableModel" />
     <MESSAGE value="edit mail button in JInterframe Kundenstamm" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit mail button in JInterframe Kundenstamm" />
+    <MESSAGE value="edit Text form Button &#10;to German" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit Text form Button &#10;to German" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
