@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/iMainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/interfaces/IEditOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/interfaces/IEditOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +170,7 @@
       <workItem from="1639577165025" duration="6000000" />
       <workItem from="1639629689556" duration="47000" />
       <workItem from="1639639663878" duration="681000" />
-      <workItem from="1639640449575" duration="1777000" />
+      <workItem from="1639640449575" duration="3846000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639583066675</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="edit customerpanel &#10;jTextField8 and jTextField9 to dispaly data.&#10;&#10;format jTextField23 kreditlimit with decimal (&quot;0#.##&quot;)">
+      <created>1639642392221</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1639642392221</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +350,8 @@
     <MESSAGE value="EditOffer&#10;&#10;remove row form JTable3 &#10;from DefaultTableModel" />
     <MESSAGE value="edit mail button in JInterframe Kundenstamm" />
     <MESSAGE value="edit Text form Button &#10;to German" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit Text form Button &#10;to German" />
+    <MESSAGE value="edit customerpanel &#10;jTextField8 and jTextField9 to dispaly data.&#10;&#10;format jTextField23 kreditlimit with decimal (&quot;0#.##&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit customerpanel &#10;jTextField8 and jTextField9 to dispaly data.&#10;&#10;format jTextField23 kreditlimit with decimal (&quot;0#.##&quot;)" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

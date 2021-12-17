@@ -16,7 +16,7 @@ import javax.swing.JMenuItem;
  *
  * @author hoscho
  */
-public class MainFrame extends javax.swing.JFrame 
+public class MainFrame extends javax.swing.JFrame implements iMainFrame
 {
 
     /**
