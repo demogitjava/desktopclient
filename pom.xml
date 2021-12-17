@@ -265,7 +265,7 @@
                         <version>2.5.3</version>
 
                         <configuration>
-                            <mainClass>de.jsoft.JDeskotp</mainClass>
+                            <mainClass>de.jsoft.JDesktop</mainClass>
                         </configuration>
                     </plugin>
 

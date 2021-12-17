@@ -54,10 +54,7 @@ public class MainFrame extends javax.swing.JFrame implements iMainFrame
                 return null;
             }
 
-            @Override
-            public JToolBar setJToolbar() {
-                return null;
-            }
+
         };
 
 
