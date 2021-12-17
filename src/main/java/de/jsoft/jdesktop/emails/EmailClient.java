@@ -403,8 +403,15 @@ public class EmailClient extends javax.swing.JInternalFrame
         }
         return message;
     }
-  
-   
+
+    public JInternalFrame loadJInternalFrame()
+    {
+        setVisible(true);
+        setMaximizable(true);
+        pack();
+        moveToFront();
+        return new JInternalFrame();
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

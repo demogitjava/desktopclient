@@ -2,7 +2,10 @@
 package de.jsoft;
 
 
+import de.jsoft.jdesktop.login.iNewJInternalFrame;
 import de.jsoft.jdesktop.mainframe.MainFrame;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -88,9 +91,10 @@ public class JDesktop implements iJDesktop
 
         de.jsoft.jdesktop.login.NewJInternalFrame loginframe = new de.jsoft.jdesktop.login.NewJInternalFrame();
         loginframe.setVisible(true);
-
+        loginframe.pack();
              
         jdeskpane.add(loginframe);
+
 
         mframe.add(jdeskpane);
        

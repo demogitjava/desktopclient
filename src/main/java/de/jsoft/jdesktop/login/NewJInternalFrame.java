@@ -474,10 +474,18 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
         NewJInternalFrame.headers = headers;
     }
 
-   
-    
-    
-    
+
+    public Component loadJInternalFrame()
+    {
+        setVisible(true);
+        setMaximizable(true);
+        pack();
+
+        return new JInternalFrame();
+    }
+
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     public static javax.swing.JComboBox<String> jComboBox1;

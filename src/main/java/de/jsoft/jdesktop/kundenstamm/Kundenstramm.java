@@ -15,6 +15,7 @@ import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import de.jsoft.jdesktop.emails.IEmailClient;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
@@ -928,16 +929,17 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
+
         de.jsoft.jdesktop.emails.EmailClient emailclient = new de.jsoft.jdesktop.emails.EmailClient();
         emailclient.setVisible(true);
         emailclient.setMaximizable(true);
         emailclient.pack();
         emailclient.moveToFront();
         de.jsoft.JDesktop.jdeskpane.add(emailclient);
-        
-      
+
+
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed

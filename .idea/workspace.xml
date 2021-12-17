@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/IEmailClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/JDesktop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/EmailClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/emails/EmailClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iNewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iNewJInternalFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -349,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639737730101</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="load JInternalframe over Interface to JDesktpPane">
+      <created>1639741084436</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1639741084437</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +375,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed lanserver module from this project" />
     <MESSAGE value="add new cusotmer &#10;set id and new customernumber to customerpanel" />
     <MESSAGE value="add qr code image to Cusotmer Panel &#10;add function for new customer" />
     <MESSAGE value="edit pom.xml" />
@@ -392,7 +399,8 @@
     <MESSAGE value="add interfaces to &#10;iKundenstamm and Login JInternalFrame" />
     <MESSAGE value="EditOfffer&#10;add JPanel" />
     <MESSAGE value="edit pom.xml &#10;and interface function in MainFrame&#10;setMenuBar" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit pom.xml &#10;and interface function in MainFrame&#10;setMenuBar" />
+    <MESSAGE value="load JInternalframe over Interface to JDesktpPane" />
+    <option name="LAST_COMMIT_MESSAGE" value="load JInternalframe over Interface to JDesktpPane" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
