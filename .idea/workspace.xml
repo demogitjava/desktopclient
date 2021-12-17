@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iNewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iNewJInternalFrame.java" afterDir="false" />
-    </list>
+    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +166,7 @@
       <workItem from="1639577165025" duration="6000000" />
       <workItem from="1639629689556" duration="47000" />
       <workItem from="1639639663878" duration="681000" />
-      <workItem from="1639640449575" duration="5437000" />
+      <workItem from="1639640449575" duration="5710000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -319,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639714182108</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add interfaces to &#10;iKundenstamm and Login JInternalFrame">
+      <created>1639715930557</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1639715930557</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +362,8 @@
     <MESSAGE value="edit Text form Button &#10;to German" />
     <MESSAGE value="edit customerpanel &#10;jTextField8 and jTextField9 to dispaly data.&#10;&#10;format jTextField23 kreditlimit with decimal (&quot;0#.##&quot;)" />
     <MESSAGE value="add interface to MainFrame" />
-    <option name="LAST_COMMIT_MESSAGE" value="add interface to MainFrame" />
+    <MESSAGE value="add interfaces to &#10;iKundenstamm and Login JInternalFrame" />
+    <option name="LAST_COMMIT_MESSAGE" value="add interfaces to &#10;iKundenstamm and Login JInternalFrame" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
