@@ -166,7 +166,7 @@
       <workItem from="1639577165025" duration="6000000" />
       <workItem from="1639629689556" duration="47000" />
       <workItem from="1639639663878" duration="681000" />
-      <workItem from="1639640449575" duration="5710000" />
+      <workItem from="1639640449575" duration="6014000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -322,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639715930557</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="EditOfffer&#10;add JPanel">
+      <created>1639716453890</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1639716453890</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +370,8 @@
     <MESSAGE value="edit customerpanel &#10;jTextField8 and jTextField9 to dispaly data.&#10;&#10;format jTextField23 kreditlimit with decimal (&quot;0#.##&quot;)" />
     <MESSAGE value="add interface to MainFrame" />
     <MESSAGE value="add interfaces to &#10;iKundenstamm and Login JInternalFrame" />
-    <option name="LAST_COMMIT_MESSAGE" value="add interfaces to &#10;iKundenstamm and Login JInternalFrame" />
+    <MESSAGE value="EditOfffer&#10;add JPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditOfffer&#10;add JPanel" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
