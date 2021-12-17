@@ -5,19 +5,13 @@
  */
 package de.jsoft.jdesktop.menu;
 
-import de.jsoft.JDesktop;
-
-import static de.jsoft.JDesktop.jdeskpane;
 import static de.jsoft.JDesktop.mframe;
-import java.awt.BorderLayout;
-import java.awt.LayoutManager;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-
-import javax.swing.plaf.metal.DefaultMetalTheme;
-import javax.swing.plaf.synth.SynthLookAndFeel;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
+import javax.swing.border.MatteBorder;
 
 /**
  *
@@ -121,14 +115,18 @@ public class WindowsMenu implements iWindowsMenus
         });
         menusettings.add(setlookandfeelnimbus);
 
-
         bar.add(menu); //Adding JMenu in the JMenuBar
         bar.add(menusettings);
 
-     
-         
+
+        MatteBorder matteBorder = new MatteBorder(1, 0, 0, 0, Color.BLACK);
+        bar.setBorder(matteBorder);
+
+
         return bar;
-       
+
+
     }
-    
+
+
 }

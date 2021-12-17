@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="" />
+    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LanServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/iMainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/iMainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/iWindowsMenus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/iWindowsMenus.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +25,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -69,7 +80,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16333333" />
     <property name="project.structure.side.proportion" value="0.27669904" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="ReactorSettings">
@@ -77,6 +88,11 @@
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.jsoft.jdesktop.menu" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -90,7 +106,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="de.jsoft.JDesktop" />
-      <module name="JDesktop" />
+      <module name="LanServer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

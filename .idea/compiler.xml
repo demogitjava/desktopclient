@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JDesktop" />
+        <module name="LanServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="JDesktop" target="11" />
-      <module name="LanServer" target="1.8" />
+      <module name="LanServer" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

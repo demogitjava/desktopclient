@@ -10,9 +10,13 @@ import de.jsoft.JDesktop;
 import static de.jsoft.JDesktop.mframe;
 import static de.jsoft.JDesktop.rtemp;
 import de.jsoft.jdesktop.config.LoginProvider;
-import java.awt.Dimension;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
+
+import de.jsoft.jdesktop.kundenstamm.Kundenstramm;
 import org.springframework.stereotype.Controller;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -31,7 +35,11 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 //import sun.misc.BASE64Encoder;
 import org.apache.http.impl.client.CloseableHttpClient;
+
+import javax.swing.*;
 import java.util.Base64;
+
+
 
 /**
  *
@@ -322,10 +330,10 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
    
     }//GEN-LAST:event_jComboBox1ComponentShown
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       // TODO add your handling code here:
        Integer selectedlanguage = (int) jComboBox1.getSelectedIndex();
-       de.jsoft.JDesktop.setLgtoPanel(selectedlanguage);
+       JDesktop.setLgtoPanel(selectedlanguage);
        
        
        String stuser = jTextField1.getText();
@@ -339,7 +347,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
        //String authStringEnc = new BASE64Encoder().encode(authString.getBytes());
        String authStringEnc = Base64.getEncoder().encodeToString(authString.getBytes());
             
-       de.jsoft.jdesktop.config.LoginProvider loginprovider = new de.jsoft.jdesktop.config.LoginProvider();   
+       LoginProvider loginprovider = new LoginProvider();
        setHeaders(authStringEnc);
       
        loginprovider.logintoServer(stuser, stpassword);
@@ -347,7 +355,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
        
         
       
-        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(de.jsoft.jdesktop.config.LoginProvider.client);
+        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(LoginProvider.client);
         
         // "http://localhost:8443/users"
          ResponseEntity<String> response = new RestTemplate(requestFactory).
@@ -361,7 +369,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
             {
                 System.out.print("Loggin is success");
                 
-                de.jsoft.jdesktop.login.NewJInternalFrame loginframe = new de.jsoft.jdesktop.login.NewJInternalFrame();
+                NewJInternalFrame loginframe = new NewJInternalFrame();
                 loginframe.dispose();
                 
                 JDesktop.jdeskpane.removeAll();
@@ -374,16 +382,18 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
                     if User successful loginid
                 */
                 de.jsoft.jdesktop.menu.WindowsMenu wmenu = new de.jsoft.jdesktop.menu.WindowsMenu();
+
                 mframe.setJMenuBar(wmenu.setMenu());
-               
-                de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
+
+
+                Kundenstramm kdstamm = new Kundenstramm();
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);
                 kdstamm.pack();
                 
                 
                 // user is logedin
-                de.jsoft.JDesktop.userislogedin = true;
+                JDesktop.userislogedin = true;
                 
                 JDesktop.jdeskpane.add(kdstamm);
                 
