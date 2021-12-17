@@ -51,10 +51,8 @@ public class MainFrame extends javax.swing.JFrame implements iMainFrame
         de.jsoft.jdesktop.menu.iWindowsMenus iWindowsMenus = new de.jsoft.jdesktop.menu.iWindowsMenus() {
             @Override
             public JMenuBar setMenu() {
-                return null;
+                return bar;
             }
-
-
         };
 
 

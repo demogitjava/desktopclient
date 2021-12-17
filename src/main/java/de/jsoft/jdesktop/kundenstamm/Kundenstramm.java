@@ -22,12 +22,8 @@ import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 //import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
 import de.jsoft.JDesktop;
-import de.jsoft.jdesktop.login.LoginFrame;
-import static de.jsoft.jdesktop.login.NewJInternalFrame.headers;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.krysalis.barcode4j.impl.upcean.EAN13Bean;
@@ -36,25 +32,13 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
-import org.apache.http.impl.client.CloseableHttpClient;
+
 import javax.swing.*;
-import org.apache.http.HttpStatus;
-import org.springframework.http.HttpHeaders;
 
 import java.awt.image.BufferedImage;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 
 
-import org.krysalis.barcode4j.BarcodeException;
-import org.krysalis.barcode4j.BarcodeGenerator;
-import org.krysalis.barcode4j.BarcodeUtil;
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
-
-import org.apache.http.impl.client.CloseableHttpClient;
-import static org.springframework.shell.table.CellMatchers.row;
-
 
 
 //Auskunft Kreditreform url
@@ -2445,7 +2429,14 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         this.aevent = aevent;
     }
 
-    
+    public Component loadJInternalFrame()
+    {
+        setVisible(true);
+        setMaximizable(true);
+        pack();
+           
+        return new JInternalFrame();
+    }
     
      
     // Variables declaration - do not modify//GEN-BEGIN:variables

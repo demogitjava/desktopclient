@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/iKundenstamm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/NewJInternalFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/mainframe/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639716453890</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="edit pom.xml &#10;and interface function in MainFrame&#10;setMenuBar">
+      <created>1639737730101</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1639737730101</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +391,8 @@
     <MESSAGE value="add interface to MainFrame" />
     <MESSAGE value="add interfaces to &#10;iKundenstamm and Login JInternalFrame" />
     <MESSAGE value="EditOfffer&#10;add JPanel" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditOfffer&#10;add JPanel" />
+    <MESSAGE value="edit pom.xml &#10;and interface function in MainFrame&#10;setMenuBar" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit pom.xml &#10;and interface function in MainFrame&#10;setMenuBar" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
