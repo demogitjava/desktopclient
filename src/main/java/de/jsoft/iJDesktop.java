@@ -10,6 +10,8 @@ import javax.swing.*;
 public interface iJDesktop
 {
 
+   
+    
    MainFrame mframe = null;
    RestTemplate rtemp = null;
 

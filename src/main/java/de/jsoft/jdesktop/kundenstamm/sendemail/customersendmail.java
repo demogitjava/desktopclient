@@ -127,6 +127,7 @@ public class customersendmail extends javax.swing.JInternalFrame implements icus
         
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
@@ -138,7 +139,7 @@ public class customersendmail extends javax.swing.JInternalFrame implements icus
       
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    
+    @Override
     public void getTexttoEmailData(String customeremail, String offernumber)
     {
         jTextField1.setText(customeremail);

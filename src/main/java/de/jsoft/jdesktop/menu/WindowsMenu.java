@@ -21,12 +21,18 @@ public class WindowsMenu implements iWindowsMenus
 {
     
     public JMenuBar bar;
-    
+   
     public String txusername;
     public int intport;
 
     String stlaf;
 
+    public WindowsMenu()
+    {
+        
+    }
+    
+    @Override
     public JMenuBar setMenu()
     {
          
@@ -43,16 +49,16 @@ public class WindowsMenu implements iWindowsMenus
           });
           
      
-          menu.add(exitapplication); //Adding JMenuItem in the JMenu
+        menu.add(exitapplication); //Adding JMenuItem in the JMenu
 
 
-          /*
+        /*
                 Settings
-           */
-          JMenu menusettings = new JMenu("Settings");
+        */
+        JMenu menusettings = new JMenu("Settings");
 
-          JMenuItem setlookandfeelmetal = new JMenuItem("MetalLAF");
-            setlookandfeelmetal.addActionListener(new ActionListener() {
+        JMenuItem setlookandfeelmetal = new JMenuItem("MetalLAF");
+        setlookandfeelmetal.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent ev)
                 {
                     stlaf = "Metal";
@@ -70,7 +76,7 @@ public class WindowsMenu implements iWindowsMenus
 
                 }
             });
-           menusettings.add(setlookandfeelmetal);
+        menusettings.add(setlookandfeelmetal);
 
 
         JMenuItem setlookandfeelwindows = new JMenuItem("WindowsLAF");
@@ -118,14 +124,16 @@ public class WindowsMenu implements iWindowsMenus
         bar.add(menu); //Adding JMenu in the JMenuBar
         bar.add(menusettings);
 
+        bar.add(new JPanel());
 
-        MatteBorder matteBorder = new MatteBorder(1, 0, 0, 0, Color.BLACK);
-        bar.setBorder(matteBorder);
 
+        JToolBar toolBar = new JToolBar();
+        
+        
+
+        bar.add(toolBar);
 
         return bar;
-
-
     }
 
 

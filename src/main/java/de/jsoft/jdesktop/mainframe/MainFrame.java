@@ -14,13 +14,16 @@ import javax.swing.*;
 public class MainFrame extends javax.swing.JFrame implements iMainFrame
 {
 
+    public JToolBar toolbar;
+
     /**
      * Creates new form MainFrame
      */
     public MainFrame()
     {
+
         initComponents();
-        
+
         
     }
 
@@ -44,21 +47,23 @@ public class MainFrame extends javax.swing.JFrame implements iMainFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static final javax.swing.JDesktopPane jDesktopPane1 = new javax.swing.JDesktopPane();
     // End of variables declaration//GEN-END:variables
-
+    @Override
     public void setMenuBar(JMenuBar bar)
     {
 
-        de.jsoft.jdesktop.menu.iWindowsMenus iWindowsMenus = new de.jsoft.jdesktop.menu.iWindowsMenus() {
-            @Override
-            public JMenuBar setMenu() {
-                return bar;
-            }
-        };
+        
 
 
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void setJToolBar(JToolBar toolbar)
+    {
+
+    }
+
+  
 
 
 

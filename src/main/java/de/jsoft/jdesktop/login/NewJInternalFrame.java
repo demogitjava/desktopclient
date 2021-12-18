@@ -366,42 +366,29 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
                 loginframe.dispose();
                 
                 JDesktop.jdeskpane.removeAll();
-                  
-                
-                
-                
-                   /*
+
+                /*
                     load default Window menu 
                     if User successful loginid
                 */
                 de.jsoft.jdesktop.menu.WindowsMenu wmenu = new de.jsoft.jdesktop.menu.WindowsMenu();
-                mframe.setJMenuBar(wmenu.setMenu());
+                mframe.add(wmenu.setMenu());
 
-                /*
+
+
+
+                
                 de.jsoft.jdesktop.kundenstamm.Kundenstramm kdstamm = new de.jsoft.jdesktop.kundenstamm.Kundenstramm();
                 kdstamm.setVisible(true);
                 kdstamm.setMaximizable(true);
                 kdstamm.pack();
-                */
+                 
+                mframe.add(kdstamm.loadJInternalFrame());
 
-                de.jsoft.jdesktop.kundenstamm.iKundenstamm iKundenstamm = new iKundenstamm() {
-                 @Override
-                    public Component loadJInternalFrame()
-                    {
-                        return new JInternalFrame();
-                    }
-                };
-                mframe.add(iKundenstamm.loadJInternalFrame());
-
-
+ 
                 // user is logedin
                 JDesktop.userislogedin = true;
-                
-
-                
-                
-              
-                
+               
                 
             }
             else if(response.getStatusCodeValue() == 401)

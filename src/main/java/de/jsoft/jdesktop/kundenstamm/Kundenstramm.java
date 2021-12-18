@@ -2431,6 +2431,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         this.aevent = aevent;
     }
 
+    @Override
     public Component loadJInternalFrame()
     {
         setVisible(true);
