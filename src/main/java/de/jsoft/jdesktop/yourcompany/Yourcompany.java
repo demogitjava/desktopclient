@@ -127,7 +127,6 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -168,18 +167,22 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
 
-        jToolBar1.setRollover(true);
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
 
-        jButton2.setText("Ändern");
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton2);
+        jToolBar1.setRollover(true);
 
         jButton3.setText("speichern");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton3);
 
         jLabel1.setText("Datensatz id");
@@ -403,9 +406,12 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
