@@ -4,6 +4,15 @@
  */
 package de.jsoft.jdesktop.yourcompany;
 
+import de.jsoft.JDesktop;
+import de.jsoft.jdesktop.kundenstamm.Artikelstamm;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+
+import java.util.List;
+
 /**
  *
  * @author hoscho
@@ -52,6 +61,42 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
     @Override
     public void loadyourcompanydata()
     {
+
+        // load companydata
+        HttpEntity<String> requestEntity = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+
+        ResponseEntity<List<MYourcompanydata>> lyourcompanydata = JDesktop.rtemp.exchange(
+                de.jsoft.JDesktop.baseUrl + "getCompanydata",
+                HttpMethod.GET,
+                requestEntity,
+                new ParameterizedTypeReference<List<MYourcompanydata>>(){});
+
+        MYourcompanydata mYourcompanydata = new MYourcompanydata();
+
+        /*
+                add text form table yourcompanydata to
+                jInternalframe
+         */
+        List<MYourcompanydata> yourcomp = lyourcompanydata.getBody();
+        jTextField1.setText(yourcomp.get(0).getFirmenname());
+        jTextField2.setText(yourcomp.get(0).getStrasse());
+        jTextField3.setText(String.valueOf(yourcomp.get(0).getPlz()));
+        jTextField4.setText(yourcomp.get(0).getOrt());
+        jTextField5.setText(yourcomp.get(0).getTelefon());
+        jTextField6.setText(yourcomp.get(0).getEmail());
+        jTextField7.setText(String.valueOf(yourcomp.get(0).getFirmennumer()));
+        jTextField8.setText(yourcomp.get(0).getSteuernummer());
+        jTextField9.setText(yourcomp.get(0).getUstIdNr());
+        jTextField10.setText(yourcomp.get(0).getGeschäftsführer());
+        jTextField11.setText(yourcomp.get(0).getAmtsgericht());
+        jTextField12.setText(yourcomp.get(0).getBank());
+        jTextField13.setText(yourcomp.get(0).getKontoinhaber());
+        jTextField14.setText(yourcomp.get(0).getIban());
+
+        jLabel2.setText(String.valueOf(yourcomp.get(0).getId()));
+
+
+
 
     }
 
@@ -273,7 +318,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel20)
                                     .addComponent(jLabel17))))
-                        .addGap(0, 14, Short.MAX_VALUE))
+                        .addGap(0, 128, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)

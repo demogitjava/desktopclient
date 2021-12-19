@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/iYourcompany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/iMYourcompanydata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -89,6 +92,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="de.jsoft.jdesktop.menu" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="de.jsoft.jdesktop.yourcompany" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -180,7 +186,7 @@
       <workItem from="1639639663878" duration="681000" />
       <workItem from="1639640449575" duration="6014000" />
       <workItem from="1639812162619" duration="7136000" />
-      <workItem from="1639893444064" duration="8815000" />
+      <workItem from="1639893444064" duration="17320000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -378,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639898184704</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="edit fucntions in yourcompanydata">
+      <created>1639905172143</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1639905172143</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +410,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
     <MESSAGE value="add interface to JDesktop start up class" />
     <MESSAGE value="inject Service to starup JDesktopApplication" />
     <MESSAGE value="remove anntotions from spring boot &#10;application starts with Java SE" />
@@ -422,7 +434,8 @@
     <MESSAGE value="." />
     <MESSAGE value="dispaly Yourcompany JInternalFrame to &#10;Desktop with function &#10;JDesktop.jdeskpane" />
     <MESSAGE value="add Interface to LoginProvider" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Interface to LoginProvider" />
+    <MESSAGE value="edit fucntions in yourcompanydata" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit fucntions in yourcompanydata" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

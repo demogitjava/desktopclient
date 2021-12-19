@@ -136,6 +136,7 @@ public class WindowsMenu implements iWindowsMenus
 
                 de.jsoft.jdesktop.yourcompany.Yourcompany yourcompanyintframe = new de.jsoft.jdesktop.yourcompany.Yourcompany();
 
+                yourcompanyintframe.loadyourcompanydata();
                 yourcompanyintframe.setVisible(true);
                 yourcompanyintframe.pack();
 
