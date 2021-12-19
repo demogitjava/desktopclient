@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/iLoginProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/LoginProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/LoginProvider.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +181,7 @@
       <workItem from="1639639663878" duration="681000" />
       <workItem from="1639640449575" duration="6014000" />
       <workItem from="1639812162619" duration="7136000" />
-      <workItem from="1639893444064" duration="4110000" />
+      <workItem from="1639893444064" duration="4426000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -390,7 +391,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add qr code image to Cusotmer Panel &#10;add function for new customer" />
     <MESSAGE value="edit pom.xml" />
     <MESSAGE value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
     <MESSAGE value="add interface to JDesktop start up class" />
@@ -415,7 +415,8 @@
     <MESSAGE value="edit pom.xml &#10;and interface function in MainFrame&#10;setMenuBar" />
     <MESSAGE value="load JInternalframe over Interface to JDesktpPane" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="dispaly Yourcompany JInternalFrame to &#10;Desktop with function &#10;JDesktop.jdeskpane" />
+    <option name="LAST_COMMIT_MESSAGE" value="dispaly Yourcompany JInternalFrame to &#10;Desktop with function &#10;JDesktop.jdeskpane" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

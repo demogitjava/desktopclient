@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 
-public class LoginProvider 
+public class LoginProvider implements iLoginProvider
 {
  
     public static CloseableHttpClient client;
@@ -43,7 +43,7 @@ public class LoginProvider
         
     }
     
-    
+    @Override
     public void logintoServer(String stuser, String stpassword)
     {
         try {
@@ -105,6 +105,7 @@ public class LoginProvider
             Logger.getLogger(LoginProvider.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
 
     public static CloseableHttpClient getClient() {
         return client;
