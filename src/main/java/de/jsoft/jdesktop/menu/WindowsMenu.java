@@ -5,6 +5,8 @@
  */
 package de.jsoft.jdesktop.menu;
 
+import de.jsoft.JDesktop;
+
 import static de.jsoft.JDesktop.mframe;
 
 import java.awt.*;
@@ -124,14 +126,33 @@ public class WindowsMenu implements iWindowsMenus
         bar.add(menu); //Adding JMenu in the JMenuBar
         bar.add(menusettings);
 
-        bar.add(new JPanel());
 
-
+        JPanel panel = new JPanel((new FlowLayout(FlowLayout.RIGHT)));
         JToolBar toolBar = new JToolBar();
+        JButton loadcompdata = new JButton("load your company data");
+        loadcompdata.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev)
+            {
+
+                de.jsoft.jdesktop.yourcompany.Yourcompany yourcompanyintframe = new de.jsoft.jdesktop.yourcompany.Yourcompany();
+
+                yourcompanyintframe.setVisible(true);
+                yourcompanyintframe.pack();
+
+                JDesktop.jdeskpane.add(yourcompanyintframe);
+
+
+            }
+        });
+        toolBar.add(loadcompdata);
+
+        panel.add(toolBar);
+        bar.add(panel);
+
         
         
 
-        bar.add(toolBar);
+
 
         return bar;
     }

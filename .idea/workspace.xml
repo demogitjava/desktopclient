@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/menu/WindowsMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,16 +109,15 @@
       </method>
     </configuration>
     <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
-      <module name="JDesktop" />
-      <option name="USE_SOCKET_TRANSPORT" value="false" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="localhost" />
-      <option name="HOST" />
-      <option name="PORT" value="65535" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <option name="AUTO_RESTART" value="false" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="localhost" />
-        <option name="TRANSPORT" value="1" />
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="false" />
       </RunnerSettings>
       <method v="2" />
@@ -182,6 +180,7 @@
       <workItem from="1639639663878" duration="681000" />
       <workItem from="1639640449575" duration="6014000" />
       <workItem from="1639812162619" duration="7136000" />
+      <workItem from="1639893444064" duration="4110000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
