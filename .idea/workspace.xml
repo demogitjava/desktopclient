@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/iLoginProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/controller/CtrlUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/iYourcompany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/LoginProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/config/LoginProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LanServer" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16333333" />
@@ -181,7 +180,7 @@
       <workItem from="1639639663878" duration="681000" />
       <workItem from="1639640449575" duration="6014000" />
       <workItem from="1639812162619" duration="7136000" />
-      <workItem from="1639893444064" duration="4426000" />
+      <workItem from="1639893444064" duration="8815000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -372,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639817171815</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add Interface to LoginProvider">
+      <created>1639898184704</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1639898184704</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +397,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="edit pom.xml" />
     <MESSAGE value="edit pom.xml &#10;to build the jar as native for better performece &#10;on start up the dekstop.jar" />
     <MESSAGE value="add interface to JDesktop start up class" />
     <MESSAGE value="inject Service to starup JDesktopApplication" />
@@ -416,7 +421,8 @@
     <MESSAGE value="load JInternalframe over Interface to JDesktpPane" />
     <MESSAGE value="." />
     <MESSAGE value="dispaly Yourcompany JInternalFrame to &#10;Desktop with function &#10;JDesktop.jdeskpane" />
-    <option name="LAST_COMMIT_MESSAGE" value="dispaly Yourcompany JInternalFrame to &#10;Desktop with function &#10;JDesktop.jdeskpane" />
+    <MESSAGE value="add Interface to LoginProvider" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Interface to LoginProvider" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

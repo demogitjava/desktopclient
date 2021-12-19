@@ -8,14 +8,69 @@ package de.jsoft.jdesktop.yourcompany;
  *
  * @author hoscho
  */
-public class Yourcompany extends javax.swing.JInternalFrame {
+public class Yourcompany extends javax.swing.JInternalFrame implements iYourcompany
+{
 
     /**
      * Creates new form Yourcompany
      */
-    public Yourcompany() {
+    public Yourcompany()
+    {
         initComponents();
+        clearTextFields();
     }
+
+    /*
+        clearTextField from JInternalframe with setText("");
+     */
+    @Override
+    public void clearTextFields()
+    {
+
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField10.setText("");
+        jTextField11.setText("");
+        jTextField12.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField15.setText("");
+        jTextField16.setText("");
+
+        jPasswordField1.setText("");
+
+
+    }
+
+    @Override
+    public void loadyourcompanydata()
+    {
+
+    }
+
+    @Override
+    public void edityourcompanydata()
+    {
+
+    }
+    
+    @Override
+    public void saveyourcompanydata()
+    {
+        
+    }
+
+  
+
+   
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,10 +82,8 @@ public class Yourcompany extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -72,12 +125,6 @@ public class Yourcompany extends javax.swing.JInternalFrame {
 
         jToolBar1.setRollover(true);
 
-        jButton1.setText("Neu");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton1);
-
         jButton2.setText("Ändern");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -89,12 +136,6 @@ public class Yourcompany extends javax.swing.JInternalFrame {
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton3);
-
-        jButton4.setText("löschen");
-        jButton4.setFocusable(false);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton4);
 
         jLabel1.setText("Datensatz id");
 
@@ -319,10 +360,8 @@ public class Yourcompany extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
