@@ -12,6 +12,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 /**
  *
@@ -20,6 +22,8 @@ import java.util.List;
 public class Yourcompany extends javax.swing.JInternalFrame implements iYourcompany
 {
 
+    DefaultListModel<String> model;
+    
     /**
      * Creates new form Yourcompany
      */
@@ -96,7 +100,35 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         jLabel2.setText(String.valueOf(yourcomp.get(0).getId()));
 
 
+        
+        /*
+            load userdata 
+        */
+        HttpEntity<String> requestEntityuser = new HttpEntity<String>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
 
+        ResponseEntity<List<de.jsoft.jdesktop.yourcompany.MUsers>> lyouruserdata = JDesktop.rtemp.exchange(
+                de.jsoft.JDesktop.baseUrl + "getuserdata",
+                HttpMethod.GET,
+                requestEntityuser,
+                new ParameterizedTypeReference<List<de.jsoft.jdesktop.yourcompany.MUsers>>(){});
+
+        de.jsoft.jdesktop.yourcompany.MUsers musers = new de.jsoft.jdesktop.yourcompany.MUsers();
+        
+        
+        List<de.jsoft.jdesktop.yourcompany.MUsers> youruserlist = lyouruserdata.getBody();
+        
+       
+        
+        for(int i = 0; i < youruserlist.size(); i++)
+        {
+            String stuser = youruserlist.get(i).getUsername();
+            String strole = youruserlist.get(i).getRole();
+            
+            long stid = youruserlist.get(i).getId();
+            
+            model.addElement(stid + " ," + stuser + " ," + strole);
+        }
+        
 
     }
 
@@ -167,6 +199,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         jPasswordField2 = new javax.swing.JPasswordField();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
+        model = new DefaultListModel<>();
         jList1 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -257,11 +290,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
 
         jLabel22.setText("reenter");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        jList1.setModel(model);
         jScrollPane1.setViewportView(jList1);
 
         jButton1.setText("neu");
@@ -336,7 +365,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane1)
@@ -345,7 +374,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -467,7 +496,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
+    public javax.swing.JList<String> jList1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
