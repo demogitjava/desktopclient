@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/iLoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/DaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/DaoUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/JPACustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/JPACustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/iDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/iDaoUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/mawi/JPABuchungsdaten.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/mawi/JPABuchungsdaten.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/login/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LanServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16333333" />
@@ -101,7 +105,7 @@
       <command value="mvn deploy" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.JDesktop">
+  <component name="RunManager" selected="Remote JVM Debug.Unnamed">
     <configuration name="JDesktop" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -183,7 +187,11 @@
       <workItem from="1639639663878" duration="681000" />
       <workItem from="1639640449575" duration="6014000" />
       <workItem from="1639812162619" duration="7136000" />
-      <workItem from="1639893444064" duration="17770000" />
+      <workItem from="1639893444064" duration="20261000" />
+      <workItem from="1639976319996" duration="3560000" />
+      <workItem from="1639990723995" duration="954000" />
+      <workItem from="1639992593499" duration="1013000" />
+      <workItem from="1640000305377" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -395,7 +403,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639915493015</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add interface to LoginFrame">
+      <created>1639915810006</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1639915810006</updated>
+    </task>
+    <task id="LOCAL-00032" summary="make jinternalframe colable, resize">
+      <created>1639916071799</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1639916071799</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,8 +436,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="inject Service to starup JDesktopApplication" />
-    <MESSAGE value="remove anntotions from spring boot &#10;application starts with Java SE" />
     <MESSAGE value="remove profiles plugins form pom.xml" />
     <MESSAGE value="EditOffer JInernalFrame &#10;for display in JDesktopPane" />
     <MESSAGE value="EditOffer JInernalFrame &#10;get DefaultModel data to JInternalFrame" />
@@ -439,7 +459,9 @@
     <MESSAGE value="add Interface to LoginProvider" />
     <MESSAGE value="edit fucntions in yourcompanydata" />
     <MESSAGE value="write list data from h2 table yourcompany to jTextFields in JInternalFrame" />
-    <option name="LAST_COMMIT_MESSAGE" value="write list data from h2 table yourcompany to jTextFields in JInternalFrame" />
+    <MESSAGE value="add interface to LoginFrame" />
+    <MESSAGE value="make jinternalframe colable, resize" />
+    <option name="LAST_COMMIT_MESSAGE" value="make jinternalframe colable, resize" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

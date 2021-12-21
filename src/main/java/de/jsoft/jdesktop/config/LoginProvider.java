@@ -84,6 +84,10 @@ public class LoginProvider implements iLoginProvider
                 // user is logedin
                 de.jsoft.JDesktop.userislogedin = true;
                 
+                // set username to memory
+                de.jsoft.JDesktop.logedinusername = stuser;
+                
+                
                 /*
                     load default Window menu 
                     if User successful loginid

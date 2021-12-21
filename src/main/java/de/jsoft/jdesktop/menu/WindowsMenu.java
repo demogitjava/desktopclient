@@ -130,18 +130,39 @@ public class WindowsMenu implements iWindowsMenus
         JPanel panel = new JPanel((new FlowLayout(FlowLayout.RIGHT)));
         JToolBar toolBar = new JToolBar();
         JButton loadcompdata = new JButton("load your company data");
-        loadcompdata.addActionListener(new ActionListener() {
+        loadcompdata.addActionListener(new ActionListener() 
+        {
             public void actionPerformed(ActionEvent ev)
             {
+                
+                
+                String adminuser = de.jsoft.JDesktop.logedinusername;
+                if(adminuser.equals("admin"))
+                {
+                      de.jsoft.jdesktop.yourcompany.Yourcompany yourcompanyintframe = new de.jsoft.jdesktop.yourcompany.Yourcompany();
 
-                de.jsoft.jdesktop.yourcompany.Yourcompany yourcompanyintframe = new de.jsoft.jdesktop.yourcompany.Yourcompany();
+                      yourcompanyintframe.loadyourcompanydata();
+                      yourcompanyintframe.setVisible(true);
+                      yourcompanyintframe.pack();
 
-                yourcompanyintframe.loadyourcompanydata();
-                yourcompanyintframe.setVisible(true);
-                yourcompanyintframe.pack();
+                      JDesktop.jdeskpane.add(yourcompanyintframe);
+                }   
+                else
+                {
+                    JLabel label = new JLabel("You have no admin rights to edit user or passwords");
+                  
+                    label.setHorizontalAlignment(JLabel.CENTER);
+                    label.setVerticalTextPosition(JLabel.BOTTOM);
+                    label.setHorizontalTextPosition(JLabel.CENTER);
+                    JOptionPane optionpane = new JOptionPane(label, JOptionPane.PLAIN_MESSAGE);
+                    
+                    
+                    JDesktop.jdeskpane.add(optionpane);
+                }
+                
+              
 
-                JDesktop.jdeskpane.add(yourcompanyintframe);
-
+              
 
             }
         });
@@ -150,11 +171,7 @@ public class WindowsMenu implements iWindowsMenus
         panel.add(toolBar);
         bar.add(panel);
 
-        
-        
-
-
-
+   
         return bar;
     }
 

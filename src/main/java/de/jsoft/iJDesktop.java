@@ -15,9 +15,11 @@ public interface iJDesktop
    MainFrame mframe = null;
    RestTemplate rtemp = null;
 
-    String baseUrl = null;
-    JDesktopPane jdeskpane = null;
+   String baseUrl = null;
+   JDesktopPane jdeskpane = null;
 
-    int lgglobal = Integer.parseInt(null);
-    boolean userislogedin = false;
+   int lgglobal = Integer.parseInt(null);
+   boolean userislogedin = false;
+   
+   public static String logedinusername = null;
 }

@@ -25,6 +25,9 @@ import org.springframework.http.HttpHeaders;
 public class JDesktop implements iJDesktop
 {
     
+    
+   
+    
     public static MainFrame mframe;
     public static RestTemplate rtemp;
     
@@ -33,7 +36,11 @@ public class JDesktop implements iJDesktop
 
     public static int lgglobal;
     public static boolean userislogedin = false;
-
+    
+    public static String logedinusername;
+   
+    
+    
     @Autowired
     iJDesktop iJDesktop;
     
