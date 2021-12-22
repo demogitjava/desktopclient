@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  *
@@ -23,7 +24,9 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
 {
 
     DefaultListModel<String> model;
-    
+
+    BCryptPasswordEncoder pwencoder;
+    List<de.jsoft.jdesktop.yourcompany.MUsers> youruserlist;
     /**
      * Creates new form Yourcompany
      */
@@ -115,7 +118,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         de.jsoft.jdesktop.yourcompany.MUsers musers = new de.jsoft.jdesktop.yourcompany.MUsers();
         
         
-        List<de.jsoft.jdesktop.yourcompany.MUsers> youruserlist = lyouruserdata.getBody();
+        youruserlist = lyouruserdata.getBody();
         
        
         
@@ -492,15 +495,31 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+    // edit username and password
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+
+
 
 
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
         // TODO add your handling code here:
-        
+        String selecteditem = String.valueOf(jList1.getSelectedIndex());
+
+        jTextField15.setText(youruserlist.get(Integer.parseInt(selecteditem)).getUsername());
+
+
+
+        jPasswordField1.setText("");
+        jPasswordField2.setText("");
+
+        jTextField16.setText(youruserlist.get(Integer.parseInt(selecteditem)).getRole());
+
+        jLabel21.setText(String.valueOf(youruserlist.get(Integer.parseInt(selecteditem)).getId()));
+
     }//GEN-LAST:event_jList1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
