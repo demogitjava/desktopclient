@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/DaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/DaoUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/JPACustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/JPACustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/iDaoUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/iDaoUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/mawi/JPABuchungsdaten.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/dao/interfaces/mawi/JPABuchungsdaten.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
@@ -105,7 +101,7 @@
       <command value="mvn deploy" />
     </option>
   </component>
-  <component name="RunManager" selected="Remote JVM Debug.Unnamed">
+  <component name="RunManager" selected="Application.JDesktop">
     <configuration name="JDesktop" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -192,6 +188,8 @@
       <workItem from="1639990723995" duration="954000" />
       <workItem from="1639992593499" duration="1013000" />
       <workItem from="1640000305377" duration="2934000" />
+      <workItem from="1640087170362" duration="455000" />
+      <workItem from="1640149433647" duration="1409000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -464,11 +462,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="make jinternalframe colable, resize" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.springframework.http.ResponseEntity" memberName="body" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="yourcomp" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JDesktop$JDesktop.ic" NAME="JDesktop Coverage Results" MODIFIED="1639556219483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
