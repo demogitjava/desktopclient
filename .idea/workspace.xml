@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/model/Yourcompanydata.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/src/main/java/de/jgsoftware/lanserver/model/Yourcompanydata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +205,7 @@
       <workItem from="1640149433647" duration="10245000" />
       <workItem from="1640235208533" duration="686000" />
       <workItem from="1640507794483" duration="5852000" />
-      <workItem from="1640590646380" duration="3230000" />
+      <workItem from="1640590646380" duration="3355000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -447,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640590978242</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="edit model Yourcompanydata">
+      <created>1640594190826</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1640594190826</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +471,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="EditOffer JInernalFrame &#10;get DefaultModel data to JInternalFrame" />
     <MESSAGE value="EditOffer JInernalFrame &#10;public void getofferdatafromCustomerJTable2&#10;&#10;get Data from JTable2" />
     <MESSAGE value="EditOffer JInernalFrame &#10;and add fucntion to iEditOffer interface&#10;&#10;the jinternalframe starts up and display &#10;DefaultTableModel from Jtable2 &quot;Kundenstamm&quot;" />
     <MESSAGE value="EditOffer&#10;&#10;add Values to jTextField1&#10;and JTextField2&#10;&#10;by click event from jTable3" />
@@ -491,7 +495,8 @@
     <MESSAGE value="." />
     <MESSAGE value="write userdata without passwords to Jlist in memory for edit username and password" />
     <MESSAGE value="edit README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit README.md" />
+    <MESSAGE value="edit model Yourcompanydata" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit model Yourcompanydata" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
