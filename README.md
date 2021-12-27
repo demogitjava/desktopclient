@@ -29,12 +29,16 @@ make sure that java is correctly installed and the "JAVA_HOME" path is set.
 
 You can get the java jdk from here:
 
+----------------------------------------------
 
-
-
+used jdk:
 **GraalVM Community **
 https://www.graalvm.org/downloads/
 
+----------------------------------------------
+
+**Java Azul **
+https://www.azul.com/products/core/
 
 **Open JDK**
 https://openjdk.java.net/
