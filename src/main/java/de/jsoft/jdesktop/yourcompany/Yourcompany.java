@@ -89,7 +89,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         jTextField4.setText(yourcomp.get(0).getOrt());
         jTextField5.setText(yourcomp.get(0).getTelefon());
         jTextField6.setText(yourcomp.get(0).getEmail());
-        jTextField7.setText(String.valueOf(yourcomp.get(0).getFirmennumer()));
+        jTextField7.setText(String.valueOf(yourcomp.get(0).getFirmennummer()));
         jTextField8.setText(yourcomp.get(0).getSteuernummer());
         jTextField9.setText(yourcomp.get(0).getUstIdNr());
         jTextField10.setText(yourcomp.get(0).getGeschäftsführer());
@@ -587,7 +587,7 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         yourcompanydata.setAmtsgericht(jTextField11.getText());
         yourcompanydata.setKontoinhaber(jTextField13.getText());
         yourcompanydata.setEmail(jTextField6.getText());
-        yourcompanydata.setFirmennumer(Integer.parseInt(jTextField7.getText()));
+        yourcompanydata.setFirmennummer(Integer.parseInt(jTextField7.getText()));
         yourcompanydata.setSteuernummer(jTextField8.getText());
         yourcompanydata.setUstIdNr(jTextField9.getText());
         yourcompanydata.setGeschäftsführer(jTextField10.getText());

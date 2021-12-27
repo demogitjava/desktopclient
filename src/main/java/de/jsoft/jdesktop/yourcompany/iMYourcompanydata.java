@@ -16,8 +16,10 @@ public interface iMYourcompanydata
     public void setTelefon(String telefon);
     public String getEmail();
     public void setEmail(String email);
-    public Integer getFirmennumer();
-    public void setFirmennumer(Integer firmennumer);
+
+    public Integer getFirmennummer();
+    public void setFirmennummer(Integer firmennummer);
+
     public String getSteuernummer();
     public void setSteuernummer(String steuernummer);
     public String getUstIdNr();

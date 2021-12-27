@@ -1,10 +1,7 @@
 package de.jsoft.jdesktop.yourcompany;
 
-
-
 public class MYourcompanydata implements iMYourcompanydata
 {
-
 
     private Integer id;
 
@@ -82,12 +79,14 @@ public class MYourcompanydata implements iMYourcompanydata
     public void setEmail(String email) {
         this.email = email;
     }
+
+
     @Override
-    public Integer getFirmennumer() {
+    public Integer getFirmennummer() {
         return firmennummer;
     }
     @Override
-    public void setFirmennumer(Integer firmennumer) {
+    public void setFirmennummer(Integer firmennummer) {
         this.firmennummer = firmennummer;
     }
 
