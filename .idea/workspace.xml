@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LanServer/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../LanServer/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
     </list>
@@ -119,7 +113,7 @@
   </component>
   <component name="RunManager" selected="Application.JDesktop">
     <configuration name="JDesktop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="GraalCE" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/graalvm-ce-java11-21.3.0" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="de.jsoft.JDesktop" />
       <module name="LanServer" />
@@ -213,6 +207,7 @@
       <workItem from="1640149433647" duration="10245000" />
       <workItem from="1640235208533" duration="686000" />
       <workItem from="1640507794483" duration="5852000" />
+      <workItem from="1640590646380" duration="3230000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -445,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640154506763</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="edit README.md">
+      <created>1640590978242</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1640590978242</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +466,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="EditOffer JInernalFrame &#10;for display in JDesktopPane" />
     <MESSAGE value="EditOffer JInernalFrame &#10;get DefaultModel data to JInternalFrame" />
     <MESSAGE value="EditOffer JInernalFrame &#10;public void getofferdatafromCustomerJTable2&#10;&#10;get Data from JTable2" />
     <MESSAGE value="EditOffer JInernalFrame &#10;and add fucntion to iEditOffer interface&#10;&#10;the jinternalframe starts up and display &#10;DefaultTableModel from Jtable2 &quot;Kundenstamm&quot;" />
@@ -489,25 +490,41 @@
     <MESSAGE value="make jinternalframe colable, resize" />
     <MESSAGE value="." />
     <MESSAGE value="write userdata without passwords to Jlist in memory for edit username and password" />
-    <option name="LAST_COMMIT_MESSAGE" value="write userdata without passwords to Jlist in memory for edit username and password" />
+    <MESSAGE value="edit README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>528</line>
+          <line>531</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>516</line>
+          <line>519</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>526</line>
+          <line>529</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
+          <line>596</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
+          <line>579</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

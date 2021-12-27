@@ -15,7 +15,7 @@ public class MYourcompanydata implements iMYourcompanydata
     private String ort;
     private String telefon;
     private String email;
-    private Integer firmennumer;
+    private Integer firmennummer;
 
     private String steuernummer;
     private String UstIdNr;

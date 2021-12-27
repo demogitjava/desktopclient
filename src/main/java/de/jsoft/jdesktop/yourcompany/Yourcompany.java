@@ -5,16 +5,14 @@
 package de.jsoft.jdesktop.yourcompany;
 
 import de.jsoft.JDesktop;
-import de.jsoft.jdesktop.kundenstamm.Artikelstamm;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-
-import java.util.List;
-import javax.swing.*;
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import javax.swing.*;
+import java.util.List;
 
 /**
  *
@@ -335,6 +333,11 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         jLabel23.setText("for demo only one company is supported");
 
         jButton5.setText("edit company data");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -570,6 +573,33 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        
+        MYourcompanydata yourcompanydata = new MYourcompanydata();
+
+        yourcompanydata.setFirmenname(jTextField1.getText());
+        yourcompanydata.setStrasse(jTextField2.getText());
+        yourcompanydata.setPlz(Integer.valueOf(jTextField3.getText()));
+        yourcompanydata.setOrt(jTextField4.getText());
+        yourcompanydata.setTelefon(jTextField5.getText());
+        yourcompanydata.setAmtsgericht(jTextField11.getText());
+        yourcompanydata.setKontoinhaber(jTextField13.getText());
+        yourcompanydata.setEmail(jTextField6.getText());
+        yourcompanydata.setFirmennumer(Integer.parseInt(jTextField7.getText()));
+        yourcompanydata.setSteuernummer(jTextField8.getText());
+        yourcompanydata.setUstIdNr(jTextField9.getText());
+        yourcompanydata.setGeschäftsführer(jTextField10.getText());
+        yourcompanydata.setBank(jTextField12.getText());
+        yourcompanydata.setIban(jTextField14.getText());
+
+        HttpEntity entity = new HttpEntity(yourcompanydata,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+        ResponseEntity<MYourcompanydata> out = JDesktop.rtemp.exchange(JDesktop.baseUrl + "editcompanydata", HttpMethod.POST, entity, MYourcompanydata.class);
+
+
+
+    }//GEN-LAST:event_jButton5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
