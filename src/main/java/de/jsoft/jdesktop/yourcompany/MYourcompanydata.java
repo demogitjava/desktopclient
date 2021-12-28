@@ -3,6 +3,7 @@ package de.jsoft.jdesktop.yourcompany;
 public class MYourcompanydata implements iMYourcompanydata
 {
 
+
     private Integer id;
 
     private String firmenname;
@@ -12,8 +13,8 @@ public class MYourcompanydata implements iMYourcompanydata
     private String ort;
     private String telefon;
     private String email;
+    // FIRMENNUMMER
     private Integer firmennummer;
-
     private String steuernummer;
     private String UstIdNr;
     private String geschäftsführer;
@@ -81,14 +82,7 @@ public class MYourcompanydata implements iMYourcompanydata
     }
 
 
-    @Override
-    public Integer getFirmennummer() {
-        return firmennummer;
-    }
-    @Override
-    public void setFirmennummer(Integer firmennummer) {
-        this.firmennummer = firmennummer;
-    }
+
 
     @Override
     public String getSteuernummer() {
@@ -146,4 +140,27 @@ public class MYourcompanydata implements iMYourcompanydata
     public void setIban(String iban) {
         this.iban = iban;
     }
+
+    @Override
+    public Integer getFirmennummer() {
+        return firmennummer;
+    }
+
+    @Override
+    public void setFirmennummer(Integer firmennummer) {
+        this.firmennummer = firmennummer;
+    }
+
+
+    @Override
+    public Integer getFirmennumer() {
+        return firmennummer;
+    }
+
+    @Override
+    public void setFirmennumer(Integer firmennumer) {
+        this.firmennummer = firmennummer;
+    }
 }
+
+
