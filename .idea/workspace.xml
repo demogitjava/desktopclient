@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/MYourcompanydata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/iMYourcompanydata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/iMYourcompanydata.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +37,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -72,6 +79,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="h2" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -81,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LanServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16333333" />
@@ -112,7 +120,7 @@
   </component>
   <component name="RunManager" selected="Application.JDesktop">
     <configuration name="JDesktop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/graalvm-ce-java11-21.3.0" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/OpenJDK/jdk-11.0.8.10-hotspot" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="de.jsoft.JDesktop" />
       <module name="LanServer" />
@@ -207,7 +215,10 @@
       <workItem from="1640235208533" duration="686000" />
       <workItem from="1640507794483" duration="5852000" />
       <workItem from="1640590646380" duration="3355000" />
-      <workItem from="1640672510577" duration="4656000" />
+      <workItem from="1640672510577" duration="23441000" />
+      <workItem from="1640871603134" duration="1295000" />
+      <workItem from="1640945846082" duration="1442000" />
+      <workItem from="1641147834433" duration="458000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -461,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640617930045</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary=".">
+      <created>1640679508017</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1640679508017</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,50 +518,30 @@
     <MESSAGE value="write list data from h2 table yourcompany to jTextFields in JInternalFrame" />
     <MESSAGE value="add interface to LoginFrame" />
     <MESSAGE value="make jinternalframe colable, resize" />
-    <MESSAGE value="." />
     <MESSAGE value="write userdata without passwords to Jlist in memory for edit username and password" />
     <MESSAGE value="edit README.md" />
     <MESSAGE value="edit model Yourcompanydata" />
     <MESSAGE value="edit model MYourcompanydata&#10;the company number is now available in the JInternalFrame&#10;Panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit model MYourcompanydata&#10;the company number is now available in the JInternalFrame&#10;Panel" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>531</line>
+          <line>532</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>519</line>
+          <line>520</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>529</line>
+          <line>530</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>596</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>579</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/yourcompany/Yourcompany.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
