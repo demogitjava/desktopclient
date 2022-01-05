@@ -12,6 +12,9 @@ import static de.jsoft.JDesktop.mframe;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 
@@ -144,8 +147,15 @@ public class WindowsMenu implements iWindowsMenus
                       yourcompanyintframe.loadyourcompanydata();
                       yourcompanyintframe.setVisible(true);
                       yourcompanyintframe.pack();
-
+                    
+                    try {
+                        yourcompanyintframe.setSelected(true);
+                    } catch (PropertyVetoException ex) {
+                        Logger.getLogger(WindowsMenu.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                   
                       JDesktop.jdeskpane.add(yourcompanyintframe);
+                    
                 }   
                 else
                 {

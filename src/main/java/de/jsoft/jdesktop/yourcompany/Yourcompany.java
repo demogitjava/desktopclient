@@ -12,8 +12,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+
+
 import javax.swing.*;
 import java.util.List;
+import org.springframework.context.annotation.Bean;
 
 /**
  *
@@ -551,9 +554,47 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+     
+      
+        Long iduser = Long.parseLong(jLabel21.getText());
+               
+        String stusername = jTextField15.getText();
+        
+        String stpass1 = jPasswordField1.getText();
+        String stpass2 = jPasswordField2.getText();
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(stpass1);
+        
+        
+       
+        // $2a$10$l3w7zjyFKsBFxKOjBQF4COx0BoCgaZnYKRZK080rRDLQYY3AxLgDC
+        String strole = jTextField16.getText();
+        if(stpass1.equals(stpass2))
+        {
+              MUsers users = new MUsers();
+          
+            users.setId(iduser);
+            users.setUsername(stusername);
+            users.setPassword(encodedPassword);
+            users.setRole(strole);
+            
+            HttpEntity entity = new HttpEntity(users,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+            ResponseEntity<MUsers> createuserres = JDesktop.rtemp.exchange(JDesktop.baseUrl + "createnewuser", HttpMethod.POST, entity, MUsers.class);
 
+
+        }
+        else
+        {
+             JOptionPane.showMessageDialog(null, "Password wrong");
+        }
+        
+      
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
