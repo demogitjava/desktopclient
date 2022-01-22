@@ -594,9 +594,21 @@ public class Yourcompany extends javax.swing.JInternalFrame implements iYourcomp
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    
+    // delete user 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+          MUsers users = new MUsers();
+          
+          String userid = String.valueOf(jLabel21.getText());
+          long uid = Long.parseLong(userid);
+          users.setId(uid);
+         
+          HttpEntity entity = new HttpEntity(users,de.jsoft.jdesktop.login.NewJInternalFrame.header);
+          ResponseEntity<MUsers> delusers = JDesktop.rtemp.exchange(JDesktop.baseUrl + "deleteuser", HttpMethod.POST, entity, MUsers.class);
+
+          delusers.getStatusCode();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
