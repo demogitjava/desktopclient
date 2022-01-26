@@ -37,6 +37,8 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import javax.swing.*;
 
 import java.awt.image.BufferedImage;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
@@ -81,8 +83,24 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         // tab create offers - // Angebote erstellen
         loadcustomselectedItems();
         
+        // add year for jcheckbox1
+        Date date = new Date();
+        SimpleDateFormat getYearFormat = new SimpleDateFormat("yyyy");
+        String currentYear = getYearFormat.format(date);
         
+        Integer yearforcheckbox = Integer.parseInt(currentYear) -1;
+        String yearonebehind =  yearforcheckbox.toString();
         
+        Integer yearforcheckbox2 = Integer.parseInt(currentYear) -2;
+        String styearonebehind2 =  yearforcheckbox2.toString();
+        
+        Integer yearforcheckbox3 = Integer.parseInt(currentYear) -3;
+        String styearonebehind3 =  yearforcheckbox3.toString();
+        
+        jComboBox1.addItem(currentYear);
+        jComboBox1.addItem(yearonebehind);
+        jComboBox1.addItem(styearonebehind2);
+        jComboBox1.addItem(styearonebehind3);
         
     }
     
@@ -275,6 +293,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         jList1 = new javax.swing.JList<>();
         jButton16 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
 
         jRadioButtonMenuItem1.setSelected(true);
@@ -687,7 +706,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kundenstamm", jPanel1);
@@ -855,14 +874,13 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(jLabel25))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Angebote erstellen", jPanel2);
 
         jTextField26.setText("jTextField26");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -880,6 +898,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
 
         jButton17.setText("lieferschein -> rechnung");
 
+        jButton18.setText("auftrag -> lieferschein");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -895,14 +915,18 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
                         .addGap(15, 15, 15)
                         .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(307, Short.MAX_VALUE))))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))
+                        .addContainerGap(310, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton18))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -923,7 +947,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Rechnungen & Mahnwesen", jPanel4);
@@ -1366,6 +1390,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
   
@@ -2461,6 +2486,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
