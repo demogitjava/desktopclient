@@ -53,6 +53,13 @@ public class DaoKundenstamm
     }
     
     
+    /*
+    
+        jTabebbed Pane 
+        offerpanel
+    
+    */
+    
     // JTable 1
     // Create offers
      public void addDatatoTable(List<Artikelstamm> selectedcustomitems, JTable jTable2)
@@ -232,6 +239,12 @@ public class DaoKundenstamm
      
      
    
+    /*
+        
+        JTabbedPane 
+        deliveric node & offer    
+        
+    */
     
     
         

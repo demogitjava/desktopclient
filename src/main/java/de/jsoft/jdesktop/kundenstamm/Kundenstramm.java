@@ -23,6 +23,7 @@ import java.lang.reflect.Type;
 import com.google.gson.reflect.TypeToken;
 //import com.sun.org.apache.xerces.internal.parsers.SecurityConfiguration;
 import de.jsoft.JDesktop;
+import static de.jsoft.JDesktop.jdeskpane;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ import java.util.Date;
 
 
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
-
+import javax.swing.JDialog;
 
 //Auskunft Kreditreform url
 // https://online.creditreform.de/ssoapplicationweb/jsp/anmeldung/anmeldungNormal.jsf
@@ -334,6 +335,11 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         getContentPane().add(jToolBar1, java.awt.BorderLayout.PAGE_START);
 
         jTabbedPane1.setToolTipText("");
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
 
         jPanel1.setPreferredSize(new java.awt.Dimension(745, 515));
 
@@ -879,7 +885,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
 
         jTabbedPane1.addTab("Angebote erstellen", jPanel2);
 
-        jTextField26.setText("jTextField26");
+        jTextField26.setText("suchen");
 
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1392,6 +1398,118 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        // TODO add your handling code here:
+        
+        int tabvalue = jTabbedPane1.getSelectedIndex();
+        
+        JInternalFrame jdialogFrame = new JInternalFrame("keine Kundennummer", true, true, true, true);
+        
+        // jTextField13 -> customer number
+        switch(tabvalue)
+        {
+            
+            // customerpanel with name street usw.
+            case 0:
+            {
+                
+                break;
+            }
+            
+            // offer 
+            case 1:
+            {
+                       String stkdnummer = jTextField13.getText();
+                        if(stkdnummer.isEmpty())
+                        {
+                             JPanel panel = new JPanel();
+                             panel.setLayout(new GridLayout(2,2));
+                             panel.add(new JLabel("es wurde kein Kunde abgefragt"));
+
+
+                             jdialogFrame.add(panel);
+                             jdialogFrame.setSize(450,80);
+                             jdialogFrame.setVisible(true);
+
+                             jdeskpane.add(jdialogFrame);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                 
+                  
+               
+               break;
+            }
+            
+            
+           // customerpanel offer and delivery note
+            case 2:
+            {
+                
+                        String stkdnummer = jTextField13.getText();
+                        if(stkdnummer.isEmpty())
+                        {
+                             JPanel panel = new JPanel();
+                             panel.setLayout(new GridLayout(2,2));
+                             panel.add(new JLabel("es wurde kein Kunde abgefragt"));
+
+
+                             jdialogFrame.add(panel);
+                             jdialogFrame.setSize(450,80);
+                             jdialogFrame.setVisible(true);
+
+                             jdeskpane.add(jdialogFrame);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                 
+                
+                   
+                  
+                break;
+            }
+            
+            // invoise and reminder
+            case 3:
+            {
+                    String stkdnummer = jTextField13.getText();
+                        if(stkdnummer.isEmpty())
+                        {
+                             JPanel panel = new JPanel();
+                             panel.setLayout(new GridLayout(2,2));
+                             panel.add(new JLabel("es wurde kein Kunde abgefragt"));
+
+
+                             jdialogFrame.add(panel);
+                             jdialogFrame.setSize(450,80);
+                             jdialogFrame.setVisible(true);
+
+                             jdeskpane.add(jdialogFrame);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                 
+                
+                      
+                
+                       
+                break;
+            }
+         
+            default:
+                break;
+        }
+        
+        
+        
+    }//GEN-LAST:event_jTabbedPane1StateChanged
 
   
     public void updateJTextFields(ActionEvent aevent)
