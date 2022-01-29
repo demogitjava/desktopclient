@@ -1436,6 +1436,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
                         }
                         else
                         {
+                            
+                           
+                            
                             break;
                         }
                  
@@ -1465,8 +1468,21 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
                         }
                         else
                         {
-                            break;
-                        }
+                              HttpEntity<String> requestEntity = new HttpEntity<>(de.jsoft.jdesktop.login.NewJInternalFrame.header);
+
+                                ResponseEntity<List<Buchungsdaten>> customerentity = JDesktop.rtemp.exchange(
+                                    de.jsoft.JDesktop.baseUrl + "customer/getcustomerdocuments/" + jTextField13.getText(),
+                                    HttpMethod.GET,
+                                    requestEntity,
+                                    new ParameterizedTypeReference<List<Buchungsdaten>>(){});
+
+
+                                List<Buchungsdaten> loffercustomer = customerentity.getBody();
+                                
+                           
+                                
+                            
+            }
                  
                 
                    
