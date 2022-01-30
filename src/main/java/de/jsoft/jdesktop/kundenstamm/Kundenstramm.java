@@ -1479,7 +1479,9 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
 
                                 List<Buchungsdaten> loffercustomer = customerentity.getBody();
                                 
-                           
+                                
+                                DaoKundenstamm daokdstammm = new DaoKundenstamm();
+                                daokdstammm.getofferanddevlicerinodes(loffercustomer, jList1);
                                 
                             
             }

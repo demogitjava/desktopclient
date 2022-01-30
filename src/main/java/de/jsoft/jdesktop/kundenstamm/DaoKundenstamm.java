@@ -7,6 +7,7 @@ package de.jsoft.jdesktop.kundenstamm;
 
 import com.google.gson.Gson;
 import de.jsoft.JDesktop;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import org.apache.kafka.clients.admin.KafkaAdminClient;
@@ -242,10 +244,49 @@ public class DaoKundenstamm
     /*
         
         JTabbedPane 
-        deliveric node & offer    
+        deliveri nodes & offer    
         
     */
-    
+    public HashMap getofferanddevlicerinodes(List<Buchungsdaten> loffercustomer, JList jList1)
+    {
+        /*
+            
+            create a hashmap 
+            for add value with offer number
+            saved as keyvalue for access
+        
+        */
+        HashMap hofferanddeliverynodes = new HashMap();
+        Integer belsize = loffercustomer.size();
+        Double newvkp = null;
+        
+        for(int i = 0; i < belsize; i++)
+        {
+
+            Integer beleg = loffercustomer.get(i).getBeleg();
+            Double vkp = loffercustomer.get(i).getVk();
+            
+           
+            if(hofferanddeliverynodes.get(beleg) == null)
+            {
+                 hofferanddeliverynodes.put(beleg, vkp);
+            }
+            else
+            {
+                 
+                Double hsmapvk = (Double) hofferanddeliverynodes.get(beleg);
+                newvkp = hsmapvk + vkp;
+                hofferanddeliverynodes.put(beleg, newvkp);
+                 
+            }    
+        }
+        
+        
+        int hashlistsize = hofferanddeliverynodes.size();
+        
+        return hofferanddeliverynodes;
+        
+    }
     
         
     
