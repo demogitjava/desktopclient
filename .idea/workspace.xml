@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/nb-configuration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/DaoKundenstamm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/DaoKundenstamm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/jsoft/jdesktop/kundenstamm/Kundenstramm.java" afterDir="false" />
-    </list>
+    <list default="true" id="6b85bbda-a9de-4891-8bf1-e36999eeecb1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +82,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demodatabase" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.16333333" />
@@ -228,6 +221,7 @@
       <workItem from="1643545814608" duration="67000" />
       <workItem from="1643546047565" duration="2443000" />
       <workItem from="1643552936104" duration="1282000" />
+      <workItem from="1643796801568" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
