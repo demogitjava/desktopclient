@@ -40,6 +40,8 @@ import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Set;
 
 
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
@@ -69,6 +71,10 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
     
     private ResponseEntity<MKundenstamm> newcustomer;
    
+    
+    public DefaultListModel offerdeliverynodeModel;
+    public HashMap hofferanddeliverynodes;
+    
     /**
      * Creates new form Kundenstramm
      */
@@ -460,7 +466,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
             }
         });
 
-        jButton10.setText("LÃ¶schen");
+        jButton10.setText("Löschen");
         jButton10.setPreferredSize(new java.awt.Dimension(70, 27));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -468,7 +474,7 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
             }
         });
 
-        jButton11.setText("Ã„ndern");
+        jButton11.setText("Ändern");
         jButton11.setPreferredSize(new java.awt.Dimension(80, 27));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -893,11 +899,8 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
             }
         });
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        offerdeliverynodeModel = new DefaultListModel();
+        jList1.setModel(offerdeliverynodeModel);
         jScrollPane4.setViewportView(jList1);
 
         jButton16.setText("anzeigen");
@@ -1477,13 +1480,31 @@ public class Kundenstramm extends javax.swing.JInternalFrame implements iKundens
                                     new ParameterizedTypeReference<List<Buchungsdaten>>(){});
 
 
-                                List<Buchungsdaten> loffercustomer = customerentity.getBody();
-                                
-                                
+                                    List<Buchungsdaten> loffercustomer = customerentity.getBody();
+
+                                // offernumber with offer and sum value
+                                hofferanddeliverynodes = new HashMap();
+
                                 DaoKundenstamm daokdstammm = new DaoKundenstamm();
-                                daokdstammm.getofferanddevlicerinodes(loffercustomer, jList1);
-                                
-                            
+                                daokdstammm.getofferanddevlicerinodes(loffercustomer, jList1, hofferanddeliverynodes);
+
+                                // size of hashmap with key value
+                                Integer hoffersize = (Integer) hofferanddeliverynodes.size();
+
+                                DefaultListModel model = (DefaultListModel) jList1.getModel();
+
+
+                            Set keys = hofferanddeliverynodes.keySet();
+
+
+                            for(Object key: keys){
+                                System.out.println(key + ": " + hofferanddeliverynodes.get(key));
+                                model.addElement(key + ": " + hofferanddeliverynodes.get(key));
+                            }
+                            //for (Map.Entry entry: map.entrySet)
+                              //  System.out.println(entry.getKey() + entry.getValue);
+
+
             }
                  
                 

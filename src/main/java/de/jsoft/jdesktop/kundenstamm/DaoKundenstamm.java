@@ -14,11 +14,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import org.apache.kafka.clients.admin.KafkaAdminClient;
+import static org.jline.keymap.KeyMap.key;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -48,7 +47,9 @@ public class DaoKundenstamm
     List<MJTable2Offer> saveoffer;
     
     List<Buchungsdaten> saveofferhttpentity;
-    
+
+    public HashMap hofferanddeliverynodes;
+
     public DaoKundenstamm()
     {
         
@@ -166,7 +167,7 @@ public class DaoKundenstamm
          for(int i = 0; i < rows; i++)
          {
              Buchungsdaten buchungsdaten = new Buchungsdaten();
-             // Ã¼berprÃ¼ft ob anzahl eingeben
+             // überprüft ob anzahl eingeben
              Integer anzahl1 = (Integer) this.model.getValueAt(i, 3);
             // if(anzahl1 == null)
             // {
@@ -247,7 +248,7 @@ public class DaoKundenstamm
         deliveri nodes & offer    
         
     */
-    public HashMap getofferanddevlicerinodes(List<Buchungsdaten> loffercustomer, JList jList1)
+    public HashMap getofferanddevlicerinodes(List<Buchungsdaten> loffercustomer, JList jList1, HashMap hofferanddeliverynodes)
     {
         /*
             
@@ -256,16 +257,15 @@ public class DaoKundenstamm
             saved as keyvalue for access
         
         */
-        HashMap hofferanddeliverynodes = new HashMap();
+        //hofferanddeliverynodes = null;
         Integer belsize = loffercustomer.size();
         Double newvkp = null;
-        
+
         for(int i = 0; i < belsize; i++)
         {
 
             Integer beleg = loffercustomer.get(i).getBeleg();
-            Double vkp = loffercustomer.get(i).getVk();
-            
+            Double vkp = loffercustomer.get(i).getVk();          
            
             if(hofferanddeliverynodes.get(beleg) == null)
             {
@@ -273,17 +273,17 @@ public class DaoKundenstamm
             }
             else
             {
-                 
                 Double hsmapvk = (Double) hofferanddeliverynodes.get(beleg);
                 newvkp = hsmapvk + vkp;
-                hofferanddeliverynodes.put(beleg, newvkp);
-                 
+                hofferanddeliverynodes.put(beleg, newvkp);    
             }    
         }
-        
-        
+
         int hashlistsize = hofferanddeliverynodes.size();
+       
+        // defaultlistofferanddeliverynode.add
         
+       
         return hofferanddeliverynodes;
         
     }
