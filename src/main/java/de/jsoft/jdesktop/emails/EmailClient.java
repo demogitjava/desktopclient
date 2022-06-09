@@ -5,6 +5,7 @@
  */
 package de.jsoft.jdesktop.emails;
 
+import de.jsoft.JDesktop;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -255,7 +256,7 @@ public class EmailClient extends javax.swing.JInternalFrame
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
-        jButton1 = new javax.swing.JButton();
+        newMailjButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         rootNode = new DefaultMutableTreeNode("Mail_INBOX");
@@ -274,13 +275,18 @@ public class EmailClient extends javax.swing.JInternalFrame
 
         jToolBar1.setRollover(true);
 
-        jButton1.setText("Neue Email");
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton1);
+        newMailjButton1.setText("Neue Email");
+        newMailjButton1.setFocusable(false);
+        newMailjButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        newMailjButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        newMailjButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newMailjButton1ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(newMailjButton1);
 
-        jButton2.setText("Email Löschen");
+        jButton2.setText("Email loeschen");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -306,6 +312,16 @@ public class EmailClient extends javax.swing.JInternalFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void newMailjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newMailjButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        de.jsoft.jdesktop.emails.createMail.NewMail newmail = new de.jsoft.jdesktop.emails.createMail.NewMail();
+        newmail.setVisible(true);
+        newmail.pack();
+        JDesktop.mframe.add(newmail);
+        
+    }//GEN-LAST:event_newMailjButton1ActionPerformed
 
     /*
     
@@ -415,7 +431,6 @@ public class EmailClient extends javax.swing.JInternalFrame
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JEditorPane jEditorPane2;
     protected javax.swing.JList<String> jList1;
@@ -425,5 +440,6 @@ public class EmailClient extends javax.swing.JInternalFrame
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JToolBar jToolBar1;
     protected javax.swing.JTree jTree2;
+    protected javax.swing.JButton newMailjButton1;
     // End of variables declaration//GEN-END:variables
 }
