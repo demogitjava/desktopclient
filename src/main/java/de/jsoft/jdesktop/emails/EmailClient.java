@@ -319,7 +319,7 @@ public class EmailClient extends javax.swing.JInternalFrame
         de.jsoft.jdesktop.emails.createMail.NewMail newmail = new de.jsoft.jdesktop.emails.createMail.NewMail();
         newmail.setVisible(true);
         newmail.pack();
-        JDesktop.mframe.add(newmail);
+        JDesktop.jdeskpane.add(newmail);
         
     }//GEN-LAST:event_newMailjButton1ActionPerformed
 
