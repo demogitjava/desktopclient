@@ -67,7 +67,7 @@ public class MailClient implements iMailClient
     public MailClient()
     {
       username = "jgsoftwares@gmx.net";
-      password = "mvpr52k1";
+      password = "jj78mvpr52k1";
       host = "imap.gmx.net";
       props = new Properties();
     }
@@ -92,7 +92,7 @@ public class MailClient implements iMailClient
             session = Session.getDefaultInstance(props, null);
             store = session.getStore("imaps");
             try {
-                store.connect("imap.gmx.net", "jgsoftwares@gmx.net", "mvpr52k1");
+                store.connect("imap.gmx.net", "jgsoftwares@gmx.net", "jj78mvpr52k1");
             } catch (MessagingException ex) {
                 Logger.getLogger(MailClient.class.getName()).log(Level.SEVERE, null, ex);
             }
