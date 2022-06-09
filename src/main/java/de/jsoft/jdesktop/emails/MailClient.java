@@ -72,6 +72,7 @@ public class MailClient implements iMailClient
       props = new Properties();
     }
    
+    @Override
     public Store connectToStore()
     {
         try {
@@ -111,6 +112,7 @@ public class MailClient implements iMailClient
     
     */
     
+    @Override
     public HashMap listFolders()
     { 
         hash_map = new HashMap<Integer, String>();
@@ -140,6 +142,7 @@ public class MailClient implements iMailClient
      * 
      *  
      */
+    @Override
     public HashMap listMessages(Object nodeInfo)
     {
         
@@ -186,11 +189,13 @@ public class MailClient implements iMailClient
     
    
     
+    @Override
     public void searchMessage()
     {
         
     }
 
+    @Override
     public void sendEmail()
     {
         
