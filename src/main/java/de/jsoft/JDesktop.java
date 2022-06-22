@@ -2,23 +2,14 @@
 package de.jsoft;
 
 
-import de.jsoft.jdesktop.login.iNewJInternalFrame;
-import de.jsoft.jdesktop.mainframe.MainFrame;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
-import javax.swing.UIManager.*;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-import javax.swing.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.springframework.http.HttpHeaders;
+
+import javax.swing.JDesktopPane;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+
+import de.jsoft.jdesktop.mainframe.MainFrame;
 
 
 //@ComponentScan(basePackages = "de.jsoft")
@@ -92,7 +83,7 @@ public class JDesktop implements iJDesktop
         jdeskpane = MainFrame.jDesktopPane1;
 
         /*
-            inizialisiere Klassen fÃ¼r DeskopPane
+            inizialisiere Klassen f�r DeskopPane
         */
         Object size = (Object) MainFrame.jDesktopPane1.getSize();
 

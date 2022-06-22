@@ -5,4 +5,5 @@ import java.awt.*;
 public interface IEmailClient
 {
     public Component loadJInternalFrame();
+  
 }
