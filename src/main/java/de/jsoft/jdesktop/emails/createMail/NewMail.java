@@ -5,18 +5,7 @@
  */
 package de.jsoft.jdesktop.emails.createMail;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.stereotype.Service;
-
-import javax.mail.*;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JTextArea;
+import javax.mail.MessagingException;
 
 /**
  *
@@ -70,7 +59,11 @@ public class NewMail extends javax.swing.JInternalFrame {
         btmailsend.setText("senden");
         btmailsend.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmailsendActionPerformed(evt);
+                try {
+                    btmailsendActionPerformed(evt);
+                } catch (MessagingException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
 
@@ -127,7 +120,7 @@ public class NewMail extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btsendmailActionPerformed
 
-    private void btmailsendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmailsendActionPerformed
+    private void btmailsendActionPerformed(java.awt.event.ActionEvent evt) throws MessagingException {//GEN-FIRST:event_btmailsendActionPerformed
         // TODO add your handling code here:
        
        // message text
@@ -137,8 +130,8 @@ public class NewMail extends javax.swing.JInternalFrame {
        
        // betreff 
        name = btsendmail.getText();
-        
-      
+
+
     }//GEN-LAST:event_btmailsendActionPerformed
 
 

@@ -5,8 +5,8 @@
  */
 package de.jsoft.jdesktop.emails;
 
-import java.util.HashMap;
 import javax.mail.Store;
+import java.util.HashMap;
 
 
 

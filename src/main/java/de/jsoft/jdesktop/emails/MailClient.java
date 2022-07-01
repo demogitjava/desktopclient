@@ -5,28 +5,18 @@
  */
 package de.jsoft.jdesktop.emails;
 
-import java.util.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.mail.internet.MimeMultipart;
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.NoSuchProviderException;
-import javax.mail.Session;
-import javax.mail.Store;
-
-import java.util.Properties;
-
-
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import java.util.HashMap;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 //import static sun.security.jgss.GSSUtil.login;
 
 /**
@@ -87,9 +77,16 @@ public class MailClient implements iMailClient
             props.setProperty("mail.imaps.socketFactory.port", "993");
             props.setProperty("mail.imaps.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
             props.setProperty("mail.imaps.socketFactory.fallback", "false");
-            
-         
-            
+
+            /*
+                send email over
+                smtps
+             */
+            props.put("mail.transport.protocol", "smtps");
+            props.put("mail.smtps.host", "mail.gmx.net");
+            props.put("mail.smtps.auth", "true");
+            props.put("mail.smtps.port", 587);
+
             session = Session.getDefaultInstance(props, null);
             store = session.getStore("imaps");
             try {
