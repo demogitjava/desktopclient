@@ -17,7 +17,7 @@ import java.util.Properties;
 public class NewMail extends javax.swing.JInternalFrame {
 
     String stmessage;
-    String email;
+    public String email;
     String name;
     /**
      * Creates new form NewMail
@@ -162,9 +162,10 @@ public class NewMail extends javax.swing.JInternalFrame {
 
         try
         {
+
             Message message = new MimeMessage(mailSession);
             //InternetAddress addressTo = new InternetAddress(receiver);
-            InternetAddress addressTo = new InternetAddress("jgsoftwares@gmx.net");
+            InternetAddress addressTo = new InternetAddress(email);
             message.setRecipient(Message.RecipientType.TO, addressTo);
             message.setFrom(new InternetAddress(sender));
 
@@ -176,13 +177,14 @@ public class NewMail extends javax.swing.JInternalFrame {
             System.out.print("Fehler send Email over smtp" + e);
         }
 
+        this.dispose();
 
     }//GEN-LAST:event_btmailsendActionPerformed
 
 
-    
 
-     
+
+
 
 
 
