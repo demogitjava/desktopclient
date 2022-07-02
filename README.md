@@ -5,6 +5,17 @@ Demo Desktop Client
 used IDE is ApacheNetBeans 12.0
 
 
+imap config:
+de.jsoft.jdesktop.email.MailClient
+username / password
+-> line 57
+
+de.jsoft.jdesktop.emails.createMail
+smtp config for send mail with username password and config for gmx 
+over smtp handshake
+-> line 138
+
+
 default username: admin
         password: jj78mvpr52k1
 
