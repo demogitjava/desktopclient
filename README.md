@@ -4,9 +4,8 @@ Demo Desktop Client
 
 used IDE is ApacheNetBeans 12.0
 
-//-----------------------------------------------
-        mvn spring-boot:run
-//-----------------------------------------------
+u can run the application with maven type
+mvn spring-boot:run
 
 imap config
 -----------------------------------
