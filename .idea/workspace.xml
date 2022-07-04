@@ -224,7 +224,7 @@
       <workItem from="1656663539385" duration="94000" />
       <workItem from="1656663680514" duration="4958000" />
       <workItem from="1656670463208" duration="11193000" />
-      <workItem from="1656924985236" duration="3448000" />
+      <workItem from="1656924985236" duration="3483000" />
     </task>
     <task id="LOCAL-00001" summary="removed lanserver module from this project">
       <created>1629467183007</created>
@@ -527,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656928270774</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="edit readme">
+      <created>1656928447183</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1656928447183</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
