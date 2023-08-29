@@ -11,7 +11,7 @@
 
     </parent>
     
-    <groupId>de.jsoft.JDesktop</groupId>
+    <groupId>de.jsoftware.JDesktop</groupId>
     <artifactId>LanServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>JDesktop</name>
@@ -274,7 +274,7 @@
                         <version>2.5.3</version>
 
                         <configuration>
-                            <mainClass>de.jsoft.JDesktop</mainClass>
+                            <mainClass>de.jsoftware.JDesktop</mainClass>
                         </configuration>
                     </plugin>
                     
