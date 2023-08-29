@@ -277,6 +277,12 @@
                             <mainClass>de.jsoft.JDesktop</mainClass>
                         </configuration>
                     </plugin>
+                    
+                    
+                       <plugin>
+                        <groupId>org.graalvm.buildtools</groupId>
+                        <artifactId>native-maven-plugin</artifactId>
+                    </plugin>
 
         </plugins>
 
