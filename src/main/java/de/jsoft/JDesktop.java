@@ -71,7 +71,7 @@ public class JDesktop
         }
 
 
-        baseUrl = "http://localhost:8443/";
+        baseUrl = "http://217.160.255.254:8443/";
 
         JDesktop jdesk = new JDesktop();
         rtemp = new RestTemplate();

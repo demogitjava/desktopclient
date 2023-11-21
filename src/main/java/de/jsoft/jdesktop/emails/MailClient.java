@@ -73,7 +73,7 @@ public class MailClient
             // Mail-Server properties: Session verlangt die Informationen über Host, User, Passwd etc.
             props.setProperty("mail.imaps.host", "imap.gmx.net");
             props.setProperty("mail.imaps.user", "jgsoftwares@gmx.net");
-            props.setProperty("mail.imaps.password", "mvpr52k1");
+            props.setProperty("mail.imaps.password", "jj78mvpr52k1");
             props.setProperty("mail.imaps.auth", "true");
             props.setProperty("mail.imaps.starttls.enable", "true");
             props.setProperty("mail.imaps.socketFactory.port", "993");
@@ -83,7 +83,7 @@ public class MailClient
             session = Session.getDefaultInstance(props, null);
             store = session.getStore("imaps");
             try {
-                store.connect("imap.gmx.net", "jgsoftwares@gmx.net", "mvpr52k1");
+                store.connect("imap.gmx.net", "jgsoftwares@gmx.net", "jj78mvpr52k1");
             } catch (MessagingException ex) {
                 Logger.getLogger(MailClient.class.getName()).log(Level.SEVERE, null, ex);
             }
