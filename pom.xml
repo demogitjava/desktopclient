@@ -268,22 +268,37 @@
                 </configuration>
             </plugin>
 
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                        <version>2.5.3</version>
+                   <plugin>
+                    <!-- Build an executable JAR -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                      <archive>
+                        <manifest>
+                          <addClasspath>true</addClasspath>
+                          <classpathPrefix>lib/</classpathPrefix>
+                          <mainClass>de.jgsoftware.JDesktop</mainClass>
+                        </manifest>
+                      </archive>
+                    </configuration>
+                  </plugin>
 
-                        <configuration>
-                            <mainClass>de.jsoftware.JDesktop</mainClass>
-                        </configuration>
-                    </plugin>
-                    
+
+                 
                     
                        <plugin>
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
                     </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <debug>false</debug>
+                </configuration>
+            </plugin>
         </plugins>
 
 
