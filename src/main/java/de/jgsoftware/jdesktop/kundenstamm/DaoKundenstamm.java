@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import org.apache.kafka.clients.admin.KafkaAdminClient;
+
 import static org.jline.keymap.KeyMap.key;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
