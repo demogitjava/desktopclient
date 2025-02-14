@@ -72,7 +72,7 @@ public class JDesktop implements iJDesktop
         }
 
        
-        baseUrl = "http://demolanserver.ddns.net:8443/";
+        baseUrl = "http://217.160.255.254:8443/";
        
         JDesktop jdesk = new JDesktop();
         rtemp = new RestTemplate();
