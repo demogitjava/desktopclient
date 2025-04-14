@@ -71,9 +71,10 @@ public class JDesktop implements iJDesktop
             System.out.print("LookAndFeel Error Nimbus !");
         }
 
+        // url over host modus
+        //baseUrl = "http://217.160.255.254:8443/";
        
-        baseUrl = "http://217.160.255.254:8443/";
-       
+        baseUrl = "http://192.168.10.56:8443/";
         JDesktop jdesk = new JDesktop();
         rtemp = new RestTemplate();
 
