@@ -2,6 +2,7 @@
 package de.jgsoftware;
 
 
+import de.jgsoftware.jdesktop.config.RestTemplateConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
@@ -76,8 +77,14 @@ public class JDesktop implements iJDesktop
        
         baseUrl = "http://192.168.10.56:8443/";
         JDesktop jdesk = new JDesktop();
+        
+        
+        // load config for RestTemplate
+        de.jgsoftware.jdesktop.config.RestTemplateConfig restconfig = new de.jgsoftware.jdesktop.config.RestTemplateConfig();
+        restconfig.restTemplate();
+        
         rtemp = new RestTemplate();
-
+         
 
         mframe = new MainFrame();
 

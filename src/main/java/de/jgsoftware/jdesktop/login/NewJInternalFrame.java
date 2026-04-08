@@ -293,7 +293,7 @@ public class NewJInternalFrame extends javax.swing.JInternalFrame implements iNe
           
               case 5:
             {
-                System.out.print("selected 5 --- TÃ¼rkisch");
+                System.out.print("selected 5 --- Türkisch");
                     // Username
                 jLabel1.setText(textlabelresponse.getBody().get(1).getTr());
 
